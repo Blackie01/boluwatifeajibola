@@ -52,9 +52,6 @@
 //   );
 // }
 
-
-
-
 "use client";
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
@@ -83,14 +80,14 @@ export default function About() {
         color: "#ffffff",
         stagger: 0.1, // each word's light-up is offset within the timeline
         ease: "none",
-      }
+      },
     );
 
     // Scrub the entire timeline against scroll progress
     ScrollTrigger.create({
       trigger: sectionRef.current,
-      start: "top 70%",    // when section top hits 20% from viewport top
-      end: "bottom 80%",   // when section bottom hits 80% from viewport top
+      start: "top 70%", // when section top hits 20% from viewport top
+      end: "bottom 80%", // when section bottom hits 80% from viewport top
       scrub: 1,
       animation: tl,
     });

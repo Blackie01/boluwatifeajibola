@@ -198,7 +198,7 @@ export default function Hero() {
           <AnimatePresence>
             {isNav && (
               <motion.div
-                className="fixed top-0 left-0 w-full h-20 bg-[#0a0a0a] z-40 border-b border-white/5"
+                className="fixed top-0 left-0 w-full h-20 bg-transparent z-40 border-b border-white/5"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
