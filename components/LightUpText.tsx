@@ -59,10 +59,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const aboutText =
-  "Hello, I am Boluwatife Ajibola. Defined by the four pillars of Research, Impact, Creativity, and Activism, my work traces the journey of ideas from polling sites to the performing arts. Whether I am consulting on digital humanitarian strategies or performing spoken word, my mission is to harmonize civic action with creative practice to spark meaningful social change.";
+type Props = {
+    text: string;
+    styles?: string;
+}
 
-export default function About() {
+export default function LightUpText({text, styles}: Props) {
   const sectionRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
 
@@ -97,12 +99,12 @@ export default function About() {
     };
   }, []);
 
-  const words = aboutText.split(" ");
+  const words = text.split(" ");
 
   return (
     <section
       ref={sectionRef}
-      className="min-h-[100vh] bg-[#0a0a0a] px-12 py-32 flex items-center"
+      className={` bg-[#0a0a0a] px-12 py-32 flex items-center ${styles}`}
     >
       <h1
         ref={textRef}

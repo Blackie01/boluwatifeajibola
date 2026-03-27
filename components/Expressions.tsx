@@ -2,8 +2,48 @@
 import React, { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Helper for the springing line-by-line reveal
+export function RevealTitle({ lines, className, style }: { lines: string[], className?: string, style?: React.CSSProperties }) {
+  return (
+    <motion.h2
+      className={className}
+      style={style}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+    >
+      {lines.map((text, i) => (
+        <span key={i} className="block overflow-hidden pb-2">
+          <motion.span
+            className="block origin-bottom"
+            custom={i}
+            variants={{
+              hidden: { y: "120%", rotate: 2 },
+              visible: (custom) => ({
+                y: "0%",
+                rotate: 0,
+                transition: {
+                  type: "spring",
+                  damping: 15,
+                  stiffness: 100,
+                  mass: 0.8,
+                  delay: custom * 0.15,
+                },
+              }),
+            }}
+          >
+            {text}
+          </motion.span>
+        </span>
+      ))}
+    </motion.h2>
+  );
+}
 
 const cards = [
   {
@@ -26,7 +66,7 @@ const cards = [
   },
   {
     id: 4,
-    title: "Speaking & Events",
+    title: "Speaking Events",
     bg: "#EA7B7B",
     text: "Whether delivering a keynote on the global political landscape or facilitating a masterclass on digital governance, I bring a multidisciplinary lens to every stage. My speaking and events practice focuses on creating immersive experiences that challenge conventional thinking, blending deep academic insight with the rhythmic pulse of creative storytelling.",
   },
@@ -41,7 +81,8 @@ export default function Expressions() {
       const slider = sliderRef.current!;
       const scrollAmount = slider.scrollWidth - window.innerWidth;
 
-      gsap.to(slider, {
+      // Main horizontal scroll tween
+      const scrollTween = gsap.to(slider, {
         x: -scrollAmount,
         ease: "none",
         scrollTrigger: {
@@ -51,40 +92,58 @@ export default function Expressions() {
           end: () => "+=" + slider.scrollWidth,
         },
       });
+
+      // Per-card number translation: slides from left to right within the card
+      gsap.utils.toArray<HTMLElement>(".card-number").forEach((num) => {
+        gsap.fromTo(
+          num,
+          { xPercent: 10 },
+          {
+            xPercent: 220,
+            ease: "none",
+            scrollTrigger: {
+              trigger: num.closest(".card-panel") as HTMLElement,
+              containerAnimation: scrollTween,
+              start: "left center",
+              end: "right center",
+              scrub: 1,
+            },
+          }
+        );
+      });
     }, componentRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <div ref={componentRef} className="bg-white">
+    <div ref={componentRef} className="bg-white" data-nav-theme="light">
       <div
         ref={sliderRef}
-        className="flex flex-nowrap items-stretch h-screen border border-[red] gap-8 pr-12"
+        className="flex flex-nowrap items-stretch h-screen gap-8 pr-12"
       >
         {/* Title panel — narrower so first card peeks */}
         <div
-          className="flex-shrink-0 h-full flex items-center justify-center px-12 md:px-24 border border-[red]"
+          className="flex-shrink-0 h-full flex items-center justify-center px-12 md:px-24"
           style={{ width: "55vw" }}
         >
-          <h2
+          <RevealTitle
+            lines={["What I", "do?"]}
             className="text-5xl md:text-7xl lg:text-[100px] font-bold text-[#0a0a0a] leading-tight"
             style={{ fontFamily: "var(--font-cormorant-unicase), serif" }}
-          >
-            What I <br/>do?
-          </h2>
+          />
         </div>
 
         {/* Cards */}
         {cards.map((card, index) => (
           <div
             key={card.id}
-            className="flex-shrink-0 h-full flex items-center justify-center border border-[green]"
+            className="flex-shrink-0 h-full flex items-end pb-[2vh] justify-center card-panel"
             style={{ width: "70vw" }}
           >
             {/* end pb-[2rem] */}
             <div
-              className="relative w-full h-[90vh] border border-[blue] rounded-3xl overflow-hidden flex flex-col justify-end p-10 md:p-14"
+              className="relative w-full h-[85vh] rounded-[52px] overflow-hidden flex flex-col justify-end p-10 md:p-14"
               style={{ backgroundColor: card.bg }}
             >
               {/* Decorative Background Curves */}
@@ -107,8 +166,23 @@ export default function Expressions() {
                 </svg>
               </div>
 
+              {/* Background image — left side, faded into card bg */}
+              <div className="absolute -right-[10rem] bottom-0 w-[55%] h-[87.5%] pointer-events-none overflow-hidden" style={{ borderBottomRightRadius: "52px" }}>
+                <Image
+                  src="/bsharpimage4.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="40vw"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{ backgroundColor: card.bg, opacity: 0.6 }}
+                />
+              </div>
+
               {/* Card number */}
-              <span className="absolute top-8 right-10 text-[8rem] md:text-[12rem] font-bold text-white/20 leading-none select-none z-10">
+              <span className="card-number absolute top-8 left-10 text-[8rem] md:text-[12rem] font-bold text-white/20 leading-none select-none z-10">
                 {String(index + 1).padStart(2, "0")}
               </span>
 
@@ -124,6 +198,16 @@ export default function Expressions() {
             </div>
           </div>
         ))}
+         <div
+          className="flex-shrink-0 h-full flex items-center justify-center px-12 md:px-24"
+          style={{ width: "100vw" }}
+        >
+          <RevealTitle
+            lines={["Selected", "Research Works"]}
+            className="text-5xl md:text-7xl lg:text-[100px] text-center font-bold text-[#0a0a0a] leading-tight"
+            style={{ fontFamily: "var(--font-cormorant-unicase), serif" }}
+          />
+        </div>
       </div>
     </div>
   );
