@@ -104,7 +104,7 @@ export default function LightUpText({text, styles}: Props) {
   return (
     <section
       ref={sectionRef}
-      className={` bg-[#0a0a0a] px-12 py-32 flex items-center ${styles}`}
+      className={`bg-[#0D0D0D] px-12 py-32 flex items-center ${styles}`}
     >
       <h1
         ref={textRef}
