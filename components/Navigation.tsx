@@ -15,7 +15,7 @@ const MENU_ITEMS = [
     { name: "Speaking and Events", href: "/" },
   ]},
   { name: "resources", href: "/", children: [
-    { name: "Conference Papers", href: "/" },
+    { name: "Conference Papers", href: "/conference-papers" },
   ]},
   { name: "contact", href: "/", children: [] },
 ]
