@@ -11,7 +11,7 @@ import LightUpText from "@/components/LightUpText";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 min-h-screen dark:bg-black bg-[#0C0C0C] overflow-x-clip">
+    <div className="flex flex-col flex-1 min-h-screen bg-[#0C0C0C] overflow-x-clip">
       <HeroSection />
       <LightUpText
         styles="min-h-[100vh]"

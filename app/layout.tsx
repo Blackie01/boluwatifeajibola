@@ -39,9 +39,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${cormorantUnicase.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${outfit.variable} ${cormorantUnicase.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased bg-[#0C0C0C]`}
     >
-      <body className="min-h-full flex flex-col bg-[#0C0C0C]">
+      <body className="min-h-full bg-[#0C0C0C]">
         <Navigation />
         {children}
       </body>

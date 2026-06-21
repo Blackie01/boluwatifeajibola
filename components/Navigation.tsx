@@ -1,13 +1,23 @@
 'use client'
 import React, { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Link from "next/link"
 
 const MENU_ITEMS = [
-  { name: "about", children: [] },
-  { name: "Research & Impact", children: ["Research", "Protests and Polls", "Impact and Engagement"] },
-  { name: "Artistic Hub", children: ["Creative Practice", "Speaking and Events"] },
-  { name: "resources", children: ["Conference Papers"] },
-  { name: "contact", children: [] },
+  { name: "about", href: "/about", children: [] },
+  { name: "Research & Impact", href: "/", children: [
+    { name: "Research", href: "/" },
+    { name: "Protests and Polls", href: "/" },
+    { name: "Impact and Engagement", href: "/" },
+  ]},
+  { name: "Artistic Hub", href: "/", children: [
+    { name: "Creative Practice", href: "/" },
+    { name: "Speaking and Events", href: "/" },
+  ]},
+  { name: "resources", href: "/", children: [
+    { name: "Conference Papers", href: "/" },
+  ]},
+  { name: "contact", href: "/", children: [] },
 ]
 
 export default function Navigation() {
@@ -26,9 +36,9 @@ export default function Navigation() {
   return (
     <nav className="fixed  backdrop-blur-md top-o left-0 right-0 z-50 pt-6 px-6 md:px-12 flex justify-between items-start pointer-events-none">
       {/* Logo */}
-      <div className="pointer-events-auto text-white text-xl font-medium tracking-tight mt-2">
+      <Link href="/" className="pointer-events-auto text-white text-xl font-medium tracking-tight mt-2">
         BoluAjibola
-      </div>
+      </Link>
 
       {/* Right Section: Popover + Hamburger */}
       <div 
@@ -47,13 +57,14 @@ export default function Navigation() {
               {/* Main Menu Bar */}
               <div className="bg-[#111111]/90 backdrop-blur-md border border-white/10 rounded-full flex items-center p-1 shadow-2xl relative h-10">
                 {MENU_ITEMS.map((item) => (
-                  <div
+                  <Link
                     key={item.name}
+                    href={item.href}
                     className="relative px-5 py-1.5 cursor-pointer text-sm text-[#a0a0a0] hover:text-white transition-colors capitalize whitespace-nowrap z-10 flex items-center h-full"
                     onMouseEnter={() => setHoveredTab(item.name)}
                   >
                     {item.name}
-                  </div>
+                  </Link>
                 ))}
 
                 {/* Animated active background pill for hovered item (optional, adds to the feel) */}
@@ -114,12 +125,13 @@ export default function Navigation() {
                                     
                                     <div className="flex flex-col gap-3 p-5 min-w-[180px]">
                                       {item.children.map((child) => (
-                                        <div 
-                                          key={child} 
+                                        <Link 
+                                          key={child.name} 
+                                          href={child.href}
                                           className="text-sm text-[#a0a0a0] hover:text-white cursor-pointer transition-colors whitespace-nowrap"
                                         >
-                                          {child}
-                                        </div>
+                                          {child.name}
+                                        </Link>
                                       ))}
                                     </div>
                                   </div>
