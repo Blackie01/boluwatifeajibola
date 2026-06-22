@@ -16,7 +16,7 @@ const MonogramLogo = ({ letters }: { letters: string }) => {
 export default function AccordionItem({ item, isOpen, onClick }: { item: any, isOpen: boolean, onClick: () => void }) {
   const logoVariants = {
     rest: { rotateY: 0, color: "#ffffff" },
-    hover: { rotateY: 360, color: "#A479FF" }
+    hover: { rotateY: 360, color: "#d4af37" }
   };
 
   return (
@@ -28,14 +28,16 @@ export default function AccordionItem({ item, isOpen, onClick }: { item: any, is
       animate="rest"
     >
       <div className="flex items-center justify-between py-6 md:py-8">
-         <div className="flex items-center gap-6 md:gap-8">
-            {/* SVG Logo that flips and turns purple on hover */}
-            <motion.div 
-              variants={logoVariants} 
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <MonogramLogo letters={item.logo} />
-            </motion.div>
+          <div className="flex items-center gap-6 md:gap-8">
+            {/* SVG Logo that flips and turns gold on hover */}
+            {item.logo && (
+                <motion.div 
+                variants={logoVariants} 
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                >
+                <MonogramLogo letters={item.logo} />
+                </motion.div>
+            )}
             
             {/* Organization Name */}
             <h3 className="text-lg md:text-xl font-medium tracking-tight text-gray-200 group-hover:text-white transition-colors duration-300">
@@ -47,7 +49,7 @@ export default function AccordionItem({ item, isOpen, onClick }: { item: any, is
          <motion.div 
            animate={{ rotate: isOpen ? 45 : 0 }}
            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-           className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 group-hover:border-[#A479FF] group-hover:text-[#A479FF] transition-colors duration-300 shrink-0 ml-4"
+           className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 group-hover:border-[#d4af37] group-hover:text-[#d4af37] transition-colors duration-300 shrink-0 ml-4"
          >
            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
              <path d="M12 5v14M5 12h14" />
@@ -64,7 +66,7 @@ export default function AccordionItem({ item, isOpen, onClick }: { item: any, is
              exit={{ height: 0, opacity: 0 }}
              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
-             <div className="pb-8 pl-[72px] md:pl-[88px] pr-8 text-gray-400 text-md md:text-lg leading-relaxed font-light">
+             <div className={`pb-8 ${item.logo ? 'pl-[72px] md:pl-[88px]' : 'pl-0'} pr-8 text-gray-400 text-md md:text-lg leading-relaxed font-light`}>
                <motion.div
                  initial={{ y: 20, opacity: 0 }}
                  animate={{ y: 0, opacity: 1 }}

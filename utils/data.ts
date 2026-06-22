@@ -205,3 +205,69 @@ export const membershipsData = [
   "International Association for Political Science Students",
   "Association of Research Managers and Administrators"
 ];
+
+export const impactProjectsData = [
+  {
+    name: "Digital Identity and Humanitarian Innovation (IFRC)",
+    desc: "As part of the development of the International Federation of Red Cross and Red Crescent Societies’ Digital Identity Vision, I contributed to research, stakeholder engagement processes, and collaborative workshops that informed organisational thinking on digital identity, humanitarian innovation, and data governance. The project culminated in a series of reports that supported the development of the organisation’s strategic direction."
+  },
+  {
+    name: "Alternative Models of NGO Coordination (ICVA)",
+    desc: "Working with the International Council of Voluntary Agencies, I contributed to research examining how local, national, and international actors can collaborate more effectively in humanitarian contexts. The project produced evidence and recommendations that went on to inform organisational practice and coordination frameworks at ICVA."
+  },
+  {
+    name: "Just Transition and Development Policy",
+    desc: "As a co-researcher on this international comparative project examining just transition debates across fourteen countries, I contributed to research that continues to inform conversations on climate policy, labour transitions, development, and governance in Nigeria and the larger Africa."
+  },
+  {
+    name: "Gender, Leadership and Accountability",
+    desc: "Through a DFID-funded research project examining women’s leadership and empowerment across Nigeria, Mozambique, and Pakistan, I contributed to research and stakeholder engagement processes that informed broader discussions on governance, participation, and accountability in fragile settings."
+  }
+];
+
+export const policyEngagementSummary = {
+  title: "Policy Engagement and Knowledge Mobilisation",
+  paragraphs: [
+    "Through professional training, practical experience, and collaborative projects, I have helped research teams identify policy opportunities, engage decision-makers, and communicate evidence effectively to non-academic audiences.",
+    "From working with universities, to NGOs, development organisations, or policy actors, I have facilitated the translation of research evidence to diverse audiences capable of using those evidence."
+  ],
+  imageSrc: "/b-sharp-policy-engagement.jpg",
+  imageAlt: "Policy Engagement",
+  aspectRatio: "aspect-[16/10]"
+};
+
+export const publicEngagementSummary = {
+  title: "Public Engagement as a Pathway to Impact",
+  paragraphs: [
+    "I don’t see public engagement as an add-on to research. It is one of research’s most important pathways to impact.",
+    "Throughout my career, I have contributed to public discussions through speaking engagements, training sessions, workshops, moderation, facilitation, blogging, and collaborative events. These activities have enabled me to communicate complex ideas to diverse audiences and create spaces for dialogue between research, policy, and practice."
+  ],
+  actionText: "See more on the Speaking and events page",
+  actionLink: "/speaking-and-events",
+  imageSrc: "/b-sharp-public-engagement.jpg",
+  imageAlt: "Public Engagement",
+  aspectRatio: "aspect-[16/10]"
+};
+
+export const reachCollaborationSummary = {
+  title: "Reach and Collaboration",
+  paragraphs: [
+    "My experience collaborating across institutions, sectors, and practices have strengthened my ability to work across disciplinary boundaries, navigate diverse institutional environments, and translate lessons between contexts.",
+    "Drawing on this experience, I bring a combination of analytical rigour, strategic thinking, and collaborative practice to supporting the impact strategies of higher education institutions, facilitating stakeholder engagement, contributing to international policy discussions, and helping organisations communicate evidence more effectively"
+  ],
+  imageSrc: "/b-sharp-reach.jpg",
+  imageAlt: "Reach and Collaboration",
+  aspectRatio: "aspect-[16/10]"
+};
+
+export const lookingAheadSummary = {
+  title: "Looking Ahead",
+  paragraphs: [
+    "The challenges facing societies today are increasingly complex, interconnected, and global.",
+    "We live in times when societies are faced with overlapping and complex crises. Addressing these crises require more than evidence and academic writing. It requires strong partnerships and deliberate pathways through which evidence can influence action.",
+    "I am committed to helping to build those pathways."
+  ],
+  imageSrc: "/b-sharp-looking-ahead.jpeg",
+  imageAlt: "Looking Ahead",
+  aspectRatio: "aspect-[4/5]"
+};

@@ -8,7 +8,7 @@ const MENU_ITEMS = [
   { name: "Research & Impact", href: "/", children: [
     { name: "Research", href: "/" },
     { name: "Protests and Polls", href: "/" },
-    { name: "Impact and Engagement", href: "/" },
+    { name: "Impact and Engagement", href: "/impact-and-engagement" },
   ]},
   { name: "Artistic Hub", href: "/", children: [
     { name: "Creative Practice", href: "/" },
