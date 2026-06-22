@@ -7,7 +7,7 @@ const MENU_ITEMS = [
   { name: "about", href: "/about", children: [] },
   { name: "Research & Impact", href: "/", children: [
     { name: "Research", href: "/" },
-    { name: "Protests and Polls", href: "/" },
+    { name: "Protests and Polls", href: "/protests-and-polls" },
     { name: "Impact and Engagement", href: "/impact-and-engagement" },
   ]},
   { name: "Artistic Hub", href: "/", children: [
