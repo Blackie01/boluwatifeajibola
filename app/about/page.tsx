@@ -32,7 +32,7 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="w-[85%] max-w-[280px] hidden md:block"
+              className="w-full lg:w-[85%] lg:max-w-[280px]"
             >
               <EditorialImage src="/bsharp-sitting.jpg" alt="Philosophy" aspectRatio="aspect-[4/5]" />
             </motion.div>

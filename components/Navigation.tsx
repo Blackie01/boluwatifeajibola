@@ -7,9 +7,10 @@ import Image from "next/image"
 const MENU_ITEMS = [
   { name: "about", href: "/about", children: [] },
   { name: "Research & Impact", href: "", children: [
-    { name: "Research", href: "/research" },
+    { name: "My Research", href: "/research" },
     { name: "Protests and Polls", href: "/protests-and-polls" },
     { name: "Impact and Engagement", href: "/impact-and-engagement" },
+    { name: "Research and Development", href: "/research-and-development" },
   ]},
   { name: "Artistic Hub", href: "", children: [
     { name: "Creative Practice", href: "/" },
