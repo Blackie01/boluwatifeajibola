@@ -69,12 +69,13 @@ const publicationGroups = [
   }
 ];
 
-export default function FeaturedPublications() {
+export default function FeaturedPublications({ theme = "dark" }: { theme?: "light" | "dark" }) {
+  const isLight = theme === "light";
   return (
-    <section className="w-full py-24 md:py-32 mt-32 border-t border-white/10">
+    <section className={`w-full py-24 md:py-32 mt-32 border-t ${isLight ? "border-black/10" : "border-white/10"}`}>
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12">
         <h2 
-          className="text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight text-white mb-24"
+          className={`text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight ${isLight ? "text-black" : "text-white"} mb-24`}
           style={{ fontFamily: "var(--font-outfit), sans-serif" }}
         >
           Featured publications
@@ -90,7 +91,7 @@ export default function FeaturedPublications() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-10% 0px" }}
                     transition={{ duration: 0.6 }}
-                    className="text-2xl md:text-3xl lg:text-4xl text-white/30 font-medium leading-snug pr-4"
+                    className={`text-2xl md:text-3xl lg:text-4xl ${isLight ? "text-black/30" : "text-white/30"} font-medium leading-snug pr-4`}
                     style={{ fontFamily: "var(--font-outfit), sans-serif" }}
                   >
                     {group.category}
@@ -106,22 +107,22 @@ export default function FeaturedPublications() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-10% 0px" }}
                     transition={{ duration: 0.6, delay: pIndex * 0.1 }}
-                    className="border-t border-white/10 pt-8 group"
+                    className={`border-t ${isLight ? "border-black/10" : "border-white/10"} pt-8 group`}
                   >
-                    <h4 className="text-[20px] md:text-[24px] leading-tight font-medium text-gray-200 group-hover:text-white transition-colors duration-300 mb-4">
+                    <h4 className={`text-[20px] md:text-[24px] leading-tight font-medium ${isLight ? "text-black" : "text-gray-200"} group-hover:${isLight ? "text-[#96750b]" : "text-white"} transition-colors duration-300 mb-4`}>
                       {item.title}
                     </h4>
                     
-                    <div className="text-[#a0a0a0] text-[15px] mb-6 font-light">
+                    <div className={`${isLight ? "text-[#666666]" : "text-[#a0a0a0]"} text-[15px] mb-6 font-light`}>
                       {item.source}
                     </div>
                     
-                    <p className="text-[#a0a0a0] leading-relaxed font-light mb-8 text-[16px]">
+                    <p className={`${isLight ? "text-[#444444]" : "text-[#a0a0a0]"} leading-relaxed font-light mb-8 text-[16px]`}>
                       {item.description}
                     </p>
                     
                     {item.linkText && (
-                      <Link target='_blank' href={item.href || "#"} className="inline-flex items-center gap-2 text-[#d4af37] hover:text-white transition-colors duration-300 text-[15px] group/link">
+                      <Link target='_blank' href={item.href || "#"} className={`inline-flex items-center gap-2 ${isLight ? "text-[#96750b] hover:text-[#7a5f09]" : "text-[#d4af37] hover:text-white"} transition-colors duration-300 text-[15px] group/link`}>
                         {item.linkText}
                         <svg 
                           className="transform transition-transform duration-300 group-hover/link:translate-x-1" 
@@ -139,7 +140,7 @@ export default function FeaturedPublications() {
         </div>
 
         <div className="mt-16 pt-16 flex justify-start">
-          <ActionText text="See all publications" href="/publications" />
+          <ActionText text="See all publications" href="/publications" theme={theme} />
         </div>
       </div>
     </section>

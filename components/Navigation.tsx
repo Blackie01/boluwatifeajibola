@@ -2,19 +2,20 @@
 import React, { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 
 const MENU_ITEMS = [
   { name: "about", href: "/about", children: [] },
-  { name: "Research & Impact", href: "/", children: [
+  { name: "Research & Impact", href: "", children: [
     { name: "Research", href: "/research" },
     { name: "Protests and Polls", href: "/protests-and-polls" },
     { name: "Impact and Engagement", href: "/impact-and-engagement" },
   ]},
-  { name: "Artistic Hub", href: "/", children: [
+  { name: "Artistic Hub", href: "", children: [
     { name: "Creative Practice", href: "/" },
     { name: "Speaking and Events", href: "/" },
   ]},
-  { name: "resources", href: "/", children: [
+  { name: "resources", href: "", children: [
     { name: "Conference Papers", href: "/conference-papers" },
     { name: "Publications", href: "/publications" }
   ]},
@@ -25,6 +26,52 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [hoveredTab, setHoveredTab] = useState<string | null>(null)
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null)
+  const [isLightBg, setIsLightBg] = useState(false)
+
+  useEffect(() => {
+    let ticking = false
+
+    const checkBackground = () => {
+      // Pick a point near the logo but in the pointer-events-none area (e.g. x=10)
+      // to pierce through the nav and hit the background section.
+      const el = document.elementFromPoint(10, 40)
+      let isLight = false
+      let currentEl = el
+      while (currentEl) {
+        const bg = window.getComputedStyle(currentEl).backgroundColor
+        if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') {
+          const match = bg.match(/\d+/g)
+          if (match && match.length >= 3) {
+            const r = parseInt(match[0], 10)
+            const g = parseInt(match[1], 10)
+            const b = parseInt(match[2], 10)
+            const hsp = Math.sqrt(
+              0.299 * (r * r) +
+              0.587 * (g * g) +
+              0.114 * (b * b)
+            )
+            isLight = hsp > 127.5
+          }
+          break
+        }
+        currentEl = currentEl.parentElement
+      }
+      setIsLightBg(isLight)
+      ticking = false
+    }
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(checkBackground)
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    checkBackground()
+
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
   
   // To handle the popover state smoothly
   const handleMouseLeave = () => {
@@ -38,10 +85,23 @@ export default function Navigation() {
   const hasChildren = activeItem && activeItem.children.length > 0
 
   return (
-    <nav className="fixed backdrop-blur-md top-0 left-0 right-0 z-50 pt-6 px-6 md:px-12 flex justify-between items-start pointer-events-none">
+    <nav className="fixed backdrop-blur-md top-0 left-0 right-0 z-50 pt-6 px-6 md:px-12 flex justify-between items-center pointer-events-none">
       {/* Logo */}
-      <Link href="/" className="pointer-events-auto text-white text-xl font-medium tracking-tight mt-2">
-        BoluAjibola
+      <Link href="/" className="pointer-events-auto mt-2 relative w-[250px] h-[50px] block">
+        <Image 
+          src="/logo-black-bg-preview-2.png" 
+          alt="BoluAjibola Logo" 
+          fill 
+          priority
+          className={`object-contain object-left transition-opacity duration-500 ease-in-out ${isLightBg ? 'opacity-0' : 'opacity-100'}`}
+        />
+        <Image 
+          src="/logo-white-bg-preview-2.png" 
+          alt="BoluAjibola Logo" 
+          fill 
+          priority
+          className={`object-contain object-left transition-opacity duration-500 ease-in-out ${isLightBg ? 'opacity-100' : 'opacity-0'}`}
+        />
       </Link>
 
       {/* Right Section: Popover + Hamburger */}

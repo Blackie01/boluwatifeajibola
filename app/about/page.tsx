@@ -8,6 +8,7 @@ import { educationData, professionalJourneyData, professionalJourneySummary, cre
 import SummarySectionDisplay from "@/components/SummarySectionDisplay"
 import AwardsSection from "@/components/AwardsSection"
 import MembershipsSection from "@/components/MembershipsSection"
+import EditorialImage from "@/components/EditorialImage"
 
 export default function About() {
   return (
@@ -18,14 +19,25 @@ export default function About() {
             title="About"
             subTitle="Researcher • Impact and Public Engagement Professional • Creative Practitioner"
         />
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-32 mt-16 lg:mt-0">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-4 flex items-start"
+            className="lg:col-span-4 flex flex-col gap-12"
           >
-            <div className="flex items-center gap-6 text-[#a0a0a0]">
+           
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="w-[85%] max-w-[280px] hidden md:block"
+            >
+              <EditorialImage src="/bsharp-sitting.jpg" alt="Philosophy" aspectRatio="aspect-[4/5]" />
+            </motion.div>
+
+             <div className="flex items-center gap-6 text-[#a0a0a0]">
               <a href="#" className="hover:text-white transition-colors h-8 w-8 border border-[currentColor] rounded-full flex items-center justify-center" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
@@ -42,7 +54,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-8 max-w-2xl text-[18px]"
+            className="lg:col-span-8 max-w-2xl text-[18px] "
           >
             <p className="text-[#a0a0a0] leading-relaxed mb-6">
               My work intersects research, impact, public engagement, and creative expression to understand and demonstrate how everyday desires for development and change move between spaces where they are studied and places where they are lived.
@@ -59,15 +71,15 @@ export default function About() {
         <ChronologicalDisplay title="Education" data={educationData} />
 
         {/* Professional Journey Section */}
-        <SummarySectionDisplay {...professionalJourneySummary} />
+        <SummarySectionDisplay {...professionalJourneySummary} theme="light"/>
 
         <div id="experience">
           <ChronologicalDisplay title="Experience" data={professionalJourneyData} />
         </div>
 
-        <SummarySectionDisplay {...creativeSummary} imagePosition="right" />
+        <SummarySectionDisplay {...creativeSummary} imagePosition="right" theme="light" />
         <SummarySectionDisplay {...oneGoalSummary} imagePosition="left" />
-        <SummarySectionDisplay {...onePhilosophySummary} imagePosition="right" />
+        {/* <SummarySectionDisplay {...onePhilosophySummary} imagePosition="right" /> */}
 
         {/* Awards and Recognitions */}
         <AwardsSection />

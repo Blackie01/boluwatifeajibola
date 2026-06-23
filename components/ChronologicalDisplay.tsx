@@ -27,7 +27,7 @@ export default function ChronologicalDisplay({ title, data }: Props) {
   const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1])
 
   return (
-    <section ref={containerRef} className="w-full py-10 relative">
+    <section ref={containerRef} className="w-full py-32 relative">
       <div className="mb-16">
         <h2 
           className="text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight text-white"

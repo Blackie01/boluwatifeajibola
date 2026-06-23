@@ -57,7 +57,8 @@ const otherProjects = [
   }
 ];
 
-export default function OtherResearchProjects() {
+export default function OtherResearchProjects({ theme = "dark" }: { theme?: "light" | "dark" }) {
+  const isLight = theme === "light";
   return (
     <section className="w-full pt-24 md:pt-32 pb-32">
       <motion.div 
@@ -68,19 +69,19 @@ export default function OtherResearchProjects() {
         className="max-w-7xl mx-auto w-full px-6 md:px-12 mb-16 lg:col-span-8"
       >
         <h2 
-          className="text-3xl md:text-5xl font-medium text-white mb-8 leading-tight tracking-tight uppercase"
+          className={`text-3xl md:text-5xl font-medium ${isLight ? "text-black" : "text-white"} mb-8 leading-tight tracking-tight uppercase`}
           style={{ fontFamily: "var(--font-outfit), sans-serif" }}
         >
           Other research projects
         </h2>
-        <p className="text-[#a0a0a0] text-[18px] leading-relaxed font-light max-w-3xl">
+        <p className={`${isLight ? "text-[#666666]" : "text-[#a0a0a0]"} text-[18px] leading-relaxed font-light max-w-3xl`}>
           My past projects do not only span diverse sectors, they reflect my commitment to research that is analytically grounded and responsive to real-world challenges. I present some of these below:
         </p>
       </motion.div>
 
-      <div className="w-full border-b border-white/20">
+      <div className={`w-full border-b ${isLight ? "border-black/10" : "border-white/20"}`}>
         {otherProjects.map((project, index) => (
-          <div key={project.num} className="border-t border-white/20 w-full">
+          <div key={project.num} className={`border-t ${isLight ? "border-black/10" : "border-white/20"} w-full`}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -89,19 +90,19 @@ export default function OtherResearchProjects() {
               className="max-w-7xl mx-auto w-full px-6 md:px-12 pt-8 pb-16 md:pt-12 md:pb-24 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 relative"
             >
               {/* Index Column */}
-              <div className="w-full md:w-[10%] text-sm text-[#a0a0a0] font-outfit md:sticky md:top-32 self-start">
+              <div className={`w-full md:w-[10%] text-sm ${isLight ? "text-[#666666]" : "text-[#a0a0a0]"} font-outfit md:sticky md:top-32 self-start`}>
                 ({project.num})
               </div>
 
               {/* Title Column */}
               <div className="w-full md:w-[30%] md:sticky md:top-32 self-start">
-                <h3 className="text-sm md:text-base text-white/80 font-medium tracking-wide uppercase leading-relaxed">
+                <h3 className={`text-sm md:text-base ${isLight ? "text-black/80" : "text-white/80"} font-medium tracking-wide uppercase leading-relaxed`}>
                   {project.title}
                 </h3>
               </div>
 
               {/* Content Column */}
-              <div className="w-full md:w-[60%] text-base leading-relaxed text-[#d1d1d1] font-light">
+              <div className={`w-full md:w-[60%] text-base leading-relaxed ${isLight ? "text-[#444444]" : "text-[#d1d1d1]"} font-light`}>
                 {project.content}
               </div>
             </motion.div>

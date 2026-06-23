@@ -1,6 +1,8 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import ActionText from './ActionText';
 
 const themes = [
   {
@@ -9,7 +11,7 @@ const themes = [
     content: (
       <div className="flex flex-col gap-6">
         <p>
-          My work examines protests, social movements, and elections as not just expressions of resistance and contention, but also as dynamic political ecosystems where narratives, identities, and possibilities for change are negotiated. I am interested in the larger systems and structures that movements and parties interact with to shape the democratic character of a state. I am currently pursuing this agenda through my ongoing doctoral research – Protests and Polls.
+          My work examines protests, social movements, and elections as not just expressions of resistance and contention, but also as dynamic political ecosystems where narratives, identities, and possibilities for change are negotiated. I am interested in the larger systems and structures that movements and parties interact with to shape the democratic character of a state. I am currently pursuing this agenda through my ongoing doctoral research – <ActionText href="/protests-and-polls" text="Protests and Polls" theme='light' />.
         </p>
         <p>
           Across my publications and conference papers, I have analysed how protest movements shape the character of political institutions, including legislatures and policing infrastructures, as well as the governance failures that underpin contention. I am particularly interested in the role of discourse, emotions and symbols in mobilising or demobilising participation and in sustaining movement energies.
@@ -59,11 +61,12 @@ const themes = [
   }
 ];
 
-export default function ResearchThemes() {
+export default function ResearchThemes({ theme = "dark" }: { theme?: "light" | "dark" }) {
+  const isLight = theme === "light";
   return (
-    <section className="w-full border-b border-white/20 mb-32">
+    <section className={`w-full border-b ${isLight ? "border-black/10" : "border-white/20"} mb-32`}>
       {themes.map((theme, index) => (
-        <div key={theme.num} className="border-t border-white/20 w-full">
+        <div key={theme.num} className={`border-t ${isLight ? "border-black/10" : "border-white/20"} w-full`}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,19 +75,19 @@ export default function ResearchThemes() {
             className="max-w-7xl mx-auto w-full px-6 md:px-12 pt-8 pb-16 md:pt-12 md:pb-24 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 relative"
           >
             {/* Index Column */}
-            <div className="w-full md:w-[10%] text-sm text-[#a0a0a0] font-outfit md:sticky md:top-32 self-start">
+            <div className={`w-full md:w-[10%] text-sm ${isLight ? "text-[#666666]" : "text-[#a0a0a0]"} font-outfit md:sticky md:top-32 self-start`}>
               ({theme.num})
             </div>
 
             {/* Title/Category Column */}
             <div className="w-full md:w-[30%] md:sticky md:top-32 self-start">
-              <h3 className="text-sm md:text-base text-white/80 font-medium tracking-wide uppercase leading-relaxed">
+              <h3 className={`text-sm md:text-base ${isLight ? "text-black/80" : "text-white/80"} font-medium tracking-wide uppercase leading-relaxed`}>
                 {theme.title}
               </h3>
             </div>
 
             {/* Content Column */}
-            <div className="w-full md:w-[60%] text-[18px] leading-relaxed text-[#d1d1d1] font-light">
+            <div className={`w-full md:w-[60%] text-[18px] leading-relaxed ${isLight ? "text-[#444444]" : "text-[#d1d1d1]"} font-light`}>
               {theme.content}
             </div>
           </motion.div>

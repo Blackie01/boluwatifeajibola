@@ -109,12 +109,13 @@ const conferencePapersData = [
   }
 ];
 
-export default function ResearchConferencePapers() {
+export default function ResearchConferencePapers({ theme = "dark" }: { theme?: "light" | "dark" }) {
+  const isLight = theme === "light";
   return (
-    <section className="w-full py-24 md:py-32">
+    <section className="w-full pb-24 md:pb-32">
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12">
         <h2 
-          className="text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight text-white mb-24 uppercase"
+          className={`text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight ${isLight ? "text-black" : "text-white"} mb-24 uppercase`}
           style={{ fontFamily: "var(--font-outfit), sans-serif" }}
         >
           Conference Papers
@@ -130,7 +131,7 @@ export default function ResearchConferencePapers() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-10% 0px" }}
                     transition={{ duration: 0.6 }}
-                    className="text-4xl md:text-5xl lg:text-[64px] text-white/20 font-medium"
+                    className={`text-4xl md:text-5xl lg:text-[64px] ${isLight ? "text-black/20" : "text-white/20"} font-medium`}
                     style={{ fontFamily: "var(--font-outfit), sans-serif" }}
                   >
                     {yearGroup.year}
@@ -146,12 +147,12 @@ export default function ResearchConferencePapers() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-10% 0px" }}
                     transition={{ duration: 0.6, delay: pIndex * 0.1 }}
-                    className="border-t border-white/10 pt-8 group"
+                    className={`border-t ${isLight ? "border-black/10" : "border-white/10"} pt-8 group`}
                   >
-                    <h4 className="text-[20px] md:text-[24px] leading-tight font-medium text-gray-200 group-hover:text-white transition-colors duration-300 mb-4">
+                    <h4 className={`text-[20px] md:text-[24px] leading-tight font-medium ${isLight ? "text-black" : "text-gray-200"} group-hover:${isLight ? "text-[#96750b]" : "text-white"} transition-colors duration-300 mb-4`}>
                       {paper.title}
                     </h4>
-                    <div className="text-[#a0a0a0] text-[15px] font-light">
+                    <div className={`${isLight ? "text-[#666666]" : "text-[#a0a0a0]"} text-[15px] font-light`}>
                       {paper.conference}
                     </div>
                   </motion.div>
@@ -161,8 +162,8 @@ export default function ResearchConferencePapers() {
           ))}
         </div>
 
-        <div className="mt-32 pt-16 border-t border-white/10 flex justify-start">
-          <ActionText text="For more on the conference papers" href="/conference-papers" />
+        <div className={`mt-32 pt-16 border-t ${isLight ? "border-black/10" : "border-white/10"} flex justify-start`}>
+          <ActionText text="For more on the conference papers" href="/conference-papers" theme={theme} />
         </div>
       </div>
     </section>

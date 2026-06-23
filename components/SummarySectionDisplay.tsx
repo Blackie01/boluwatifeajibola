@@ -15,6 +15,9 @@ interface SummarySectionDisplayProps {
   actionText?: string;
   actionLink?: string;
   aspectRatio?: string;
+  theme?: 'dark' | 'light';
+  accentTitlePart?: string;
+  accentParagraphIndex?: number;
 }
 
 export default function SummarySectionDisplay({
@@ -25,12 +28,20 @@ export default function SummarySectionDisplay({
   imagePosition = 'left',
   actionText,
   actionLink,
-  aspectRatio
+  aspectRatio,
+  theme = 'dark',
+  accentTitlePart,
+  accentParagraphIndex
 }: SummarySectionDisplayProps) {
   
   const isLandscape = aspectRatio === 'aspect-[16/10]';
   const isLeft = imagePosition === 'left';
   const isRight = imagePosition === 'right';
+  const isLight = theme === 'light';
+
+  const titleColor = isLight ? "text-black" : "text-white";
+  const lineBg = isLight ? "bg-black/10" : "bg-[#2a2a2a]";
+  const textColor = isLight ? "text-[#4a4a4a]" : "text-[#a0a0a0]";
 
   const flushLeftClasses = 
     "-mx-6 md:-mx-12 w-[calc(100%+3rem)] md:w-[calc(100%+6rem)] " +
@@ -74,24 +85,35 @@ export default function SummarySectionDisplay({
       {title && (
         <>
           <h2 
-            className="text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight text-white mb-6"
+            className={`text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight ${titleColor} mb-6`}
             style={{ fontFamily: "var(--font-outfit), sans-serif" }}
           >
-            {title}
+            {accentTitlePart && title.includes(accentTitlePart) ? (
+              <>
+                {title.split(accentTitlePart)[0]}
+                <span className="text-[#96750b]">{accentTitlePart}</span>
+                {title.split(accentTitlePart)[1]}
+              </>
+            ) : (
+              title
+            )}
           </h2>
-          <div className="h-[1px] w-[80px] bg-[#2a2a2a] mb-8" />
+          <div className={`h-[1px] w-[80px] ${lineBg} mb-8`} />
         </>
       )}
-      
+      {/* text-[#d4af37] */}
       <div className="flex flex-col gap-6 text-[18px] max-w-2xl">
-        {paragraphs.map((paragraph, index) => (
-          <p key={index} className="text-[#a0a0a0] leading-relaxed">
-            {paragraph}
-          </p>
-        ))}
+        {paragraphs.map((paragraph, index) => {
+          const isAccent = accentParagraphIndex === index;
+          return (
+            <p key={index} className={`${isAccent ? 'text-[#fff] text-[18px] font-normal' : textColor} leading-relaxed`}>
+              {paragraph}
+            </p>
+          );
+        })}
         {actionText && (
           <div className="mt-4">
-            <ActionText text={actionText} href={actionLink} />
+            <ActionText text={actionText} href={actionLink} theme={theme} />
           </div>
         )}
       </div>
@@ -99,9 +121,14 @@ export default function SummarySectionDisplay({
   );
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 my-32 items-center">
-      {imageContent}
-      {textContent}
-    </div>
+    <section className={`relative ${isLight ? 'py-32' : 'my-32'}`}>
+      {isLight && (
+        <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[100vw] bg-white" />
+      )}
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-center">
+        {imageContent}
+        {textContent}
+      </div>
+    </section>
   )
 }
