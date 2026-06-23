@@ -6,7 +6,7 @@ import Link from "next/link"
 const MENU_ITEMS = [
   { name: "about", href: "/about", children: [] },
   { name: "Research & Impact", href: "/", children: [
-    { name: "Research", href: "/" },
+    { name: "Research", href: "/research" },
     { name: "Protests and Polls", href: "/protests-and-polls" },
     { name: "Impact and Engagement", href: "/impact-and-engagement" },
   ]},
@@ -16,6 +16,7 @@ const MENU_ITEMS = [
   ]},
   { name: "resources", href: "/", children: [
     { name: "Conference Papers", href: "/conference-papers" },
+    { name: "Publications", href: "/publications" }
   ]},
   { name: "contact", href: "/", children: [] },
 ]
