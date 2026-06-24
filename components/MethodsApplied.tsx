@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const methods = [
+const defaultMethods = [
   {
     title: "Ethnographic and Qualitative Research",
     desc: "Interviews, participant observation, digital ethnography, and biographic methods."
@@ -21,8 +21,24 @@ const methods = [
   }
 ];
 
-export default function MethodsApplied({ theme = "dark" }: { theme?: "light" | "dark" }) {
+export interface MethodsAppliedProps {
+  theme?: "light" | "dark";
+  title?: string;
+  description?: string;
+  items?: { title: string; desc?: string }[];
+  columns?: 1 | 2;
+}
+
+export default function MethodsApplied({ 
+  theme = "dark",
+  title = "Methods applied",
+  description = "My research combines ethnographic, qualitative, and mixed-method approaches to examine how political, social, and institutional dynamics unfold in real-world contexts. My methodological approach is guided by an interest in lived experience, political meaning-making, and the role of discourse, emotion and symbols in bridging and shaping contentious experiences.",
+  items = defaultMethods,
+  columns = 2
+}: MethodsAppliedProps) {
   const isLight = theme === "light";
+  const gridColsClass = columns === 1 ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2";
+
   return (
     <section className="max-w-7xl mx-auto w-full px-6 md:px-12">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
@@ -39,16 +55,16 @@ export default function MethodsApplied({ theme = "dark" }: { theme?: "light" | "
             className={`text-3xl md:text-5xl font-medium ${isLight ? "text-black" : "text-white"} mb-8 leading-tight tracking-tight`}
             style={{ fontFamily: "var(--font-outfit), sans-serif" }}
           >
-            Methods applied
+            {title}
           </h2>
           <p className={`${isLight ? "text-[#444444]" : "text-[#a0a0a0]"} text-[18px] leading-relaxed font-light`}>
-            My research combines ethnographic, qualitative, and mixed-method approaches to examine how political, social, and institutional dynamics unfold in real-world contexts. My methodological approach is guided by an interest in lived experience, political meaning-making, and the role of discourse, emotion and symbols in bridging and shaping contentious experiences.
+            {description}
           </p>
         </motion.div>
 
         {/* Methods Grid */}
-        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
-          {methods.map((method, index) => (
+        <div className={`lg:col-span-7 grid ${gridColsClass} gap-x-12 gap-y-16`}>
+          {items.map((method, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
