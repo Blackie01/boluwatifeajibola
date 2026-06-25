@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
@@ -13,7 +13,7 @@ const MENU_ITEMS = [
     { name: "Research and Development", href: "/research-and-development" },
   ]},
   { name: "Artistic Hub", href: "", children: [
-    { name: "Creative Practice", href: "/" },
+    { name: "Creative Practice", href: "/creative-practice" },
     { name: "Speaking and Events", href: "/speaking-and-events" },
   ]},
   { name: "resources", href: "", children: [

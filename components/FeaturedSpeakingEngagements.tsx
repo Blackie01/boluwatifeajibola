@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import EditorialImage from "@/components/EditorialImage";
 
 const speakingEngagements = [
   {
@@ -194,11 +195,14 @@ const speakingEngagements = [
           Its success contributed to institutional recognition, including an
           award of commendation from the university.
         </p>
-        <p>
-          This event marked an important early moment in my development as a
-          convener of political conversations, combining student leadership,
-          civic education, digital politics, and public engagement.
-        </p>
+        <div className="mt-4 w-full">
+          <EditorialImage 
+            src="/bsharp-collage-2.png" 
+            alt="Speaking Engagement Collage" 
+            aspectRatio="aspect-video"
+            className="w-full rounded-sm object-cover bg-black/5" 
+          />
+        </div>
       </div>
     ),
   },

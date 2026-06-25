@@ -1,14 +1,12 @@
 'use client'
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import ActionText from './ActionText';
 import EditorialImage from './EditorialImage';
 
 interface SummarySectionDisplayProps {
   title?: string;
-  paragraphs: string[];
+  paragraphs: (string | React.ReactNode)[];
   imageSrc: string;
   imageAlt?: string;
   imagePosition?: 'left' | 'right';
@@ -106,9 +104,9 @@ export default function SummarySectionDisplay({
         {paragraphs.map((paragraph, index) => {
           const isAccent = accentParagraphIndex === index;
           return (
-            <p key={index} className={`${isAccent ? 'text-[#fff] text-[18px] font-normal' : textColor} leading-relaxed`}>
+            <div key={index} className={`${isAccent ? 'text-[#fff] text-[18px] font-normal' : textColor} leading-relaxed`}>
               {paragraph}
-            </p>
+            </div>
           );
         })}
         {actionText && (
