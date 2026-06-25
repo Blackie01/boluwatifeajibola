@@ -31,11 +31,11 @@ export default function SpeakingAndEvents() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full flex flex-col md:flex-row md:items-end justify-between gap-8 md:gap-0"
+            className="w-full flex flex-col md:flex-row md:items-end justify-between gap-0 md:gap-0"
           >
             {/* Left side text */}
-            <div className="text-left">
-              <p className="text-[#a0a0a0] mb-2 font-light tracking-wide uppercase text-xs md:text-sm">Speaking & Events</p>
+            <div className="text-left mb-0 md:mb-0">
+              <p className="text-[#a0a0a0] mb-1 md:mb-2 font-light tracking-wide uppercase text-xs md:text-sm">Speaking & Events</p>
               <h1 
                 className="text-[30px] text-[#a0a0a0] font-light leading-[1.2] tracking-wide"
                 style={{ fontFamily: 'var(--font-outfit)' }}
