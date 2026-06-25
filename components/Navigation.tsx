@@ -14,7 +14,7 @@ const MENU_ITEMS = [
   ]},
   { name: "Artistic Hub", href: "", children: [
     { name: "Creative Practice", href: "/" },
-    { name: "Speaking and Events", href: "/" },
+    { name: "Speaking and Events", href: "/speaking-and-events" },
   ]},
   { name: "resources", href: "", children: [
     { name: "Conference Papers", href: "/conference-papers" },
