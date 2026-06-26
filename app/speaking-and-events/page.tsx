@@ -32,40 +32,56 @@ export default function SpeakingAndEvents() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full flex flex-col md:flex-row md:items-end justify-between gap-0 md:gap-0"
+            className="w-full"
           >
-            {/* Left side text */}
-            <div className="text-left mb-0 md:mb-0">
-              <p className="text-[#fff] mb-1 md:mb-2 font-bold uppercase text-[30px] md:text-[50px] leading-[60px] tracking-tight">
-                Speaking &
+            {/* Mobile Text (joined) */}
+            <div className="block md:hidden text-left mb-2">
+              <p className="text-[#fff] font-bold uppercase text-[28px] leading-[1.1] tracking-tight">
+                Speaking & Events
               </p>
               <h1
-                className="text-[30px] text-[#a0a0a0] font-light leading-[1.2] tracking-wide"
+                className="text-[16px] text-[#a0a0a0] font-light leading-[1.3] tracking-wide mt-2"
                 style={{ fontFamily: "var(--font-outfit)" }}
               >
-                Ideas need <br className="hidden md:block" />a stage
+                Ideas need a stage and the right person to hold the room
               </h1>
             </div>
 
-            {/* Right side text */}
-            <div className="text-left md:text-right">
-              <p className="text-[#fff] mb-1 md:mb-2 font-bold uppercase text-[30px] md:text-[50px] leading-[60px] tracking-tight">
-                Events
-              </p>
-              <h1
-                className="text-[30px] text-[#a0a0a0] font-light leading-[1.2] tracking-wide"
-                style={{ fontFamily: "var(--font-outfit)" }}
-              >
-                and the right person <br className="hidden md:block" />
-                to hold the room
-              </h1>
+            {/* Desktop Text (split) */}
+            <div className="hidden md:flex w-full items-end justify-between">
+              {/* Left side text */}
+              <div className="text-left">
+                <p className="text-[#fff] mb-2 font-bold uppercase text-[50px] leading-[60px] tracking-tight">
+                  Speaking &
+                </p>
+                <h1
+                  className="text-[30px] text-[#a0a0a0] font-light leading-[1.2] tracking-wide"
+                  style={{ fontFamily: "var(--font-outfit)" }}
+                >
+                  Ideas need <br />a stage
+                </h1>
+              </div>
+
+              {/* Right side text */}
+              <div className="text-right">
+                <p className="text-[#fff] mb-2 font-bold uppercase text-[50px] leading-[60px] tracking-tight">
+                  Events
+                </p>
+                <h1
+                  className="text-[30px] text-[#a0a0a0] font-light leading-[1.2] tracking-wide"
+                  style={{ fontFamily: "var(--font-outfit)" }}
+                >
+                  and the right person <br />
+                  to hold the room
+                </h1>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Novel Section: Speaking Philosophy & Collage */}
-      <div className="relative z-10 bg-[#0C0C0C]">
+      {/* Novel Section: Speaking Philosophy */}
+      <div className="relative z-10 bg-white">
         {/* Editorial Text Section */}
         <div className="max-w-7xl mx-auto w-full px-6 md:px-12 pt-24 md:pt-40 pb-24 md:pb-32">
           <div className="flex flex-col gap-16 md:gap-24">
@@ -78,7 +94,7 @@ export default function SpeakingAndEvents() {
               className="max-w-5xl"
             >
               <h2
-                className="text-3xl md:text-5xl lg:text-[50px] leading-[1.2] font-medium text-white/70 tracking-tight"
+                className="text-3xl md:text-5xl lg:text-[50px] leading-[1.2] font-medium text-[#0a0a0a] tracking-tight"
                 style={{ fontFamily: "var(--font-outfit)" }}
               >
                 My work in speaking and events brings together{" "}
@@ -102,8 +118,8 @@ export default function SpeakingAndEvents() {
                 }}
                 className="md:col-span-5 md:col-start-2 lg:col-start-3"
               >
-                <div className="w-8 h-[1px] bg-white/20 mb-6" />
-                <p className="text-[#888888] text-lg lg:text-xl font-light leading-relaxed">
+                <div className="w-8 h-[1px] bg-[#0a0a0a]/20 mb-6" />
+                <p className="text-[#666666] text-lg lg:text-xl font-light leading-relaxed">
                   Across academic, civic, student-led, professional, cultural,
                   and social spaces, I have spoken, moderated, organised,
                   hosted, facilitated, and performed.
@@ -121,8 +137,8 @@ export default function SpeakingAndEvents() {
                 }}
                 className="md:col-span-5 lg:col-span-4"
               >
-                <div className="w-8 h-[1px] bg-white/20 mb-6 hidden md:block" />
-                <p className="text-[#888888] text-lg lg:text-xl font-light leading-relaxed">
+                <div className="w-8 h-[1px] bg-[#0a0a0a]/20 mb-6 hidden md:block" />
+                <p className="text-[#666666] text-lg lg:text-xl font-light leading-relaxed">
                   My speaking and event work is shaped by experience across
                   research, public engagement, leadership, music, spoken word,
                   and creative performance.
@@ -131,7 +147,10 @@ export default function SpeakingAndEvents() {
             </div>
           </div>
         </div>
+      </div>
 
+      {/* Collage and Closing Emphasize */}
+      <div className="relative z-10 bg-[#0C0C0C]">
         {/* Full Bleed Collage Image */}
         <motion.div
           initial={{ opacity: 0 }}

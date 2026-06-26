@@ -7,7 +7,7 @@ import EditorialImage from './EditorialImage';
 interface SummarySectionDisplayProps {
   title?: string;
   paragraphs: (string | React.ReactNode)[];
-  imageSrc: string;
+  imageSrc?: string;
   imageAlt?: string;
   imagePosition?: 'left' | 'right';
   actionText?: string;
@@ -16,6 +16,7 @@ interface SummarySectionDisplayProps {
   theme?: 'dark' | 'light';
   accentTitlePart?: string;
   accentParagraphIndex?: number;
+  videoEmbed?: React.ReactNode;
 }
 
 export default function SummarySectionDisplay({
@@ -29,7 +30,8 @@ export default function SummarySectionDisplay({
   aspectRatio,
   theme = 'dark',
   accentTitlePart,
-  accentParagraphIndex
+  accentParagraphIndex,
+  videoEmbed
 }: SummarySectionDisplayProps) {
   
   const isLandscape = aspectRatio === 'aspect-[16/10]';
@@ -63,12 +65,18 @@ export default function SummarySectionDisplay({
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={`lg:col-span-5 relative ${isRight ? 'lg:order-last' : ''} ${landscapeClasses}`}
     >
-      <EditorialImage 
-        src={imageSrc} 
-        alt={imageAlt} 
-        aspectRatio={aspectRatio} 
-        className={isLandscape ? (isLeft ? "lg:rounded-l-none border-l-0" : "lg:rounded-r-none border-r-0") : ""}
-      />
+      {videoEmbed ? (
+        <div className={`w-full relative overflow-hidden rounded-sm ${aspectRatio || 'aspect-[4/5] lg:aspect-[3/4]'}`}>
+          {videoEmbed}
+        </div>
+      ) : imageSrc ? (
+        <EditorialImage 
+          src={imageSrc} 
+          alt={imageAlt} 
+          aspectRatio={aspectRatio} 
+          className={isLandscape ? (isLeft ? "lg:rounded-l-none border-l-0" : "lg:rounded-r-none border-r-0") : ""}
+        />
+      ) : null}
     </motion.div>
   );
 

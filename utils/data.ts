@@ -15,7 +15,7 @@ export const educationData = [
     yearRange: "2014 - 2018",
     role: "BSc Political Science (First Class)",
     institution: "Obafemi Awolowo University, Ile-Ife.",
-    description: "I didn't study politics to acquire a credential ahead of some future run at office, but to gained nuanced understanding of power, systems, and governance."
+    description: "I didn't study politics to acquire a credential ahead of some future run at office, but to gain nuanced understanding of power, systems, and governance."
   }
 ];
 
