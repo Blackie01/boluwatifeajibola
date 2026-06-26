@@ -33,7 +33,7 @@ export default function ImpactAndEngagement() {
           >
             <div className="flex items-center gap-6 text-[#a0a0a0]">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/boluajibola/"
                 className="hover:text-white transition-colors h-8 w-8 border border-[currentColor] rounded-full flex items-center justify-center"
                 aria-label="LinkedIn"
               >
@@ -54,7 +54,7 @@ export default function ImpactAndEngagement() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://x.com/_boluajibola?s=11"
                 className="hover:text-white transition-colors h-8 w-8 border border-[currentColor] rounded-full flex items-center justify-center"
                 aria-label="Twitter"
               >
@@ -73,7 +73,7 @@ export default function ImpactAndEngagement() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/_boluajibola/"
                 className="hover:text-white transition-colors h-8 w-8 border border-[currentColor] rounded-full flex items-center justify-center"
                 aria-label="Instagram"
               >

@@ -13,15 +13,15 @@ const MENU_ITEMS = [
     { name: "Research and Development", href: "/research-and-development" },
   ]},
   { name: "Artistic Hub", href: "", children: [
+    { name: "Speaking and Events", href: "/speaking-and-events" },
     { name: "Creative Practice", href: "/creative-practice" },
     { name: "Poetry", href: "/creative-practice/poems" },
-    { name: "Speaking and Events", href: "/speaking-and-events" },
   ]},
   { name: "resources", href: "", children: [
     { name: "Conference Papers", href: "/conference-papers" },
     { name: "Publications", href: "/publications" }
   ]},
-  { name: "contact", href: "/", children: [] },
+  { name: "contact", href: "/contact", children: [] },
 ]
 
 export default function Navigation() {
@@ -87,7 +87,7 @@ export default function Navigation() {
   const hasChildren = activeItem && activeItem.children.length > 0
 
   return (
-    <nav className="fixed backdrop-blur-md top-0 left-0 right-0 z-50 pt-6 px-6 md:px-12 flex justify-between items-center pointer-events-none">
+    <nav className="fixed backdrop-blur-md top-0 left-0 right-0 z-[100] pt-6 px-6 md:px-12 flex justify-between items-center pointer-events-none">
       {/* Logo */}
       <Link href="/" className="pointer-events-auto mt-2 relative w-[250px] h-[50px] block">
         <Image 
