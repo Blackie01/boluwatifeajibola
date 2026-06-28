@@ -29,7 +29,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Bolu Ajibola",
-  description: "Researcher, creative, and public intellectual ",
+  description: "Researcher, Creative, and Public Intellectual ",
 };
 
 export default function RootLayout({

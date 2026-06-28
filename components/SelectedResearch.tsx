@@ -395,7 +395,7 @@ export default function SelectedResearch() {
               <h3
                 className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit mb-6 tracking-tight text-[#0a0a0a] leading-tight"
               >
-                Lab: Interlocking art and activism
+                Lab: Interlocking Art and Activism
               </h3>
 
               <p className="text-gray-600 mb-8 leading-relaxed text-base md:text-lg max-w-xl">

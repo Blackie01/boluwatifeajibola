@@ -21,14 +21,14 @@ export default function WorkGrid() {
       objectPosition: "object-top"
     },
     {
-      title: "Speaking and events",
+      title: "Speaking and Events",
       subtitle: "Learn about my speaking, facilitation, and MC services.",
       image: "/bsharp-speaking-events-new.jpeg",
       href: "/speaking-and-events",
       objectPosition: "object-top"
     },
     {
-      title: "Creative practice",
+      title: "Creative Practice",
       subtitle: "Discover my music, poetry, and creative collaborations.",
       image: "/bsharp-creative-practice-new.jpg",
       href: "/creative-practice",

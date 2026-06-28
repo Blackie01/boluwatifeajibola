@@ -107,7 +107,7 @@ export default function Publications() {
             Governance
           </span>
           <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-            From COVID-19 to fuel subsidy removal in Nigeria
+            From COVID-19 to Fuel Subsidy Removal in Nigeria
           </h3>
           <p className="text-gray-400 leading-relaxed mb-12">
             Assessing the political opportunities for local grievance.
@@ -207,7 +207,7 @@ export default function Publications() {
             Published 2023
           </span>
           <h4 className="text-2xl font-bold mb-4 leading-tight">
-            Turning public engagement into standard practice
+            Turning Public Engagement into Standard Practice
           </h4>
           <p className="text-gray-400 leading-relaxed mb-10 max-w-lg">
             Institutionalisation in the work of the South African Parliament.
@@ -230,7 +230,7 @@ export default function Publications() {
             Published Paper
           </span>
           <h4 className="text-2xl font-bold mb-4 leading-tight">
-            Digital identity in humanitarian contexts{" "}
+            Digital Identity in Humanitarian Contexts{" "}
           </h4>
           <p className="text-gray-400 leading-relaxed mb-10 max-w-lg">
             Developed to initiate the co-development of the IFRC’s Digital ID
@@ -256,7 +256,7 @@ export default function Publications() {
             Case Study
           </span>
           <h4 className="text-2xl font-bold mb-4 leading-tight">
-            The quest for development
+            The Quest for Development
           </h4>
           <p className="text-gray-400 leading-relaxed mb-10 max-w-lg">
             When social media-brokered political power encounters political
