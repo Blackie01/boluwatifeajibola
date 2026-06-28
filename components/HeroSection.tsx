@@ -38,7 +38,7 @@ export default function HeroSection() {
             className="text-white text-[28px] md:text-5xl font-medium leading-[1.1] tracking-tight mb-3 md:mb-6"
             style={{ fontFamily: "var(--font-outfit), sans-serif" }}
           >
-            Researcher, Creative, and Public Engagement Professional
+            Researcher, Creative, and Research and Development Professional
           </h1>
           
           <motion.p 
