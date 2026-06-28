@@ -5,9 +5,10 @@ interface ActionTextProps {
     text: string;
     href?: string;
     theme?: 'dark' | 'light';
+    target?: string;
 }
 
-export default function ActionText({ text, href, theme = 'dark' }: ActionTextProps) {
+export default function ActionText({ text, href, theme = 'dark', target }: ActionTextProps) {
   const isLight = theme === 'light';
 
   const baseTextColor = isLight ? "text-[#666666]" : "text-[#a0a0a0]";
@@ -27,7 +28,7 @@ export default function ActionText({ text, href, theme = 'dark' }: ActionTextPro
 
   if (href) {
     return (
-      <Link href={href} className={containerClasses}>
+      <Link target={target} href={href} className={containerClasses}>
         {content}
       </Link>
     );

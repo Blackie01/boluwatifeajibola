@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState, useLayoutEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import ActionText from "./ActionText";
 
 export default function SelectedResearch() {
   const containerRef = useRef<HTMLElement>(null);
@@ -30,7 +31,7 @@ export default function SelectedResearch() {
   const dropDistance = 150; // Distance the line goes down past the grid
 
   // Mathematical paths for left and right river flows drawing the border
-  const r = 40; // Exact match to rounded-[40px]
+  const r = 2; // Exact match to rounded-[20px]
 
   // Left path traces from top-center, around left side, to bottom-center, then straight down
   const leftPath = `
@@ -57,13 +58,28 @@ export default function SelectedResearch() {
   return (
     <section
       ref={containerRef}
-      className="bg-white text-black pt-24 px-4 sm:px-8 md:px-12 lg:px-24 w-full relative"
+      className="bg-white text-black pt-32 px-4 sm:px-8 md:px-12 lg:px-24 w-full relative"
       data-nav-theme="light"
       style={{ paddingBottom:  dropDistance }} // Add extra room for the trailing vertical line
     >
+      <div className="max-w-7xl mx-auto w-full relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10% 0px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-24"
+        >
+          <h2 className="text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight uppercase font-bold mb-6 font-outfit">
+            Selected Research
+          </h2>
+          <div className="h-[2px] w-[80px] bg-gray-200 mb-6"></div>
+        </motion.div>
+      </div>
+
       <div
         ref={gridRef}
-        className="max-w-[1400px] w-full mx-auto relative z-10"
+        className="max-w-7xl w-full mx-auto relative z-10"
       >
         {/* Dynamic SVG absolute overlay drawing the animated borders exactly matching grid shape */}
         {dims.w > 0 && (
@@ -106,7 +122,7 @@ export default function SelectedResearch() {
           </svg>
         )}
 
-        <div className="border border-transparent rounded-[40px] overflow-hidden bg-white shadow-sm">
+        <div className="border border-transparent rounded-[20px] overflow-hidden bg-white shadow-sm">
           {/* Row 1 */}
           <div className="flex flex-col md:flex-row border-b border-gray-200/80">
             {/* Top Left: Video */}
@@ -155,7 +171,13 @@ export default function SelectedResearch() {
             </div>
 
             {/* Top Right: Text */}
-            <div className="md:w-1/2 p-12 md:p-20 flex flex-col justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10% 0px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+              className="md:w-1/2 p-12 md:p-20 flex flex-col justify-center"
+            >
               <div className="flex items-center gap-2 mb-8">
                 <div className="px-3 py-1.5 rounded-full border border-gray-200 flex items-center gap-2">
                   <span className="flex h-2 w-2 rounded-full bg-blue-500"></span>
@@ -166,19 +188,13 @@ export default function SelectedResearch() {
               </div>
 
               <h3
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-[#0a0a0a] leading-tight"
-                style={{ fontFamily: "var(--font-cormorant-unicase), serif" }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit mb-6 tracking-tight text-[#0a0a0a] leading-tight"
               >
                 Protests and Polls (PaP)
               </h3>
 
               <p className="text-gray-600 mb-8 leading-relaxed text-base md:text-lg max-w-xl">
-                PaP focuses on the #EndSARS protests (2020), the 2023 general
-                elections, the pre- and post-2023 elections character of the
-                #Obidient movement, and the ongoing overlaps between activism
-                and politics in the lead up to the 2027 elections. Across these
-                junctures, this project traces how discourse, emotions, and
-                symbols travel between the streets and polling sites in Nigeria.
+                My ongoing doctoral research, with the conceptual anchor ‘Protests and Polls’ (PaP), explores how protest movements and electoral politics shape each other. PaP focuses on the #EndSARS protests (2020), the 2023 general elections, the pre- and post-2023 elections character of the #Obidient movement, and the ongoing overlaps between activism and politics in the lead up to the 2027 elections. Across these junctures, this project traces how discourse, emotions, and symbols travel between the streets and polling sites in Nigeria.  
               </p>
 
               <div className="mb-12">
@@ -192,35 +208,25 @@ export default function SelectedResearch() {
               </div>
 
               <div>
-                <a
-                  href="#"
-                  className="inline-flex items-center text-sm font-bold uppercase tracking-wider text-[#0a0a0a] hover:text-gray-500 transition-colors group"
-                >
-                  <span className="underline decoration-2 underline-offset-4">
-                    Explore more
-                  </span>
-                  <svg
-                    className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
+                <ActionText
+                  href="/protest-and"
+                  text="Explore more"
+                  theme="light"
+                />
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Row 2 */}
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row border-b border-gray-200/80">
             {/* Bottom Left: Text */}
-            <div className="md:w-1/2 p-12 md:p-20 flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-200/80 order-2 md:order-1">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10% 0px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+              className="md:w-1/2 p-12 md:p-20 flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-200/80 order-2 md:order-1"
+            >
               <div className="flex items-center gap-2 mb-8">
                 <div className="px-3 py-1.5 rounded-full border border-gray-200 flex items-center gap-2">
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
@@ -231,8 +237,7 @@ export default function SelectedResearch() {
               </div>
 
               <h3
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-[#0a0a0a] leading-tight"
-                style={{ fontFamily: "var(--font-cormorant-unicase), serif" }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit mb-6 tracking-tight text-[#0a0a0a] leading-tight"
               >
                 Digital ID & Future of Humanitarian Assistance
               </h3>
@@ -259,29 +264,14 @@ export default function SelectedResearch() {
               </div>
 
               <div>
-                <a
-                  href="#"
-                  className="inline-flex items-center text-sm font-bold uppercase tracking-wider text-[#0a0a0a] hover:text-gray-500 transition-colors group"
-                >
-                  <span className="underline decoration-2 underline-offset-4">
-                    Read the report
-                  </span>
-                  <svg
-                    className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
+                <ActionText
+                  href="https://solferinoacademy.com/wp-content/uploads/2021/09/Report-Initiating-the-co-development-of-IFRCs-Digital-ID-strategy1.pdf"
+                  text="Read the report"
+                  theme="light"
+                  target="_blank"
+                />
               </div>
-            </div>
+            </motion.div>
 
             {/* Bottom Right: Video */}
             <div className="md:w-1/2 p-10 md:p-16 flex items-center justify-center bg-gray-50/30 order-1 md:order-2">
@@ -336,6 +326,90 @@ export default function SelectedResearch() {
                 </motion.svg>
               </motion.div>
             </div>
+          </div>
+
+          {/* Row 3 */}
+          <div className="flex flex-col md:flex-row">
+            {/* Bottom Left: Video/Placeholder */}
+            <div className="md:w-1/2 p-10 md:p-16 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-200/80 bg-gray-50/30">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="relative w-full max-w-md aspect-square flex items-center justify-center"
+              >
+                <motion.svg
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 1.5,
+                    ease: "easeInOut",
+                    delay: 0.2,
+                  }}
+                  viewBox="0 0 89 111"
+                  fill="#d4af37"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="400"
+                  width="400"
+                  strokeWidth="4px"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path
+                    d="M77.0898 14.2524C73.3098 12.4324 69.1797 11.9924 64.6997 12.9324C61.5597 13.5924 58.2398 14.9324 54.7498 16.9424C51.3398 18.9224 48.0798 21.3524 44.9998 24.2524C44.6498 24.5624 44.2997 24.8924 43.9597 25.2424C39.7997 29.3224 35.9497 34.2624 32.4097 40.0524C30.9597 42.4224 29.6798 44.8124 28.5598 47.2324C26.8998 50.7924 25.5997 54.4024 24.6497 58.0724C23.3897 62.9624 22.7598 67.9524 22.7598 73.0324C22.7598 80.6824 25.4097 87.4724 30.7097 93.3924C32.0697 94.9124 33.6098 96.3824 35.3298 97.8024C38.5198 100.422 42.3197 102.862 46.7397 105.102C49.2097 106.362 51.8798 107.572 54.7498 108.712C65.4798 92.0424 73.4998 77.6824 78.7898 65.6324C84.0898 53.5924 86.7397 43.7424 86.7397 36.1024C86.7397 24.6324 83.5298 17.3424 77.0898 14.2524ZM54.8098 64.0924L50.5498 71.4424L39.2598 65.0024L44.9597 55.1724L50.5498 58.3724L64.6497 34.0524L65.7998 34.7124L70.3499 37.3024L54.8098 64.0924Z"
+                    stroke="#96750b"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M70.3499 37.3022L54.8098 64.0923L50.5498 71.4422L39.2598 65.0023L44.9597 55.1723L50.5498 58.3723L64.6497 34.0522L65.7998 34.7122L70.3499 37.3022Z"
+                    stroke="#96750b"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M77.0898 14.2524C73.3098 12.4324 69.1797 11.9924 64.6997 12.9324C61.5597 13.5924 58.2398 14.9324 54.7498 16.9424C51.3398 18.9224 48.0798 21.3524 44.9998 24.2524C44.6498 24.5624 44.2997 24.8924 43.9597 25.2424C39.7997 29.3224 35.9497 34.2624 32.4097 40.0524C30.9597 42.4224 29.6798 44.8124 28.5598 47.2324C26.8998 50.7924 25.5997 54.4024 24.6497 58.0724C23.3897 62.9624 22.7598 67.9524 22.7598 73.0324C22.7598 80.6824 25.4097 87.4724 30.7097 93.3924C32.0697 94.9124 33.6098 96.3825 35.3298 97.8025C38.5198 100.422 42.3197 102.862 46.7397 105.102L30.1099 96.7324C28.0299 95.7824 26.0797 94.8025 24.2397 93.7725C18.6197 90.6525 14.1097 87.1924 10.7097 83.3924C5.40972 77.4724 2.75977 70.6824 2.75977 63.0324C2.75977 51.5624 5.97967 40.5724 12.4097 30.0524C18.8397 19.5324 26.2898 11.8324 34.7498 6.94243C43.2198 2.05243 50.6598 1.16245 57.0898 4.25245L57.6797 4.55243L77.0898 14.2524Z"
+                    stroke="#96750b"
+                    strokeLinejoin="round"
+                  />
+                </motion.svg>
+              </motion.div>
+            </div>
+
+            {/* Bottom Right: Text */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10% 0px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+              className="md:w-1/2 p-12 md:p-20 flex flex-col justify-center"
+            >
+              <div className="flex items-center gap-2 mb-8">
+                <div className="px-3 py-1.5 rounded-full border border-gray-200 flex items-center gap-2">
+                  <span className="flex h-2 w-2 rounded-full bg-[#d4af37]"></span>
+                  <span className="text-xs font-bold tracking-widest uppercase text-gray-500">
+                    Creative
+                  </span>
+                </div>
+              </div>
+
+              <h3
+                className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit mb-6 tracking-tight text-[#0a0a0a] leading-tight"
+              >
+                Lab: Interlocking art and activism
+              </h3>
+
+              <p className="text-gray-600 mb-8 leading-relaxed text-base md:text-lg max-w-xl">
+                Beyond academic research, I use different art forms such as poetry, spoken word, and music to translate ideas into stories and experiences that resonate with different publics. While some of these works draw inspiration from themes such as social change, democracy, hope and civic responsibility, others are rooted in deep reflections on faith and the future.
+              </p>
+
+              <div>
+                <ActionText
+                  text="Explore my art"
+                  href="/creative-practice"
+                  theme="light"
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

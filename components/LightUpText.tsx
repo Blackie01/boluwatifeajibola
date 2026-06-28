@@ -1,57 +1,3 @@
-// "use client";
-// import React, { useRef, useEffect } from "react";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// const aboutText =
-//   "Hello, I am Boluwatife Ajibola. Defined by the four pillars of Research, Impact, Creativity, and Activism, my work traces the journey of ideas from polling sites to the performing arts. Whether I am consulting on digital humanitarian strategies or performing spoken word, my mission is to harmonize civic action with creative practice to spark meaningful social change.";
-
-// export default function About() {
-//   const sectionRef = useRef<HTMLElement>(null);
-//   const textRef = useRef<HTMLHeadingElement>(null);
-
-//   useEffect(() => {
-//     if (!textRef.current || !sectionRef.current) return;
-
-//     const words = textRef.current.querySelectorAll(".about-word");
-
-//     gsap.fromTo(
-//       words,
-//       { color: "#828789" },
-//       {
-//         color: "#ffffff",
-//         stagger: 0.05, // distributes the animation evenly across all words
-//         scrollTrigger: {
-//           trigger: sectionRef.current,
-//           start: "top 80%",
-//           end: "bottom 60%",
-//           scrub: 1, // smooth scrub tied to scroll position
-//         },
-//       }
-//     );
-
-//     return () => {
-//       ScrollTrigger.getAll().forEach((t) => t.kill());
-//     };
-//   }, []);
-
-//   const words = aboutText.split(" ");
-
-//   return (
-//     <section ref={sectionRef} className="min-h-[100vh] bg-[#0a0a0a] px-12 py-32 flex items-center">
-//       <h1 ref={textRef} className="text-4xl md:text-5xl lg:text-6xl leading-tight">
-//         {words.map((word, i) => (
-//           <span key={i} className="about-word" style={{ color: "#323435ff" }}>
-//             {word}{" "}
-//           </span>
-//         ))}
-//       </h1>
-//     </section>
-//   );
-// }
-
 "use client";
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
@@ -60,12 +6,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
-    text: string;
-    styles?: string;
-}
+  text: string;
+  styles?: string;
+  textClassName?: string;
+  activeColor?: string;
+  inactiveColor?: string;
+};
 
-export default function LightUpText({text, styles}: Props) {
-  const sectionRef = useRef<HTMLElement>(null);
+export default function LightUpText({
+  text,
+  styles = "",
+  textClassName = "text-4xl md:text-5xl lg:text-6xl leading-tight sticky top-[20vh]",
+  activeColor = "#ffffff",
+  inactiveColor = "#323435",
+}: Props) {
+  const sectionRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -77,9 +32,9 @@ export default function LightUpText({text, styles}: Props) {
     const tl = gsap.timeline();
     tl.fromTo(
       words,
-      { color: "#323435" },
+      { color: inactiveColor },
       {
-        color: "#ffffff",
+        color: activeColor,
         stagger: 0.1, // each word's light-up is offset within the timeline
         ease: "none",
       },
@@ -88,7 +43,7 @@ export default function LightUpText({text, styles}: Props) {
     // Scrub the entire timeline against scroll progress
     ScrollTrigger.create({
       trigger: sectionRef.current,
-      start: "top 70%", // when section top hits 20% from viewport top
+      start: "top 70%", // when section top hits 70% from viewport top
       end: "bottom 80%", // when section bottom hits 80% from viewport top
       scrub: 1,
       animation: tl,
@@ -97,25 +52,25 @@ export default function LightUpText({text, styles}: Props) {
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
-  }, []);
+  }, [activeColor, inactiveColor]);
 
   const words = text.split(" ");
 
   return (
-    <section
+    <div
       ref={sectionRef}
-      className={`bg-[#0D0D0D] px-12 py-32 flex items-center ${styles}`}
+      className={`relative ${styles}`}
     >
       <h1
         ref={textRef}
-        className="text-4xl md:text-5xl lg:text-6xl leading-tight sticky top-[20vh]"
+        className={textClassName}
       >
         {words.map((word, i) => (
-          <span key={i} className="about-word" style={{ color: "#323435" }}>
+          <span key={i} className="about-word" style={{ color: inactiveColor }}>
             {word}{" "}
           </span>
         ))}
       </h1>
-    </section>
+    </div>
   );
 }

@@ -56,7 +56,7 @@ export default function FutureInvitationsSection() {
         </div>
 
         {/* Work With Me Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
@@ -81,7 +81,7 @@ export default function FutureInvitationsSection() {
               <ActionText text="Discuss an event" href="mailto:hello@boluajibola.com" theme="light" />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
       </div>
     </section>

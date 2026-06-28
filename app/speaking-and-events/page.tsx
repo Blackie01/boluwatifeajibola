@@ -36,7 +36,7 @@ export default function SpeakingAndEvents() {
           >
             {/* Mobile Text (joined) */}
             <div className="block md:hidden text-left mb-2">
-              <p className="text-[#fff] font-bold uppercase text-[28px] leading-[1.1] tracking-tight">
+              <p className="text-[#fff]/60 font-bold uppercase text-[28px] leading-[1.1] tracking-tight">
                 Speaking & Events
               </p>
               <h1
@@ -51,7 +51,7 @@ export default function SpeakingAndEvents() {
             <div className="hidden md:flex w-full items-end justify-between">
               {/* Left side text */}
               <div className="text-left">
-                <p className="text-[#fff] mb-2 font-bold uppercase text-[50px] leading-[60px] tracking-tight">
+                <p className="text-[#fff]/60 mb-2 font-bold uppercase text-[50px] leading-[60px] tracking-tight">
                   Speaking &
                 </p>
                 <h1
@@ -64,7 +64,7 @@ export default function SpeakingAndEvents() {
 
               {/* Right side text */}
               <div className="text-right">
-                <p className="text-[#fff] mb-2 font-bold uppercase text-[50px] leading-[60px] tracking-tight">
+                <p className="text-[#fff]/60 mb-2 font-bold uppercase text-[50px] leading-[60px] tracking-tight">
                   Events
                 </p>
                 <h1

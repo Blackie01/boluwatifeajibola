@@ -71,17 +71,29 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section 
-      className="bg-[#ffffff] text-black pt-32 px-4 sm:px-8 md:px-12 lg:px-24 w-full relative" 
+      className="bg-white text-black w-full relative pt-24 sm:pt-32" 
       data-nav-theme="light"
     >
-      <div className="max-w-[1400px] mx-auto z-10 relative">
-        <div className="mb-20">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-[#1a1a1a]">
-            What <span className="text-[#A479FF]">people</span> say
-          </h2>
-          <p className="text-lg md:text-xl text-gray-500 max-w-2xl font-light">
-            A few thoughts from people who have experienced the value of working together.
-          </p>
+      <div className="max-w-7xl mx-auto px-6 md:px-12 z-10 relative">
+
+        <div className="w-full mb-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10% 0px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:w-2/3"
+          >
+            <h2 
+              className="text-[32px] md:text-[40px] uppercase font-medium text-black mb-8 leading-tight tracking-tight"
+              style={{ fontFamily: "var(--font-outfit), sans-serif" }}
+            >
+              What <span className="text-[#D4AF37]">people</span> say
+            </h2>
+            <p className="text-[#444444] text-[18px] md:text-[20px] leading-relaxed font-light">
+              A few thoughts from people who have experienced the value of working together.
+            </p>
+          </motion.div>
         </div>
         
         <div className="relative">
@@ -95,16 +107,16 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.6, delay: (Object.values(t).join("").length % 3) * 0.15 }}
-                className="break-inside-avoid bg-white p-8 md:p-10 rounded-[20px] shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-[#d7d8db] flex flex-col h-auto"
+                className="break-inside-avoid bg-[#f8f9fa] hover:bg-white p-8 md:p-10 rounded-[20px] border border-transparent hover:border-gray-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 flex flex-col h-auto cursor-pointer group"
               >
-                <p className="text-[#333] leading-relaxed mb-8 text-[15px] md:text-base font-medium">"{t.text}"</p>
+                <p className="text-[#666666] leading-relaxed mb-8 text-[14px] md:text-[16px] font-light">"{t.text}"</p>
                 
                 <hr className="border-gray-200 mb-6 w-full" />
                 
                 <div className="mt-auto">
-                  <h4 className="font-bold text-[#1a1a1a] mb-1">{t.name}</h4>
-                  <p className="text-xs font-semibold text-gray-400 mb-1">{t.role}</p>
-                  <p className="text-[11px] text-gray-400">{t.date}</p>
+                  <h4 className="font-bold text-[#0a0a0a] mb-1">{t.name}</h4>
+                  <p className="text-[10px] uppercase tracking-widest font-bold text-gray-500 mb-1">{t.role}</p>
+                  <p className="text-[10px] uppercase tracking-wider text-gray-400">{t.date}</p>
                 </div>
               </motion.div>
             ))}
