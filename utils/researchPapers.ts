@@ -45,7 +45,7 @@ export const researchPapersData = [
         papers: [
             {
                 id: 4,
-                title: "Protests and Polls: The Emotional Journey of Hope in Nigeria - From #EndSARS to the 2023 Elections and Aftermath.",
+                title: "Protests and Polls: The emotional journey of hope in Nigeria - From #EndSARS to the 2023 Elections and Aftermath.",
                 conferenceName: "Poster presentation at the White Rose Doctoral Training Partnership Conference",
                 location: "Sheffield, UK",
                 url: "",

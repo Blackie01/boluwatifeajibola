@@ -40,7 +40,7 @@ const publicationGroups = [
     category: "Technology, Development, and Civic Innovation",
     items: [
       {
-        title: "Technologically Mediated Citizen-Led Welfarism in Nigeria",
+        title: "Technologically mediated citizen-Led welfarism in Nigeria",
         source: "Routledge, 2023 — Book contribution",
         description: "My contribution here explores how citizens are harnessing digital technologies to organise welfare and support systems outside formal state structures.",
         linkText: "Find the book",
@@ -59,7 +59,7 @@ const publicationGroups = [
     category: "Public Engagement and Commentary",
     items: [
       {
-        title: "#EndSARS and #RejectFinanceBill: Patterns of Protest Across Africa",
+        title: "#EndSARS and #RejectFinanceBill: Patterns of protest across Africa",
         source: "Africa at LSE Blog, 2024",
         description: "This piece reflects on emerging patterns of protest across African contexts, drawing connections between movements in Nigeria and Kenya.",
         linkText: "Read article",
@@ -78,7 +78,7 @@ export default function FeaturedPublications({ theme = "dark" }: { theme?: "ligh
           className={`text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight ${isLight ? "text-black" : "text-white"} mb-24`}
           style={{ fontFamily: "var(--font-outfit), sans-serif" }}
         >
-          Featured publications
+          Featured Publications
         </h2>
 
         <div className="flex flex-col gap-24">

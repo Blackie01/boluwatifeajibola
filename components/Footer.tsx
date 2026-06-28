@@ -7,6 +7,7 @@ import ActionText from "./ActionText";
 
 const navLinks = [
   { name: "About", href: "/about" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Research", href: "/research" },
   { name: "Publications", href: "/publications" },
   { name: "Creative Practice", href: "/creative-practice" },
@@ -151,12 +152,21 @@ export default function Footer() {
                 Researcher, creative, and public intellectual exploring power,
                 systems, and governance across academic and civic spaces.
               </p>
-              <a
-                href="mailto:hello@boluajibola.com"
-                className="text-white hover:text-[#d4af37] transition-colors duration-300 font-light text-lg w-max"
-              >
-                hello@boluajibola.com
-              </a>
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href="mailto:hello@boluajibola.com"
+                  className="text-white hover:text-[#d4af37] transition-colors duration-300 font-light text-lg w-max"
+                >
+                  hello@boluajibola.com
+                </a>
+                <span className="text-[#666] hidden sm:block">•</span>
+                <Link
+                  href="/contact"
+                  className="text-white hover:text-[#d4af37] transition-colors duration-300 font-light text-lg w-max"
+                >
+                  Contact
+                </Link>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-12 sm:gap-24 w-full md:w-auto">

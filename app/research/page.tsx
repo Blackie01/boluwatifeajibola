@@ -84,7 +84,7 @@ export default function ResearchPage() {
 
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 pb-24">
         <PageTitle
-          title="My research"
+          title="My Research"
           subTitle="Academic & Independent Research"
         />
 

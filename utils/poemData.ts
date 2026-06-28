@@ -9,7 +9,7 @@ export interface Poem {
 export const poems: Poem[] = [
   {
     id: "echoes-from-japa",
-    title: "Echoes from JAPA: Black Power on the loose",
+    title: "Echoes from JAPA: Black Power on the Loose",
     image: "/japa-travel.jpg",
     orientation: "landscape",
     stanzas: [

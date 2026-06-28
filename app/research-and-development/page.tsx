@@ -121,7 +121,7 @@ export default function ResearchAndDevelopmentPage() {
                 <MethodsApplied 
                     theme="light"
                     columns={1}
-                    title="My distinctive approach"
+                    title="My Distinctive Approach"
                     description="My approach to Research and Development is shaped by three things. This combination allows me to support research development in a way that is strategic and attentive to both scholarly quality and real-world relevance."
                     items={[
                         { title: "My understanding of the intellectual life of research." },

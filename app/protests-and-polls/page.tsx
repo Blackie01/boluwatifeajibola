@@ -111,7 +111,7 @@ export default function ProtestsAndPolls() {
             </section>
 
             <section id="significance" className="scroll-mt-32">
-              <h2 className="text-white text-2xl font-medium mb-6 uppercase font-outfit">
+              <h2 className="text-white text-2xl font-medium mb-6 font-outfit">
                 Significance
               </h2>
               <div className="flex flex-col gap-6">
@@ -169,7 +169,7 @@ export default function ProtestsAndPolls() {
               <div className="flex flex-col gap-12">
                 <div>
                   <h3 className="text-white text-lg font-medium mb-4">
-                    Poster presentation at the 2025 WRDTP Conference
+                    Poster presentation at the 2025 WRDTP conference
                   </h3>
                   <p className="mb-6">
                     This poster visualises hope as vehicling emotional currents
@@ -179,7 +179,7 @@ export default function ProtestsAndPolls() {
                   <div className="w-full relative border border-white/10 rounded-sm overflow-hidden bg-white/5">
                     <Image
                       src="/poster-design.png"
-                      alt="Poster Presentation at the 2025 WRDTP Conference"
+                      alt="Poster Presentation at the 2025 WRDTP conference"
                       width={800}
                       height={1131}
                       className="w-full h-auto"

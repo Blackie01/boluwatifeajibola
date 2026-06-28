@@ -71,7 +71,7 @@ export const professionalJourneyData = [
 ];
 
 export const professionalJourneySummary = {
-  title: "Professional journey",
+  title: "Professional Journey",
   paragraphs: [
     "My professional experience spans research, impact development, and international consultancy, with a focus on translating knowledge into practice and policy. From being a Graduate and Administrative Assistant at Redeemers University, Nigeria, whilst I completed my National Youth Service in 2019, to being a research and impact manager at the University of Leeds, UK, I have contributed towards optimising research performance and productivity. In my ongoing role at the University of Leeds I contribute to shaping research strategies, strengthening pathways through which research can inform policy, practice, and real-world change beyond academia, as well as promoting impact literacy. My successes in the field of research and impact development reflect my commitment to translating knowledge generated through research into tangible societal benefit.",
     "Beyond working in academic institutions, I have contributed to research and consultancy projects with organisations such as the International Federation of Red Cross and Red Crescent Societies (IFRC), the International Council of Voluntary Agencies (ICVA), Banyan Global, Open Society Foundations, and Yiaga Africa, among others. I have worked on issues ranging from digital governance to humanitarian coordination, development policy, and social movement solidarities."

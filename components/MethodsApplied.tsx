@@ -31,7 +31,7 @@ export interface MethodsAppliedProps {
 
 export default function MethodsApplied({ 
   theme = "dark",
-  title = "Methods applied",
+  title = "Methods Applied",
   description = "My research combines ethnographic, qualitative, and mixed-method approaches to examine how political, social, and institutional dynamics unfold in real-world contexts. My methodological approach is guided by an interest in lived experience, political meaning-making, and the role of discourse, emotion and symbols in bridging and shaping contentious experiences.",
   items = defaultMethods,
   columns = 2

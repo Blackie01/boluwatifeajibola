@@ -8,7 +8,7 @@ const conferencePapersData = [
     year: "2026",
     papers: [
       {
-        title: "When the Protector Becomes the Perpetrator: The Lekki Massacre, Moral Shocks and the (De)mobilisation of Democratic Publics in Nigeria.",
+        title: "When the protector becomes the perpetrator: The Lekki Massacre, moral shocks and the (de)mobilisation of Democratic Publics in Nigeria.",
         conference: "Conference of the Canadian Association of African Studies, Toronto, Canada."
       },
       {
@@ -25,7 +25,7 @@ const conferencePapersData = [
     year: "2025",
     papers: [
       {
-        title: "Protests and Polls: The Emotional Journey of Hope in Nigeria - From #EndSARS to the 2023 Elections and Aftermath.",
+        title: "Protests and Polls: The emotional journey of hope in Nigeria - From #EndSARS to the 2023 elections and aftermath.",
         conference: "Poster presentation at the White Rose Doctoral Training Partnership Conference, Sheffield, UK."
       },
       {
@@ -81,7 +81,7 @@ const conferencePapersData = [
     year: "2021",
     papers: [
       {
-        title: "Contemporary social movements and Violence: Situating digital technologies and discursive exchanges between.",
+        title: "Contemporary social movements and violence: Situating digital technologies and discursive exchanges between.",
         conference: "Political Studies Association Early Career Network (PSA-ECN) Conference, UK, July."
       },
       {

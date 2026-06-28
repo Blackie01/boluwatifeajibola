@@ -14,7 +14,7 @@ export interface ResearchFuturesPosterProps {
 }
 
 export default function ResearchFuturesPoster({
-    title = "Building better research futures",
+    title = "Building Better Research Futures",
     imageSrc = "/bsharp-nexus.jpeg",
     imageAlt = "Building better research futures",
     paragraphs = [
