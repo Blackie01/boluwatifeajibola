@@ -209,7 +209,7 @@ export default function SelectedResearch() {
 
               <div>
                 <ActionText
-                  href="/protest-and"
+                  href="/protests-and-polls"
                   text="Explore more"
                   theme="light"
                 />

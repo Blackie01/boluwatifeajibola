@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import PageTitle from "@/components/PageTitle"
 import ChronologicalDisplay from "@/components/ChronologicalDisplay"
-import { educationData, professionalJourneyData, professionalJourneySummary, creativeSummary, oneGoalSummary, onePhilosophySummary } from "@/utils/data"
+import { educationData, professionalJourneyData, professionalJourneySummary, creativeSummary, oneGoalSummary } from "@/utils/data"
 import SummarySectionDisplay from "@/components/SummarySectionDisplay"
 import AwardsSection from "@/components/AwardsSection"
 import MembershipsSection from "@/components/MembershipsSection"
@@ -17,7 +17,7 @@ export default function About() {
         {/* Intro Section */}
         <PageTitle
             title="About"
-            subTitle="Researcher • Impact and Public Engagement Professional • Creative Practitioner"
+            subTitle="Researcher . Research & Development (R&D) Professional . Creative Practitioner"
         />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-32 mt-16 lg:mt-0">
           <motion.div 
@@ -57,7 +57,7 @@ export default function About() {
             className="lg:col-span-8 max-w-2xl text-[18px] "
           >
             <p className="text-[#a0a0a0] leading-relaxed mb-6">
-              My work intersects research, impact, public engagement, and creative expression to understand and demonstrate how everyday desires for development and change move between spaces where they are studied and places where they are lived.
+              My work intersects research, R&D, impact, and creative expression to understand and demonstrate how everyday desires for development and change move between spaces where they are studied and places where they are lived.
             </p>
             <p className="text-[#a0a0a0] leading-relaxed mb-6">
               This forms the basis of the questions I explore across the interconnected worlds of scholarship, creativity, civic action and faith.

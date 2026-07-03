@@ -73,7 +73,7 @@ export const professionalJourneyData = [
 export const professionalJourneySummary = {
   title: "Professional Journey",
   paragraphs: [
-    "My professional experience spans research, impact development, and international consultancy, with a focus on translating knowledge into practice and policy. From being a Graduate and Administrative Assistant at Redeemers University, Nigeria, whilst I completed my National Youth Service in 2019, to being a research and impact manager at the University of Leeds, UK, I have contributed towards optimising research performance and productivity. In my ongoing role at the University of Leeds I contribute to shaping research strategies, strengthening pathways through which research can inform policy, practice, and real-world change beyond academia, as well as promoting impact literacy. My successes in the field of research and impact development reflect my commitment to translating knowledge generated through research into tangible societal benefit.",
+    "My professional experience spans research, (R&D), impact development, and international consultancy, with a focus on translating knowledge into practice and policy. From being a Graduate and Administrative Assistant at Redeemers University, Nigeria, whilst I completed my National Youth Service in 2019, to being a research and impact manager at the University of Leeds, UK, I have contributed towards optimising research performance and productivity. In my ongoing role at the University of Leeds I contribute to shaping research strategies, strengthening pathways through which research can inform policy, practice, and real-world change beyond academia, as well as promoting impact literacy. My successes in the field of research and impact development reflect my commitment to translating knowledge generated through research into tangible societal benefit.",
     "Beyond working in academic institutions, I have contributed to research and consultancy projects with organisations such as the International Federation of Red Cross and Red Crescent Societies (IFRC), the International Council of Voluntary Agencies (ICVA), Banyan Global, Open Society Foundations, and Yiaga Africa, among others. I have worked on issues ranging from digital governance to humanitarian coordination, development policy, and social movement solidarities."
   ],
   imageSrc: "/bsharp-philosophy.jpg",
@@ -97,21 +97,12 @@ export const oneGoalSummary = {
   title: "ONE GOAL. ONE PHILOSOPHY",
   paragraphs: [
     "Across all these experiences – from research to creative practice and public engagement – I have been motivated by a core objective: contributing to deeper understanding of how societies navigate questions of governance, collective action, and change.",
-    "When evidence meets creativity, renewed knowledge to drive meaningful change emerges"
+    "The intersection of evidence and creativity produces renewed knowledge to drive meaningful change."
   ],
   imageSrc: "/bsharp-one-goal.jpg",
   imageAlt: "One goal",
   accentTitlePart: "ONE PHILOSOPHY",
   accentParagraphIndex: 1
-};
-
-export const onePhilosophySummary = {
-  title: "ONE PHILOSOPHY",
-  paragraphs: [
-    "When evidence meets creativity, renewed knowledge to drive meaningful change emerges"
-  ],
-  imageSrc: "/bsharp-philosophy.jpg",
-  imageAlt: "One philosophy"
 };
 
 export const awardsData = [
@@ -192,7 +183,8 @@ export const awardsData = [
     logo: "2018",
     desc: [
       "2018: J. Olanipekun Akintunde prizes for the Best Graduating Student, Department of Political Science.",
-      "2018: Professor Leo Dare prize for the Best Student with the overall result, Department of Political Science."
+      "2018: Professor Leo Dare prize for the Best Student with the overall result, Department of Political Science.",
+      "2026: Ife Political Science Ambassadors Award – for contribution to the growth of the Department of Political Science and for being an exemplary leader to the younger generation of political science students."
     ]
   }
 ];
