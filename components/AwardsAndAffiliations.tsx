@@ -7,25 +7,25 @@ const items = [
     id: "oau",
     name: "OAU",
     logo: "/org-logos/Obafemi Awolowo University.png",
-    text: "Collaborated on foundational research and educational outreach in political science.",
+    text: "Political Science Ambassadors Awardee.",
   },
   {
     id: "lse",
     name: "LSE",
     logo: "/org-logos/London School of Economics LSE.png",
-    text: "Participated in high-level policy discussions and presented at the leading Africa Summit.",
+    text: "Firoz and Najma Lalji Foundation Scholar.",
   },
   {
     id: "york",
     name: "YORK",
     logo: null,
-    text: "Conducted extensive doctoral research focusing on political dynamics and civil resistance.",
+    text: "Doctoral researcher in Politics.",
   },
   {
     id: "psa",
     name: "PSA",
     logo: "/org-logos/Political Studies Association Early Career Network PSA ECN.webp",
-    text: "Presented key academic papers at the Political Studies Association annual conferences.",
+    text: "Best Potential Research Award winner.",
   },
   {
     id: "dsa",
@@ -37,37 +37,43 @@ const items = [
     id: "esrc",
     name: "ESRC (UKRI)",
     logo: "/org-logos/Economic and Social Research Council ESRC.png",
-    text: "Awarded a prestigious, fully-funded research grant to support in-depth political studies.",
+    text: "ESRC-funded doctoral researcher.",
   },
   {
     id: "gld",
     name: "GLD",
     logo: "/org-logos/Governance and Local Development Institute GLD.svg",
-    text: "Partnered on sub-national governance research and local development policy analysis.",
+    text: "Funded International research workshop participant.",
   },
   {
     id: "firoz",
     name: "Firoz and Najma Lalji Foundation",
     logo: null,
-    text: "Received support and funding for advancing African-led initiatives and research.",
+    text: "Fully funded LSE master’s scholar.",
   },
   {
     id: "commonwealth",
     name: "Commonwealth",
     logo: "/org-logos/Commonwealth Commission UK.png",
-    text: "Recognized as a Commonwealth Scholar for outstanding academic and leadership potential.",
+    text: "Commonwealth Shared Scholarship awardee (un-utilised).",
   },
   {
     id: "wrdtp",
     name: "WRDTP",
     logo: "/org-logos/White Rose Doctoral Training Partnership WRDTP.jpg",
-    text: "Benefited from advanced interdisciplinary training as part of the doctoral partnership.",
+    text: "White Rose DTP pathway award holder.",
   },
   {
     id: "rcf",
     name: "RCF",
     logo: null,
-    text: "Led youth capacity-building programs, emphasizing community engagement and leadership.",
+    text: "Awarded Best Guitarist on campus.",
+  },
+  {
+    id: "taiwan",
+    name: "Taiwan",
+    logo: "/org-logos/Taiwan Foundation for Democracy TFD.png",
+    text: "International travel award recipient."
   }
 ];
 

@@ -42,7 +42,7 @@ export default function EditorialImage({
             alt={alt} 
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 ease-out scale-105 group-hover:scale-100"
+            className="object-cover filter grayscale transition-all duration-700 ease-out scale-105 group-hover:scale-100"
             priority
           />
           <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#d4af37] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
