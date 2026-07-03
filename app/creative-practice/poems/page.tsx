@@ -30,7 +30,7 @@ export default function PoemsGallery() {
                                     src={poem.image}
                                     alt={poem.title}
                                     fill
-                                    className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 ease-out scale-105 group-hover:scale-100"
+                                    className="object-cover filter grayscale transition-all duration-700 ease-out scale-105 group-hover:scale-100"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 />
                                 {/* Hover Border Accent */}

@@ -159,13 +159,25 @@ export default function SpeakingAndEvents() {
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
           className="w-full relative"
         >
-          {/* Fixed aspect ratio to show the full height of the image without cropping */}
-          <EditorialImage
-            src="/bsharp-collage-1b.png"
-            alt="Speaking and Events Experience Collage"
-            aspectRatio="aspect-[4257/2355]"
-            className="border-0 rounded-none w-full"
-          />
+          {/* Fixed aspect ratio to show the full height of the images without cropping */}
+          <div className="w-full aspect-[4257/2355] flex flex-row gap-2 md:gap-4">
+            <div className="w-[65%] h-full">
+              <EditorialImage
+                src="/speak/speak-1.jpeg"
+                alt="Speaking and Events 1"
+                aspectRatio="h-full"
+                className="border-0 rounded-none w-full"
+              />
+            </div>
+            <div className="w-[35%] h-full">
+              <EditorialImage
+                src="/speak/speak-2.jpeg"
+                alt="Speaking and Events 2"
+                aspectRatio="h-full"
+                className="border-0 rounded-none w-full"
+              />
+            </div>
+          </div>
         </motion.div>
 
         {/* P4: Closing Emphasize */}

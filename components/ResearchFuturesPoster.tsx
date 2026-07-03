@@ -9,8 +9,6 @@ export interface ResearchFuturesPosterProps {
     imageSrc?: string;
     imageAlt?: string;
     paragraphs?: string[];
-    ctaText?: string;
-    ctaHref?: string;
 }
 
 export default function ResearchFuturesPoster({
@@ -21,8 +19,6 @@ export default function ResearchFuturesPoster({
         "As a Research and Development professional, I am committed to creating the conditions for excellent research to happen, helping ideas mature, helping researchers collaborate well, helping institutions use evidence intelligently, and helping organisations build the capacity to respond to complex problems.",
         "If you are developing a proposal, building a research strategy, seeking funding, strengthening partnerships, or looking to improve how research is planned and supported, I would be glad to explore how I can contribute."
     ],
-    ctaText = "Let's work together",
-    ctaHref = "/contact"
 }: ResearchFuturesPosterProps) {
     return (
         <section className="relative w-full py-16 md:py-24 bg-white overflow-hidden">
@@ -67,12 +63,6 @@ export default function ResearchFuturesPoster({
                             </p>
                         ))}
                     </div>
-
-                    <ActionText 
-                        href={ctaHref} 
-                        text={ctaText} 
-                        theme='light'
-                    />
                 </motion.div>
                 
             </div>

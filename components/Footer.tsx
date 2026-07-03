@@ -55,17 +55,17 @@ const pageContentMap: Record<
     actionLink: "/contact",
   },
   "/research-and-development": {
-    title: "Partner On Research",
+    title: "Get in touch",
     subtitle:
-      "Looking to collaborate on rigorous, impact-driven research and policy analysis?",
-    actionCopy: "Discuss a project",
+      "Building a proposal, partnership, or research strategy?",
+    actionCopy: "Let's talk",
     actionLink: "/contact",
   },
   "/publications": {
-    title: "Commission A Piece",
+    title: "Get in touch",
     subtitle:
-      "Interested in rigorous analysis, a comprehensive report, or written commentary?",
-    actionCopy: "Request a piece",
+      "Have a question about my writing or research?",
+    actionCopy: "Get in touch",
     actionLink: "/contact",
   },
   "/impact-and-engagement": {
@@ -78,7 +78,7 @@ const pageContentMap: Record<
   "/speaking-and-events": {
     title: "Book Me",
     subtitle:
-      "Need a speaker or MC who brings energy, intelligence, and presence to your event?",
+      "Need a speaker, facilitator, moderator, or MC?",
     actionCopy: "Send an invite",
     actionLink: "/contact",
   },
@@ -86,7 +86,7 @@ const pageContentMap: Record<
     title: "Create Together",
     subtitle:
       "Looking to weave storytelling, poetry, or music into your next project?",
-    actionCopy: "Start a project",
+    actionCopy: "Get in touch",
     actionLink: "/contact",
   },
   "/creative-practice/poems": {
@@ -98,9 +98,13 @@ const pageContentMap: Record<
   },
 };
 
+const pathsWithPrefooterDisabled = ["/contact"]
+
 export default function Footer() {
   const pathname = usePathname() || "/";
   const content = pageContentMap[pathname] || pageContentMap["/"];
+
+  const isPrefooterDisabled = pathsWithPrefooterDisabled.includes(pathname)
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -108,39 +112,41 @@ export default function Footer() {
 
   return (
     <>
-      <section className="w-full bg-white text-[#0a0a0a] py-20 px-6 md:px-12 lg:px-24 border-t border-[#0a0a0a]/10 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            key={pathname}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-10% 0px" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <h2
-              className="text-[32px] md:text-[40px] leading-[1.2] font-medium tracking-tight uppercase mb-8"
-              style={{ fontFamily: "var(--font-outfit), sans-serif" }}
+      <section className={` ${!isPrefooterDisabled && "py-20 border-t border-[#0a0a0a]/10"} w-full bg-white text-[#0a0a0a] px-6 md:px-12 lg:px-24 relative z-10 `}>
+        {!isPrefooterDisabled && 
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              key={pathname}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10% 0px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              {content.title}
-            </h2>
-            <p className="text-lg md:text-xl text-[#666666] leading-relaxed mb-12 max-w-2xl font-light">
-              {content.subtitle}
-            </p>
-
-            <div className="flex flex-col md:flex-row flex-wrap gap-12 md:gap-20">
-              <div
-                className="text-2xl md:text-3xl font-light"
-                style={{ fontFamily: "var(--font-outfit)" }}
+              <h2
+                className="text-[32px] md:text-[40px] leading-[1.2] font-medium tracking-tight uppercase mb-8"
+                style={{ fontFamily: "var(--font-outfit), sans-serif" }}
               >
-                <ActionText
-                  text={content.actionCopy}
-                  href={content.actionLink}
-                  theme="light"
-                />
+                {content.title}
+              </h2>
+              <p className="text-lg md:text-xl text-[#666666] leading-relaxed mb-12 max-w-2xl font-light">
+                {content.subtitle}
+              </p>
+
+              <div className="flex flex-col md:flex-row flex-wrap gap-12 md:gap-20">
+                <div
+                  className="text-2xl md:text-3xl font-light"
+                  style={{ fontFamily: "var(--font-outfit)" }}
+                >
+                  <ActionText
+                    text={content.actionCopy}
+                    href={content.actionLink}
+                    theme="light"
+                  />
+                </div>
               </div>
-            </div>
-          </motion.div>
-        </div>
+            </motion.div>
+          </div>
+        }
       </section>
       <footer className="w-full bg-[#0C0C0C] text-white pt-24 pb-8 px-6 md:px-12 lg:px-24 border-t border-white/10 relative z-50 mt-auto">
         <div className="max-w-7xl mx-auto flex flex-col gap-16 md:gap-24">
@@ -156,8 +162,7 @@ export default function Footer() {
                 </h3>
               </Link>
               <p className="text-[#a0a0a0] font-light leading-relaxed">
-                Researcher, creative, and public intellectual exploring power,
-                systems, and governance across academic and civic spaces.
+                Researcher, creative, and research and development (R&D) professional committed to bridging research, strategy, and creativity to reimagine possibilities.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a

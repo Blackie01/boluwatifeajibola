@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import ActionText from "@/components/ActionText"
 import PageTitle from "@/components/PageTitle"
+import EditorialImage from "@/components/EditorialImage"
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -45,52 +46,45 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           
-          {/* Left Column: Info & Context */}
+          {/* Left Column: Image */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 flex flex-col gap-12"
+            className="lg:col-span-5 relative h-full min-h-[500px]"
           >
-            <div className="flex flex-col gap-6">
-              <div className="h-[1px] w-12 bg-white/20" />
-              <p className="text-[18px] text-[#a0a0a0] font-light leading-relaxed">
-                I am always open to discussing research collaborations, speaking engagements, creative performances, and public interventions.
-              </p>
-            </div>
+            <EditorialImage
+              src="/bsharp-contact.jpg"
+              alt="Bolu Ajibola Contact"
+              aspectRatio="aspect-[3/4] lg:h-full lg:absolute lg:inset-0"
+              className="border-0 rounded-none w-full"
+            />
+          </motion.div>
 
-            <div className="flex flex-col gap-10 pt-8 border-t border-white/10">
+          {/* Right Column: Info & Form */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7 flex flex-col gap-12"
+          >
+            {/* Intro Text & Email */}
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-6">
+                <div className="h-[1px] w-12 bg-white/20" />
+                <p className="text-[18px] text-[#a0a0a0] font-light leading-relaxed">
+                  I am always open to discussing research collaborations, speaking engagements, creative performances, and public interventions.
+                </p>
+              </div>
+
               <div className="flex flex-col gap-2">
                 <p className="text-[#666] uppercase tracking-widest text-xs" style={{ fontFamily: "var(--font-outfit)" }}>Email</p>
                 <div className="text-xl md:text-2xl font-light" style={{ fontFamily: "var(--font-outfit)" }}>
                   <ActionText text="hello@boluajibola.com" href="mailto:hello@boluajibola.com" theme="dark" />
                 </div>
               </div>
-
-              <div className="flex flex-col gap-2">
-                <p className="text-[#666] uppercase tracking-widest text-xs" style={{ fontFamily: "var(--font-outfit)" }}>Socials</p>
-                <div className="flex flex-col gap-4 mt-2">
-                  <a href="https://www.linkedin.com/in/boluajibola/" target="_blank" rel="noopener noreferrer" className="text-base text-white/80 hover:text-white transition-colors duration-300 w-max">
-                    LinkedIn
-                  </a>
-                  <a href="https://x.com/_boluajibola?s=11" target="_blank" rel="noopener noreferrer" className="text-base text-white/80 hover:text-white transition-colors duration-300 w-max">
-                    Twitter / X
-                  </a>
-                  <a href="https://www.instagram.com/_boluajibola/" target="_blank" rel="noopener noreferrer" className="text-base text-white/80 hover:text-white transition-colors duration-300 w-max">
-                    Instagram
-                  </a>
-                </div>
-              </div>
             </div>
-          </motion.div>
 
-          {/* Right Column: Contact Form */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7"
-          >
             <form onSubmit={handleSubmit} className="flex flex-col gap-10">
               <div className="relative">
                 <input 
@@ -169,6 +163,22 @@ export default function Contact() {
                 )}
               </div>
             </form>
+
+            {/* Socials */}
+            <div className="flex flex-col gap-2 pt-8 border-t border-white/10 mt-4">
+              <p className="text-[#666] uppercase tracking-widest text-xs" style={{ fontFamily: "var(--font-outfit)" }}>Socials</p>
+              <div className="flex flex-row flex-wrap gap-6 mt-2">
+                <a href="https://www.linkedin.com/in/boluajibola/" target="_blank" rel="noopener noreferrer" className="text-base text-white/80 hover:text-white transition-colors duration-300 w-max">
+                  LinkedIn
+                </a>
+                <a href="https://x.com/_boluajibola?s=11" target="_blank" rel="noopener noreferrer" className="text-base text-white/80 hover:text-white transition-colors duration-300 w-max">
+                  Twitter / X
+                </a>
+                <a href="https://www.instagram.com/_boluajibola/" target="_blank" rel="noopener noreferrer" className="text-base text-white/80 hover:text-white transition-colors duration-300 w-max">
+                  Instagram
+                </a>
+              </div>
+            </div>
           </motion.div>
 
         </div>
