@@ -184,16 +184,22 @@ export default function ResearchPage() {
         </div>
       </div>
 
-      <div className="bg-white text-black w-full relative z-10  pt-12 md:pt-24 mt-24 pb-24">
+      <div className="bg-white text-black w-full relative z-10 py-32">
         <div id="researchThemes">
           <ResearchThemes theme="light" />
         </div>
         <div id="methodsApplied">
           <MethodsApplied theme="light" />
         </div>
+      </div>
+
+      <div className="bg-[#0C0C0C] w-full relative z-10">
         <div id="featuredPublications">
-          <FeaturedPublications theme="light" />
+          <FeaturedPublications theme="dark" />
         </div>
+      </div>
+
+      <div className="bg-white text-black w-full relative z-10 pb-24 pt-24 md:pt-32">
         <div id="ongoingProjects">
           <OngoingProjects theme="light" />
         </div>

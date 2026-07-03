@@ -68,8 +68,7 @@ export default function ProtestsAndPolls() {
           {/* Left Content Column */}
           <div className="lg:col-span-8 text-[#a0a0a0] text-[18px] leading-relaxed flex flex-col gap-16">
             <p className="text-[22px] md:text-[28px] text-white font-light leading-snug font-outfit">
-              How do protest movements shape elections—and how do elections
-              reshape protest movements?
+              How do social movements shape elections – and how do elections reshape movements? 
             </p>
 
             <section id="about" className="scroll-mt-32">
@@ -262,10 +261,20 @@ export default function ProtestsAndPolls() {
                 <div className="col-span-1 text-[#a0a0a0] text-xs tracking-wider uppercase pt-1">
                   Affiliation
                 </div>
-                <div className="col-span-2 text-white text-sm leading-relaxed text-right">
-                  Department of Politics and International Relations,
-                  <br />
-                  University of York
+                <div className="col-span-2 text-white text-sm leading-relaxed text-right flex flex-col items-end gap-2">
+                  <span>
+                    Department of Politics and International Relations,
+                    <br />
+                    University of York
+                  </span>
+                  <div className="w-[120px] h-[40px] relative mt-1">
+                    <Image
+                      src="/org-logos/University of York logo.png"
+                      alt="University of York"
+                      fill
+                      className="object-contain object-right grayscale invert mix-blend-screen opacity-90"
+                    />
+                  </div>
                 </div>
 
                 <div className="col-span-1 text-[#a0a0a0] text-xs tracking-wider uppercase pt-1">

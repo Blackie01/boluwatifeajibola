@@ -41,10 +41,17 @@ const pageContentMap: Record<
     actionLink: "/contact",
   },
   "/research": {
-    title: "Partner On Research",
+    title: "Let’s connect ",
     subtitle:
-      "Looking to collaborate on rigorous, impact-driven research and policy analysis?",
-    actionCopy: "Discuss a project",
+      "Interested in collaborating? Let’s turn shared questions into meaningful research.",
+    actionCopy: "Get in touch",
+    actionLink: "/contact",
+  },
+   "/protests-and-polls": {
+    title: "Let’s work together",
+    subtitle:
+      "If this work resonates with your research, activism, or practice",
+    actionCopy: "Let's connect",
     actionLink: "/contact",
   },
   "/research-and-development": {

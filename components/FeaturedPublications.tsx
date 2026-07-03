@@ -72,7 +72,7 @@ const publicationGroups = [
 export default function FeaturedPublications({ theme = "dark" }: { theme?: "light" | "dark" }) {
   const isLight = theme === "light";
   return (
-    <section className={`w-full py-24 md:py-32 mt-32 border-t ${isLight ? "border-black/10" : "border-white/10"}`}>
+    <section className={`w-full py-24 md:py-32 border-t ${isLight ? "border-black/10" : "border-white/10"}`}>
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12">
         <h2 
           className={`text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight ${isLight ? "text-black" : "text-white"} mb-24`}

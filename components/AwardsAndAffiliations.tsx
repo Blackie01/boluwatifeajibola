@@ -18,7 +18,7 @@ const items = [
   {
     id: "york",
     name: "YORK",
-    logo: null,
+    logo:"/org-logos/University of York logo.png",
     text: "Doctoral researcher in Politics.",
   },
   {

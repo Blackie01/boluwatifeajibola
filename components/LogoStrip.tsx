@@ -15,6 +15,8 @@ const orgLogos = [
   "/org-logos/Taiwan Foundation for Democracy TFD.png",
   "/org-logos/Independent National Electoral Commission INEC.jpg",
   "/org-logos/French Institute for Research in Africa IFRA.png",
+  "/org-logos/University of York logo.png",
+  "/org-logos/university-of-leeds.png"
 ];
 
 // 11 logos. Duplicate to 22 for the base set, so it's divisible by 2.
