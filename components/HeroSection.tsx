@@ -5,10 +5,9 @@ import { motion, useAnimate } from "framer-motion";
 import ActionText from "./ActionText";
 
 const phrases = [
-  "Researcher of Democracy",
+  "Researcher of Development - Democracy Nexus",
+  "Social Change Researcher",
   "Research Impact Specialist",
-  "Social Change Research Specialist",
-  "Developer Research Specialist",
   "£20M+ Research Funding Supported",
   "ESRC WRDTP Scholar",
   "LSE Firoz & Najma Lalji Scholar",
@@ -30,7 +29,7 @@ function RevealText() {
         await animate(".caret-bar", { left: "100%" }, { duration: 1.2, ease: "easeInOut" });
         
         // Pause to read
-        await new Promise((resolve) => setTimeout(resolve, 2500));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         
         if (!isMounted) break;
         
@@ -120,10 +119,12 @@ export default function HeroSection() {
           */}
           
           <h1 
-            className="text-white text-[28px] md:text-5xl font-medium leading-[1.1] tracking-tight mb-3 md:mb-6"
+            className="text-white text-[28px] md:text-5xl font-medium leading-[1.1] tracking-tight mb-3 md:mb-6 min-h-[68px] md:min-h-[110px] flex flex-col justify-end"
             style={{ fontFamily: "var(--font-outfit), sans-serif" }}
           >
-            <RevealText />
+            <div>
+              <RevealText />
+            </div>
           </h1>
           
           <motion.p 

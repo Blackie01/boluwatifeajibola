@@ -17,11 +17,11 @@ That is my edge. Turning ideas into public value and social change.`;
       <div className="relative h-full max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
         
         {/* Left Side */}
-        <div className="lg:sticky lg:top-32 self-start lg:col-span-4 flex flex-col justify-start pt-2">
-          <p className="text-sm md:text-base text-black font-semibold mb-4">
+        <div className="text-[18px] md:text-[20px] lg:sticky lg:top-32 self-start lg:col-span-4 flex flex-col justify-start pt-2">
+          <p className="text-black font-semibold mb-4">
             Ever wondered how ideas move across disciplines, sectors, and creative forms?
           </p>
-          <p className="text-sm md:text-base text-[#666666] leading-relaxed">
+          <p className="text-[#666666] leading-relaxed">
             I embody that movement. My work travels from researching the democracy–development nexus to research development, grant strategy, impact, policy engagement, and creativity.
           </p>
         </div>
@@ -36,8 +36,8 @@ That is my edge. Turning ideas into public value and social change.`;
           <LightUpText
             text={aboutText}
             styles=""
-            textClassName="text-[18px] md:text-[22px]  leading-[1.6] font-medium whitespace-pre-line"
-            activeColor="#000000"
+            textClassName="text-[18px] md:text-[20px]  leading-[1.6] font-medium whitespace-pre-line"
+            activeColor="#666666"
             inactiveColor="#E5E7EB"
           />
         </div>
