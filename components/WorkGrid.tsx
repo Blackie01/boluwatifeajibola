@@ -8,10 +8,10 @@ import ActionText from './ActionText';
 export default function WorkGrid() {
   const items = [
     {
-      title: "Research & Development",
+      title: "My Research",
       subtitle: "Explore my research at the nexus of democracy and development",
       image: "/bsharp-explore-research-new.jpg",
-      href: "/research-and-development",
+      href: "/research",
       objectPosition: "object-top"
     },
     {
