@@ -1,3 +1,6 @@
+import React from 'react';
+import Link from 'next/link';
+
 export const educationData = [
   {
     yearRange: "2024 - present",
@@ -73,8 +76,8 @@ export const professionalJourneyData = [
 export const professionalJourneySummary = {
   title: "Professional Journey",
   paragraphs: [
-    "My professional experience spans research, (R&D), impact development, and international consultancy, with a focus on translating knowledge into practice and policy. From being a Graduate and Administrative Assistant at Redeemers University, Nigeria, whilst I completed my National Youth Service in 2019, to being a research and impact manager at the University of Leeds, UK, I have contributed towards optimising research performance and productivity. In my ongoing role at the University of Leeds I contribute to shaping research strategies, strengthening pathways through which research can inform policy, practice, and real-world change beyond academia, as well as promoting impact literacy. My successes in the field of research and impact development reflect my commitment to translating knowledge generated through research into tangible societal benefit.",
-    "Beyond working in academic institutions, I have contributed to research and consultancy projects with organisations such as the International Federation of Red Cross and Red Crescent Societies (IFRC), the International Council of Voluntary Agencies (ICVA), Banyan Global, Open Society Foundations, and Yiaga Africa, among others. I have worked on issues ranging from digital governance to humanitarian coordination, development policy, and social movement solidarities."
+    <>My professional experience spans <Link href="/research" className="text-[#4a4a4a] underline hover:text-[#0a0a0a] transition-colors duration-300">research</Link>, <Link href="/research-and-development" className="text-[#4a4a4a] underline hover:text-[#0a0a0a] transition-colors duration-300">R&D</Link>, <Link href="/impact-and-engagement" className="text-[#4a4a4a] underline hover:text-[#0a0a0a] transition-colors duration-300">impact development</Link>, and international consultancy, with a focus on translating knowledge into practice and policy. From being a Graduate and Administrative Assistant at Redeemers University, Nigeria, whilst I completed my National Youth Service in 2019, to being a research and impact manager at the University of Leeds, UK, I have contributed towards optimising research performance and productivity. In my ongoing role at the University of Leeds I contribute to shaping research strategies, strengthening pathways through which research can inform policy, practice, and real-world change beyond academia, as well as promoting impact literacy. My successes in the field of research and impact development reflect my commitment to translating knowledge generated through research into tangible societal benefit.</>,
+    `Beyond working in academic institutions, I have contributed to research and consultancy projects with organisations such as the International Federation of Red Cross and Red Crescent Societies (IFRC), the International Council of Voluntary Agencies (ICVA), Banyan Global, Open Society Foundations, and Yiaga Africa, among others. I have worked on issues ranging from digital governance to humanitarian coordination, development policy, and social movement solidarities.`
   ],
   imageSrc: "/bsharp-philosophy.jpg",
   imageAlt: "Bolu Ajibola Professional",
@@ -90,7 +93,7 @@ export const creativeSummary = {
   imageSrc: "/bsharp-creative.jpg",
   imageAlt: "Research meets creativity",
   actionText: "See more here.",
-  actionLink: "/creativity"
+  actionLink: "/creative-practice"
 };
 
 export const oneGoalSummary = {
@@ -106,6 +109,13 @@ export const oneGoalSummary = {
 };
 
 export const awardsData = [
+   {
+    name: "Obafemi Awolowo University, Ile-Ife, Nigeria",
+    logo: "2026",
+    desc: [
+      "2026: Ife Political Science Ambassadors Award – for contribution to the growth of the Department of Political Science and for being an exemplary leader to the younger generation of political science students."
+    ]
+  },
   {
     name: "White Rose Doctoral Training Partnership (WRDTP), UK",
     logo: "2025",
@@ -184,7 +194,6 @@ export const awardsData = [
     desc: [
       "2018: J. Olanipekun Akintunde prizes for the Best Graduating Student, Department of Political Science.",
       "2018: Professor Leo Dare prize for the Best Student with the overall result, Department of Political Science.",
-      "2026: Ife Political Science Ambassadors Award – for contribution to the growth of the Department of Political Science and for being an exemplary leader to the younger generation of political science students."
     ]
   }
 ];
@@ -262,7 +271,7 @@ export const lookingAheadSummary = {
     "We live in times when societies are faced with overlapping and complex crises. Addressing these crises require more than evidence and academic writing. It requires strong partnerships and deliberate pathways through which evidence can influence action.",
     "I am committed to helping to build those pathways."
   ],
-  imageSrc: "/b-sharp-looking-ahead.jpeg",
+  imageSrc: "/looking-ahead-2.jpeg",
   imageAlt: "Looking Ahead",
   aspectRatio: "aspect-[4/5]"
 };

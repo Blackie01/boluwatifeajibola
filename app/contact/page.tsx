@@ -74,12 +74,12 @@ export default function Contact() {
           {/* Left Column: Image */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 relative h-full min-h-[500px]"
           >
             <EditorialImage
-              src="/bsharp-contact.jpg"
+              src="/bsharp-contact-2.png"
               alt="Bolu Ajibola Contact"
               aspectRatio="aspect-[3/4] lg:h-full lg:absolute lg:inset-0"
               className="border-0 rounded-none w-full"

@@ -14,6 +14,7 @@ import {
   reachCollaborationSummary, 
   lookingAheadSummary 
 } from "@/utils/data";
+import ActionText from "@/components/ActionText";
 
 export default function ImpactAndEngagement() {
   return (
@@ -108,6 +109,10 @@ export default function ImpactAndEngagement() {
               influence policy, improve practice, shape public conversations,
               and contribute to meaningful social change.
             </p>
+            <p className="text-[#a0a0a0] leading-relaxed mb-6 font-light">
+              This sits within my broader work in research and development (R&D).
+            </p>
+            <ActionText text="Explore my R&D work" href="/research-and-development"/>
           </motion.div>
         </div>
 

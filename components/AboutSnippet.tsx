@@ -8,8 +8,6 @@ export default function AboutSnippet() {
 
 I understand research from the inside because I produce it. I understand research development because I support proposals, funding pipelines, partnerships, and institutional strategy. I understand impact because I help evidence become useful beyond academia. And I understand audiences because I have spent years communicating through stages, music, poetry, panels, and public events.
 
-Organisations do not only need good ideas. They need ideas that can be sharpened, funded, communicated, translated, and made meaningful to the people who matter. I bring the rare ability to work across the full life of those ideas.
-
 That is my edge. Turning ideas into public value and social change.`;
 
   return (

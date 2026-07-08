@@ -29,7 +29,7 @@ const pageContentMap: Record<
   "/": {
     title: "Let’s work together ",
     subtitle:
-      "Interested in collaboration, research engagement, speaking or creative projects? Get in touch with Bolu Ajibola.",
+      "Have a question about my research or would like to collaborate?",
     actionCopy: "Get in touch",
     actionLink: "/contact",
   },

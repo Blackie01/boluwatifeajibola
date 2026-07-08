@@ -150,14 +150,14 @@ export default function SpeakingAndEvents() {
       </div>
 
       {/* Collage and Closing Emphasize */}
-      <div className="relative z-10 bg-[#0C0C0C]">
-        {/* Full Bleed Collage Image */}
+      <div className="relative z-10 bg-[#0C0C0C] pt-16 md:pt-24">
+        {/* Contained Collage Image */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "0px" }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full relative"
+          className="w-full max-w-7xl mx-auto px-6 md:px-12 relative"
         >
           {/* Fixed aspect ratio to show the full height of the images without cropping */}
           <div className="w-full aspect-[4257/2355] flex flex-row gap-2 md:gap-4">

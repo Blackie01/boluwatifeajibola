@@ -67,7 +67,7 @@ export default function Testimonials() {
                 transition={{ duration: 0.6, delay: (Object.values(t).join("").length % 3) * 0.15 }}
                 className="break-inside-avoid bg-[#f8f9fa] hover:bg-white p-8 md:p-10 rounded-[20px] border border-transparent hover:border-gray-200 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 flex flex-col h-auto cursor-pointer group"
               >
-                <p className="text-[#666666] leading-relaxed mb-8 text-[14px] md:text-[16px] font-light">"{t.text}"</p>
+                <p className="text-[#666666] leading-relaxed mb-8 text-[14px] md:text-[16px] font-light">&quot;{t.text}&quot;</p>
                 
                 <hr className="border-gray-200 mb-6 w-full" />
                 

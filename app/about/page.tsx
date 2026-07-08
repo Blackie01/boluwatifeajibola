@@ -17,7 +17,7 @@ export default function About() {
         {/* Intro Section */}
         <PageTitle
             title="About"
-            subTitle="Researcher . Research & Development (R&D) Professional . Creative Practitioner"
+            subTitle="Researcher | Research & Development (R&D) Professional | Creative Practitioner"
         />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-32 mt-16 lg:mt-0">
           <motion.div 

@@ -63,7 +63,7 @@ export default function Publications() {
         {/* Right 1/4 */}
         <div className="w-full md:w-1/4 p-10 md:p-16 flex items-start md:items-end justify-start md:justify-center relative border-b border-white/10 md:border-b-0">
           <p className="text-xl md:text-3xl font-light text-[#999] leading-snug">
-            Excellence is more than an ideal; it's a lifestyle.
+            Research excellence is more than a commitment; it's a lifestyle.
           </p>
           {/* Animated bottom horizontal (spreads right from 75vw) */}
           <motion.div
@@ -103,8 +103,8 @@ export default function Publications() {
 
         {/* Right 1/3 (Publication) */}
         <div className="w-full md:w-1/3 p-10 md:p-20 flex flex-col justify-center relative border-b border-white/10 md:border-b-0 group cursor-pointer hover:bg-white/5 transition-colors duration-500">
-          <span className="px-3 py-1 border border-white/20 rounded-full text-xs uppercase tracking-widest mb-8 w-max text-gray-400">
-            Governance
+          <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold mb-4">
+            Published Article
           </span>
           <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
             From COVID-19 to Fuel Subsidy Removal in Nigeria
@@ -149,8 +149,8 @@ export default function Publications() {
 
         {/* Mid 1/2 (Publication) */}
         <div className="w-full md:w-1/2 p-10 md:p-20 flex flex-col justify-center relative border-b md:border-b-0 border-white/10 md:border-r min-h-[300px] md:min-h-[400px] group cursor-pointer hover:bg-white/5 transition-colors duration-500">
-          <span className="px-3 py-1 border border-white/20 rounded-full text-xs uppercase tracking-widest mb-6 w-max text-gray-400">
-            Legislature
+          <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold mb-4">
+            Published Article
           </span>
           <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
             Legislative Responses in Times of Crisis{" "}
@@ -204,7 +204,7 @@ export default function Publications() {
       <div className="flex flex-col md:flex-row relative">
         <div className="w-full md:w-1/3 p-10 md:p-16 flex flex-col relative border-b md:border-b-0 border-white/10 md:border-r min-h-[350px] group cursor-pointer hover:bg-white/5 transition-colors duration-500">
           <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold mb-4">
-            Published 2023
+            Published Paper
           </span>
           <h4 className="text-2xl font-bold mb-4 leading-tight">
             Turning Public Engagement into Standard Practice
@@ -227,7 +227,7 @@ export default function Publications() {
 
         <div className="w-full md:w-1/3 p-10 md:p-16 flex flex-col relative border-b md:border-b-0 border-white/10 md:border-r min-h-[350px] bg-[#0a0a0a]/50 group cursor-pointer hover:bg-white/5 transition-colors duration-500">
           <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold mb-4">
-            Published Paper
+            Published Report
           </span>
           <h4 className="text-2xl font-bold mb-4 leading-tight">
             Digital Identity in Humanitarian Contexts{" "}
@@ -253,7 +253,7 @@ export default function Publications() {
 
         <div className="w-full md:w-1/3 p-10 md:p-16 flex flex-col relative border-b border-white/10 md:border-b-0 min-h-[350px] group cursor-pointer hover:bg-white/5 transition-colors duration-500">
           <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold mb-4">
-            Case Study
+            Conference Proceeding
           </span>
           <h4 className="text-2xl font-bold mb-4 leading-tight">
             The Quest for Development

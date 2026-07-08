@@ -6,7 +6,7 @@ const items = [
   {
     id: "oau",
     name: "OAU",
-    logo: "/org-logos/Obafemi Awolowo University.png",
+    logo: "/org-logos/oau-logo-3.png",
     text: "Political Science Ambassadors Awardee.",
   },
   {
@@ -27,12 +27,12 @@ const items = [
     logo: "/org-logos/Political Studies Association Early Career Network PSA ECN.webp",
     text: "Best Potential Research Award winner.",
   },
-  {
-    id: "dsa",
-    name: "DSA",
-    logo: null,
-    text: "Engaged in critical debates on global development, poverty, and democratic frameworks.",
-  },
+  // {
+  //   id: "dsa",
+  //   name: "DSA",
+  //   logo: null,
+  //   text: "Engaged in critical debates on global development, poverty, and democratic frameworks.",
+  // },
   {
     id: "esrc",
     name: "ESRC (UKRI)",
@@ -65,7 +65,7 @@ const items = [
   },
   {
     id: "rcf",
-    name: "RCF",
+    name: "RCF OAU",
     logo: null,
     text: "Awarded Best Guitarist on campus.",
   },
