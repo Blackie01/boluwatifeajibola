@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const stats = [
@@ -12,6 +12,8 @@ const stats = [
 ];
 
 export default function StatsMarquee() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   // Triple the array to ensure a seamless infinite loop since the item count is small
   const marqueeItems = [...stats, ...stats, ...stats];
 
@@ -58,19 +60,21 @@ export default function StatsMarquee() {
 
               {/* Expanding Hover Card */}
               <div 
-                className="absolute top-1/2 -translate-y-1/2 left-0 h-[90%] flex flex-row items-center bg-[#151515] hover:bg-[#1a1a1a] shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.8)] border border-white/5 hover:border-white/10 transition-all duration-500 rounded-sm cursor-pointer hover:z-50 overflow-hidden w-full hover:w-[320px] md:hover:w-[450px]"
+                onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                data-active={activeIndex === index}
+                className="absolute top-1/2 -translate-y-1/2 left-0 h-[90%] flex flex-row items-center bg-[#151515] hover:bg-[#1a1a1a] data-[active=true]:bg-[#1a1a1a] shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.8)] data-[active=true]:shadow-[0_10px_40px_rgba(0,0,0,0.8)] border border-white/5 hover:border-white/10 data-[active=true]:border-white/10 transition-all duration-500 rounded-sm cursor-pointer hover:z-50 data-[active=true]:z-50 overflow-hidden w-full hover:w-[320px] data-[active=true]:w-[320px] md:hover:w-[450px] md:data-[active=true]:w-[450px] group"
               >
                 
                 {/* Number Section */}
                 <div className="px-6 md:px-10 shrink-0 flex items-center justify-center transition-all duration-500 h-full">
-                  <span className="font-outfit font-bold text-3xl md:text-5xl text-white tracking-tight text-center group-hover:text-[#D4AF37] transition-colors duration-500 whitespace-nowrap">
+                  <span className="font-outfit font-bold text-3xl md:text-5xl text-white tracking-tight text-center group-hover:text-[#D4AF37] group-data-[active=true]:text-[#D4AF37] transition-colors duration-500 whitespace-nowrap">
                     {item.number}
                   </span>
                 </div>
                 
                 {/* Expandable Text Content */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 flex-1 ml-2 md:ml-4 min-w-[140px] md:min-w-[200px]">
-                  <p className="text-[13px] md:text-[15px] text-gray-400 font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 pr-6 md:pr-8">
+                <div className="opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-opacity duration-500 delay-100 flex-1 ml-2 md:ml-4 min-w-[140px] md:min-w-[200px]">
+                  <p className="text-[13px] md:text-[15px] text-gray-400 font-light leading-relaxed opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-opacity duration-500 delay-200 pr-6 md:pr-8">
                     {item.text}
                   </p>
                 </div>

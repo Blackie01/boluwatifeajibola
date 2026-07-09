@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const items = [
@@ -78,6 +78,8 @@ const items = [
 ];
 
 export default function AwardsAndAffiliations() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   // Duplicate the array to create a seamless infinite loop
   const marqueeItems = [...items, ...items];
 
@@ -117,11 +119,13 @@ export default function AwardsAndAffiliations() {
             >
               {/* Expanding Hover Card */}
               <div 
-                className="absolute top-1/2 -translate-y-1/2 left-2 md:left-4 h-[90%] flex flex-row items-center bg-[#f8f9fa] hover:bg-white hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-transparent hover:border-gray-200 transition-all duration-500 rounded-sm p-6 cursor-pointer group hover:z-50 overflow-hidden w-[calc(100%-1rem)] md:w-[calc(100%-2rem)] hover:w-[320px] md:hover:w-[450px]"
+                onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                data-active={activeIndex === index}
+                className="absolute top-1/2 -translate-y-1/2 left-2 md:left-4 h-[90%] flex flex-row items-center bg-[#f8f9fa] hover:bg-white data-[active=true]:bg-white hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] data-[active=true]:shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-transparent hover:border-gray-200 data-[active=true]:border-gray-200 transition-all duration-500 rounded-sm p-6 cursor-pointer group hover:z-50 data-[active=true]:z-50 overflow-hidden w-[calc(100%-1rem)] md:w-[calc(100%-2rem)] hover:w-[320px] data-[active=true]:w-[320px] md:hover:w-[450px] md:data-[active=true]:w-[450px]"
               >
                 
                 {/* Logo Section */}
-                <div className="w-[100px] md:w-[140px] shrink-0 flex items-center justify-center grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 h-full">
+                <div className="w-[100px] md:w-[140px] shrink-0 flex items-center justify-center grayscale opacity-60 group-hover:grayscale-0 group-data-[active=true]:grayscale-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-all duration-500 h-full">
                   {item.logo ? (
                     <img 
                       src={item.logo} 
@@ -129,18 +133,18 @@ export default function AwardsAndAffiliations() {
                       className="max-w-full max-h-[80%] object-contain mix-blend-multiply" 
                     />
                   ) : (
-                    <span className="font-outfit font-bold text-lg md:text-xl text-gray-400 group-hover:text-black uppercase tracking-widest text-center">
+                    <span className="font-outfit font-bold text-lg md:text-xl text-gray-400 group-hover:text-black group-data-[active=true]:text-black uppercase tracking-widest text-center">
                       {item.name}
                     </span>
                   )}
                 </div>
                 
                 {/* Expandable Text Content */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 flex-1 ml-6 min-w-[160px] md:min-w-[220px]">
-                  <h4 className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-black mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
+                <div className="opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-opacity duration-500 delay-100 flex-1 ml-6 min-w-[160px] md:min-w-[220px]">
+                  <h4 className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-black mb-2 opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-opacity duration-500 delay-150">
                     {item.name}
                   </h4>
-                  <p className="text-[12px] md:text-[14px] text-gray-500 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 pr-2">
+                  <p className="text-[12px] md:text-[14px] text-gray-500 leading-relaxed opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-opacity duration-500 delay-200 pr-2">
                     {item.text}
                   </p>
                 </div>
