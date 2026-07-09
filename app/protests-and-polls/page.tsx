@@ -66,7 +66,7 @@ export default function ProtestsAndPolls() {
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 relative">
           {/* Left Content Column */}
-          <div className="lg:col-span-8 text-[#a0a0a0] text-[18px] leading-relaxed flex flex-col gap-16">
+          <div className="lg:col-span-8 text-[#a0a0a0] text-base leading-relaxed flex flex-col gap-16">
             <p className="text-[22px] md:text-[28px] text-white font-light leading-snug font-outfit">
               How do social movements shape elections – and how do elections reshape movements? 
             </p>

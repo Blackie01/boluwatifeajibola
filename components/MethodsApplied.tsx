@@ -57,7 +57,7 @@ export default function MethodsApplied({
           >
             {title}
           </h2>
-          <p className={`${isLight ? "text-[#444444]" : "text-[#a0a0a0]"} text-[18px] leading-relaxed font-light`}>
+          <p className={`${isLight ? "text-[#444444]" : "text-[#a0a0a0]"} text-[16px] leading-relaxed font-light`}>
             {description}
           </p>
         </motion.div>

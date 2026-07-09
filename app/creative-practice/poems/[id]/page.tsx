@@ -43,7 +43,7 @@ export default async function Poem({ params }: { params: Promise<{ id: string }>
             </div>
 
             <div className="max-w-7xl mx-auto w-full px-6 md:px-12 pb-32">
-                <div className="max-w-3xl mx-auto text-[#a0a0a0] text-[18px] md:text-[20px] leading-relaxed flex flex-col gap-10">
+                <div className="max-w-3xl mx-auto text-[#a0a0a0] text-base leading-relaxed flex flex-col gap-10">
                     {poem.stanzas.map((stanza, idx) => (
                         <p key={idx} className="whitespace-pre-line font-light">
                             {stanza}

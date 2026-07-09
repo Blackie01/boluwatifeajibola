@@ -65,7 +65,7 @@ export default function TransferableValue() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="space-y-6 text-[#a0a0a0] text-[18px] font-light leading-relaxed mb-16"
+              className="space-y-6 text-[#a0a0a0] text-base font-light leading-relaxed mb-16"
             >
               <p>
                 The skills I bring to Research and Development are transferable across sectors, disciplines, and countries.

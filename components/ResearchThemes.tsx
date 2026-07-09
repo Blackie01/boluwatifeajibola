@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import ActionText from './ActionText';
 
 const themes = [
@@ -87,7 +86,7 @@ export default function ResearchThemes({ theme = "dark" }: { theme?: "light" | "
             </div>
 
             {/* Content Column */}
-            <div className={`w-full md:w-[60%] text-[18px] leading-relaxed ${isLight ? "text-[#444444]" : "text-[#d1d1d1]"} font-light`}>
+            <div className={`w-full md:w-[60%] text-[16px] leading-relaxed ${isLight ? "text-[#444444]" : "text-[#d1d1d1]"} font-light`}>
               {theme.content}
             </div>
           </motion.div>

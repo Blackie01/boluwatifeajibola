@@ -63,7 +63,7 @@ export default function PrinciplesSection() {
                 </h3>
             </div>
             
-            <p className="text-[#a0a0a0] text-lg leading-relaxed font-light relative z-10">
+            <p className="text-[#a0a0a0] text-base leading-relaxed font-light relative z-10">
               {p.desc}
             </p>
           </motion.div>

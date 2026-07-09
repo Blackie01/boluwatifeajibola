@@ -68,7 +68,7 @@ export default function AccordionItem({ item, isOpen, onClick, theme = 'dark' }:
              exit={{ height: 0, opacity: 0 }}
              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
-             <div className={`pb-8 ${item.logo ? 'pl-[72px] md:pl-[88px]' : 'pl-0'} pr-8 ${isLight ? 'text-gray-600' : 'text-gray-400'} text-md md:text-lg leading-relaxed font-light`}>
+             <div className={`pb-8 ${item.logo ? 'pl-[72px] md:pl-[88px]' : 'pl-0'} pr-8 ${isLight ? 'text-gray-600' : 'text-gray-400'} text-base leading-relaxed font-light`}>
                <motion.div
                  initial={{ y: 20, opacity: 0 }}
                  animate={{ y: 0, opacity: 1 }}

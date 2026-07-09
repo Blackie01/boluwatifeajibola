@@ -32,7 +32,7 @@ export default function ImpactProjectsSection() {
             </h2>
             <div className="h-[2px] w-[80px] bg-[#d4af37] mb-8" />
             
-            <p className="text-[#a0a0a0] text-lg leading-relaxed font-light">
+            <p className="text-[#a0a0a0] text-[18px] leading-relaxed font-light">
               My personal research projects have also produced, and continues to produce, significant impact. I describe some of these below.
             </p>
           </motion.div>

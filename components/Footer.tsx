@@ -167,14 +167,14 @@ export default function Footer() {
               <div className="flex flex-wrap items-center gap-4">
                 <a
                   href="mailto:hello@boluajibola.com"
-                  className="text-white hover:text-[#d4af37] transition-colors duration-300 font-light text-lg w-max"
+                  className="text-white hover:text-[#d4af37] transition-colors duration-300 font-light text-base w-max"
                 >
                   hello@boluajibola.com
                 </a>
                 <span className="text-[#666] hidden sm:block">•</span>
                 <Link
                   href="/contact"
-                  className="text-white hover:text-[#d4af37] transition-colors duration-300 font-light text-lg w-max"
+                  className="text-white hover:text-[#d4af37] transition-colors duration-300 font-light text-base w-max"
                 >
                   Contact
                 </Link>

@@ -108,11 +108,11 @@ export default function SummarySectionDisplay({
         </>
       )}
       {/* text-[#d4af37] */}
-      <div className="flex flex-col gap-6 text-[18px] max-w-2xl">
+      <div className="flex flex-col gap-6 text-[16px] max-w-2xl">
         {paragraphs.map((paragraph, index) => {
           const isAccent = accentParagraphIndex === index;
           return (
-            <div key={index} className={`${isAccent ? 'text-[#fff] text-[18px] font-normal' : textColor} leading-relaxed`}>
+            <div key={index} className={`${isAccent ? 'text-[#fff] text-[16px] font-normal' : textColor} leading-relaxed`}>
               {paragraph}
             </div>
           );

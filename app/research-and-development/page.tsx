@@ -93,7 +93,7 @@ export default function ResearchAndDevelopmentPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                    className="lg:col-span-8 max-w-2xl text-[18px]"
+                    className="lg:col-span-8 max-w-2xl text-base"
                   >
                     <p className="text-[#a0a0a0] leading-relaxed mb-6 font-light">
                       My work in Research and Development focuses on shaping ideas, identifying opportunities, building collaborations, strengthening proposals, understanding funder priorities, and positioning research for success.

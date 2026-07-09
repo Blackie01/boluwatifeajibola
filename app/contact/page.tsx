@@ -97,14 +97,14 @@ export default function Contact() {
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-6">
                 <div className="h-[1px] w-12 bg-white/20" />
-                <p className="text-[18px] text-[#a0a0a0] font-light leading-relaxed">
+                <p className="text-base text-[#a0a0a0] font-light leading-relaxed">
                   I am always open to discussing research collaborations, speaking engagements, creative performances, and public interventions.
                 </p>
               </div>
 
               <div className="flex flex-col gap-2">
                 <p className="text-[#666] uppercase tracking-widest text-xs" style={{ fontFamily: "var(--font-outfit)" }}>Email</p>
-                <div className="text-xl md:text-2xl font-light" style={{ fontFamily: "var(--font-outfit)" }}>
+                <div className="text-base font-light" style={{ fontFamily: "var(--font-outfit)" }}>
                   <ActionText text="hello@boluajibola.com" href="mailto:hello@boluajibola.com" theme="dark" />
                 </div>
               </div>

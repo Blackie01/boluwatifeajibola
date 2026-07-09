@@ -74,7 +74,7 @@ export default function OtherResearchProjects({ theme = "dark" }: { theme?: "lig
         >
           Other research projects
         </h2>
-        <p className={`${isLight ? "text-[#666666]" : "text-[#a0a0a0]"} text-[18px] leading-relaxed font-light max-w-3xl`}>
+        <p className={`${isLight ? "text-[#666666]" : "text-[#a0a0a0]"} text-[16px] leading-relaxed font-light max-w-3xl`}>
           My past projects do not only span diverse sectors, they reflect my commitment to research that is analytically grounded and responsive to real-world challenges. I present some of these below:
         </p>
       </motion.div>

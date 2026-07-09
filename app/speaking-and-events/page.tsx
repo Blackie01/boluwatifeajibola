@@ -92,9 +92,9 @@ export default function SpeakingAndEvents() {
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               className="max-w-5xl"
-            >
+            > 
               <h2
-                className="text-3xl md:text-5xl lg:text-[50px] leading-[1.2] font-medium text-[#0a0a0a] tracking-tight"
+                className="text-2xl md:text-3xl lg:text-[40px] leading-[1.2] font-medium text-[#0a0a0a] tracking-tight"
                 style={{ fontFamily: "var(--font-outfit)" }}
               >
                 My work in speaking and events brings together{" "}
@@ -119,7 +119,7 @@ export default function SpeakingAndEvents() {
                 className="md:col-span-5 md:col-start-2 lg:col-start-3"
               >
                 <div className="w-8 h-[1px] bg-[#0a0a0a]/20 mb-6" />
-                <p className="text-[#666666] text-lg lg:text-xl font-light leading-relaxed">
+                <p className="text-[#666666] text-base font-light leading-relaxed">
                   Across academic, civic, student-led, professional, cultural,
                   and social spaces, I have spoken, moderated, organised,
                   hosted, facilitated, and performed.
@@ -138,7 +138,7 @@ export default function SpeakingAndEvents() {
                 className="md:col-span-5 lg:col-span-4"
               >
                 <div className="w-8 h-[1px] bg-[#0a0a0a]/20 mb-6 hidden md:block" />
-                <p className="text-[#666666] text-lg lg:text-xl font-light leading-relaxed">
+                <p className="text-[#666666] text-base font-light leading-relaxed">
                   My speaking and event work is shaped by experience across
                   research, public engagement, leadership, music, spoken word,
                   and creative performance.
@@ -189,7 +189,7 @@ export default function SpeakingAndEvents() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="w-full md:w-[70%] lg:max-w-3xl text-right"
           >
-            <p className="text-3xl font-outfit md:text-4xl lg:text-[44px] text-white font-light leading-tight">
+            <p className="text-2xl md:text-3xl lg:text-[40px] font-outfit text-white font-light leading-tight">
               I am especially interested in events where complex issues need to
               be made accessible and where audiences need to be carried along.
             </p>

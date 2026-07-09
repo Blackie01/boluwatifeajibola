@@ -373,7 +373,7 @@ export default function CreativePractice() {
               </h2>
               <div className="h-[1px] w-[80px] bg-[#2a2a2a] mb-8" />
 
-              <div className="flex flex-col gap-6 text-base md:text-[18px] max-w-2xl text-[#a0a0a0] leading-relaxed">
+              <div className="flex flex-col gap-6 text-base max-w-2xl text-[#a0a0a0] leading-relaxed">
                 <p>
                   Music has been one of the longest-running creative languages
                   of my life.
