@@ -40,7 +40,7 @@ export default function SpeakingAndEvents() {
                 Speaking & Events
               </p>
               <h1
-                className="text-[16px] text-[#a0a0a0] font-light leading-[1.3] tracking-wide mt-2"
+                className="text-base text-[#a0a0a0] font-light leading-[1.3] tracking-wide mt-2"
                 style={{ fontFamily: "var(--font-outfit)" }}
               >
                 Ideas need a stage and the right person to hold the room

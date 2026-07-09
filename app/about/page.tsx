@@ -54,7 +54,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-8 max-w-2xl text-[18px] "
+            className="lg:col-span-8 max-w-2xl text-[16px] "
           >
             <p className="text-[#a0a0a0] leading-relaxed mb-6">
               My work intersects research, R&D, impact, and creative expression to understand and demonstrate how everyday desires for development and change move between spaces where they are studied and places where they are lived.

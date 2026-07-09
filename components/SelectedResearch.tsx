@@ -199,15 +199,15 @@ export default function SelectedResearch() {
                 Protests and Polls (PaP)
               </h3>
 
-              <p className="text-gray-600 mb-8 leading-relaxed text-base md:text-lg max-w-xl">
+              <p className="text-gray-600 mb-8 leading-relaxed text-base max-w-xl">
                 My ongoing doctoral research, with the conceptual anchor ‘Protests and Polls’ (PaP), explores how protest movements and electoral politics shape each other. PaP focuses on the #EndSARS protests (2020), the 2023 general elections, the pre- and post-2023 elections character of the #Obidient movement, and the ongoing overlaps between activism and politics in the lead up to the 2027 elections. Across these junctures, this project traces how discourse, emotions, and symbols travel between the streets and polling sites in Nigeria.  
               </p>
 
               <div className="mb-12">
-                <span className="text-[11px] uppercase font-bold text-gray-400 tracking-[0.2em] mb-2 block">
+                <span className="text-[14px] uppercase font-bold text-gray-400 tracking-[0.2em] mb-2 block">
                   Themes
                 </span>
-                <p className="text-sm font-medium text-gray-800 leading-relaxed max-w-xl">
+                <p className="text-base font-medium text-gray-800 leading-relaxed max-w-xl">
                   Social movements, elections, political emotions, protest
                   culture, African public sphere
                 </p>
@@ -248,7 +248,7 @@ export default function SelectedResearch() {
                 Digital ID & Future of Humanitarian Assistance
               </h3>
 
-              <p className="text-gray-600 mb-8 leading-relaxed text-base md:text-lg max-w-xl">
+              <p className="text-gray-600 mb-8 leading-relaxed text-base max-w-xl">
                 As a research consultant commissioned by Caribou Digital, UK, on
                 a project of the International Federation of Red Cross and Red
                 Crescent Societies (IFRC), I contributed to the early
@@ -260,10 +260,10 @@ export default function SelectedResearch() {
               </p>
 
               <div className="mb-12">
-                <span className="text-[11px] uppercase font-bold text-gray-400 tracking-[0.2em] mb-2 block">
+                <span className="text-[14px] uppercase font-bold text-gray-400 tracking-[0.2em] mb-2 block">
                   Themes
                 </span>
-                <p className="text-sm font-medium text-gray-800 leading-relaxed max-w-xl">
+                <p className="text-base font-medium text-gray-800 leading-relaxed max-w-xl">
                   Digital governance, humanitarian innovation, technology and
                   development
                 </p>
@@ -375,7 +375,7 @@ export default function SelectedResearch() {
                 Lab: Interlocking Art and Activism
               </h3>
 
-              <p className="text-gray-600 mb-8 leading-relaxed text-base md:text-lg max-w-xl">
+              <p className="text-gray-600 mb-8 leading-relaxed text-base max-w-xl">
                 Beyond academic research, I use different art forms such as poetry, spoken word, and music to translate ideas into stories and experiences that resonate with different publics. While some of these works draw inspiration from themes such as social change, democracy, hope and civic responsibility, others are rooted in deep reflections on faith and the future.
               </p>
 
