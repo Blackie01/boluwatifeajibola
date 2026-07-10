@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import ActionText from "./ActionText";
 import BallotBoxSVG from "./BallotBoxSVG";
 import ProtectiveShieldSVG from "./ProtectiveShieldSVG";
-import MegaphoneSVG from "./MegaphoneSVG";
+import FistSVG from "./FistSVG";
 
 export default function SelectedResearch() {
   const containerRef = useRef<HTMLElement>(null);
@@ -348,7 +348,7 @@ export default function SelectedResearch() {
                 viewport={{ once: true, amount: 0.5 }}
                 className="relative w-full max-w-md aspect-square flex items-center justify-center"
               >
-                <MegaphoneSVG />
+                <FistSVG />
               </motion.div>
             </div>
 
