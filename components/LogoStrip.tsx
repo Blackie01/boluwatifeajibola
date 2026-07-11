@@ -13,16 +13,17 @@ const orgLogos = [
   "/org-logos/new-ifrc.png",
   "/org-logos/ICVA2.png",
   "/org-logos/yiaga.png",
+  "/org-logos/hans.jpeg",
   "/org-logos/Taiwan Foundation for Democracy TFD.png",
   "/org-logos/Political Studies Association Early Career Network PSA ECN.webp",
 ];
 
-// 11 logos.
+// 12 logos.
 // We want to slide 2 items at a time.
-// LCM of 2 and 11 is 22. So we need to travel 22 items to seamlessly reset.
-// That is 11 steps of 2 items.
-// We need extra copies at the end so the screen isn't empty when we reach item 22.
-// 22 + 6 (visible) = 28 items minimum. 4 copies of orgLogos = 44 items.
+// LCM of 2 and 12 is 12. So we need to travel 12 items to seamlessly reset.
+// That is 6 steps of 2 items.
+// We need extra copies at the end so the screen isn't empty when we reach item 12.
+// 12 + 6 (visible) = 18 items minimum. 4 copies of orgLogos = 48 items.
 const duplicatedLogos = Array(4).fill(orgLogos).flat();
 
 export default function LogoStrip() {
@@ -32,14 +33,14 @@ export default function LogoStrip() {
     let isMounted = true;
     const runAnimation = async () => {
       while (isMounted) {
-        // 11 steps. Each step moves 2 items.
-        for (let i = 1; i <= 11; i++) {
+        // 6 steps. Each step moves 2 items.
+        for (let i = 1; i <= 6; i++) {
           await new Promise((r) => setTimeout(r, 2500)); // Pause for 2.5s
           if (!isMounted) return;
-          // 44 items total. Moving 2 items = (2 / 44) * 100%
+          // 48 items total. Moving 2 items = (2 / 48) * 100%
           await animate(
             scope.current,
-            { x: `-${((i * 2) / 44) * 100}%` },
+            { x: `-${((i * 2) / 48) * 100}%` },
             { duration: 0.8, ease: "easeInOut" },
           );
         }
