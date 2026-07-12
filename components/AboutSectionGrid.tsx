@@ -9,8 +9,8 @@ export default function AboutSectionGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 border-t border-l border-[#E5E5E5]">
           {/* Cell 1 */}
           <div className="p-8 lg:p-10 border-r border-b border-[#E5E5E5] flex flex-col justify-between bg-white hover:bg-gray-50 transition-colors duration-300">
-            <p className="text-xl lg:text-[1.35rem] font-medium leading-snug text-black">
-              “I understand research from the inside because I produce it.”
+            <p className="text-base font-medium leading-snug text-black">
+              I understand research from the inside because I produce it.
             </p>
             <div className="mt-12 flex items-center gap-3 text-xs tracking-widest uppercase text-gray-400 font-semibold">
               <div className="w-1.5 h-1.5 rounded-full bg-black"></div>
@@ -20,8 +20,8 @@ export default function AboutSectionGrid() {
 
           {/* Cell 2 */}
           <div className="p-8 lg:p-10 border-r border-b border-[#E5E5E5] flex flex-col justify-between bg-white hover:bg-gray-50 transition-colors duration-300">
-            <p className="text-xl lg:text-[1.35rem] font-medium leading-snug text-black">
-              “I understand research development because I support proposals, funding pipelines, and institutional strategy.”
+            <p className="text-base font-medium leading-snug text-black">
+              I understand research development because I support proposals, funding pipelines, and institutional strategy.
             </p>
             <div className="mt-12 flex items-center gap-3 text-xs tracking-widest uppercase text-gray-400 font-semibold">
               <div className="w-1.5 h-1.5 rounded-full bg-black"></div>
@@ -31,12 +31,12 @@ export default function AboutSectionGrid() {
 
           {/* Cell 3 */}
           <div className="p-8 lg:p-10 border-r border-b border-[#E5E5E5] flex flex-col justify-between bg-white hover:bg-gray-50 transition-colors duration-300">
-            <p className="text-xl lg:text-[1.35rem] font-medium leading-snug text-black">
-              “I understand impact because I help evidence become useful beyond academia. And I understand audiences because I have spent years communicating.”
+            <p className="text-base font-medium leading-snug text-black">
+              I understand impact because I help evidence become useful beyond academia. And I understand audiences because I have spent years communicating through stages, music, poetry, panels, and public events.
             </p>
             <div className="mt-12 flex items-center gap-3 text-xs tracking-widest uppercase text-gray-400 font-semibold">
               <div className="w-1.5 h-1.5 rounded-full bg-black"></div>
-              Impact & Audiences
+              Impact & Engagement
             </div>
           </div>
 
@@ -59,7 +59,7 @@ export default function AboutSectionGrid() {
 
           {/* Cell 5 (Spans 2 columns) */}
           <div className="col-span-1 md:col-span-2 p-8 lg:p-12 border-r border-b border-[#E5E5E5] flex flex-col justify-center bg-white">
-            <p className="text-2xl lg:text-[2rem] lg:leading-[1.3] font-medium text-black">
+            <p className="text-base lg:leading-[1.3] font-medium text-black">
               <span className="text-[#999999]">
                 Ever wondered how ideas move across disciplines, sectors, and
                 creative forms?
@@ -72,7 +72,7 @@ export default function AboutSectionGrid() {
 
           {/* Cell 6 */}
           <div className="p-8 lg:p-10 border-r border-b border-[#E5E5E5] flex flex-col justify-between bg-white">
-            <p className="text-xl lg:text-2xl font-medium text-black mb-8 leading-snug">
+            <p className="text-base font-medium text-black mb-8 leading-snug">
               That is my edge. Turning ideas into public value and social change.
             </p>
             <div className="mt-auto">
