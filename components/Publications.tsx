@@ -79,9 +79,9 @@ export default function Publications() {
       {/* ROW 2: 66% | 33% */}
       <div className="flex flex-col md:flex-row relative">
         {/* Left 2/3 (Video) */}
-        <div className="w-full md:w-2/3 relative border-b md:border-b-0 border-white/10 md:border-r aspect-square md:aspect-auto md:min-h-[600px] bg-[#111]">
+        <div className="w-full md:w-2/3 grayscale relative border-b md:border-b-0 border-white/10 md:border-r aspect-square md:aspect-auto md:min-h-[600px] bg-[#111]">
           <video
-            src="/ORBIT-5-01-LITE.mp4"
+            src="/home-video.mp4"
             autoPlay
             loop
             muted
