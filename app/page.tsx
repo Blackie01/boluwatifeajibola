@@ -7,13 +7,15 @@ import HeroSection from "@/components/HeroSection";
 import LogoStrip from "@/components/LogoStrip";
 import AboutSnippet from "@/components/AboutSnippet";
 import WorkGrid from "@/components/WorkGrid";
+import AboutSectionGrid from "@/components/AboutSectionGrid";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 min-h-screen bg-[#0C0C0C] overflow-x-clip">
       <HeroSection />
       <LogoStrip />
-      <AboutSnippet />
+      {/* <AboutSnippet /> */}
+      <AboutSectionGrid/>
       <WorkGrid />
       <SelectedResearch />
       <Publications />
