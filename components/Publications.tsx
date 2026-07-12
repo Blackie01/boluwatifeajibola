@@ -181,14 +181,14 @@ export default function Publications() {
 
         {/* Right 1/4 (Video Placeholder) */}
         <div className="w-full md:w-1/4 relative border-b border-white/10 md:border-b-0 min-h-[300px] md:min-h-[400px] bg-[#111]">
-          <video
+          {/* <video
             src="/ORBIT-5-01-LITE.mp4"
             autoPlay
             loop
             muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-screen"
-          />
+          /> */}
           {/* Animated bottom horizontal (spreads right from 75vw) */}
           <motion.div
             style={{ scaleX: p7 }}
