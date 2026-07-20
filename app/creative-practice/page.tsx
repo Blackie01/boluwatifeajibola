@@ -175,7 +175,7 @@ export default function CreativePractice() {
             videoEmbed={
               <iframe
                 className="absolute -top-[48px] left-0 w-full h-[calc(100%+48px)] rounded-sm object-cover"
-                src="https://1drv.ms/v/c/0ad17e1d8c9278d2/IQRvP0d_cU0tRIqWRf_AyR3wAVNO4Fbio9dfG1g1nllJ3XU?autoplay=1&muted=1"
+                src="https://www.youtube.com/embed/QhEpiF9pudA"
                 width="1440"
                 height="900"
                 frameBorder="0"

@@ -14,13 +14,13 @@ export default function Home() {
     <div className="flex flex-col flex-1 min-h-screen bg-[#0C0C0C] overflow-x-clip">
       <HeroSection />
       <LogoStrip />
-      {/* <AboutSnippet /> */}
-      <AboutSectionGrid/>
+      <AboutSnippet />
+      {/* <AboutSectionGrid/> */}
       <WorkGrid />
       <SelectedResearch />
       <Publications />
       <AwardsAndAffiliations />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <StatsMarquee />
     </div>
   );

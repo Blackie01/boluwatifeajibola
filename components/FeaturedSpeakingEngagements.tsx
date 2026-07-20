@@ -115,7 +115,7 @@ const speakingEngagements = [
         <div className="mt-4 aspect-video w-full">
           <iframe
             className="w-full h-full rounded-sm"
-            src="https://1drv.ms/v/c/0ad17e1d8c9278d2/IQRntBH0GyVxQ5iAeLoIuKfAAdcd58HB26qsnNbpFWX2FAs"
+            src="https://www.youtube.com/embed/8qz23cQqlNs?si=IihtFvu-POdHBMSI"
             width="1440"
             height="900"
             frameBorder="0"

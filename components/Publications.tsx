@@ -44,9 +44,9 @@ export default function Publications() {
         {/* Left 3/4 */}
         <div className="w-full md:w-3/4 p-10 md:p-24 relative border-b md:border-b-0 border-white/10 md:border-r">
           <h2 className="text-5xl md:text-7xl  leading-tight font-outfit">
-            More
+            Ideas 
             <br />
-            Publications
+            In Action
           </h2>
           {/* Animated vertical drop (at 75vw) */}
           <motion.div
@@ -61,13 +61,13 @@ export default function Publications() {
         </div>
 
         {/* Right 1/4 */}
-        <div className="w-full md:w-1/4 p-10 md:p-16 flex items-start md:items-end justify-start md:justify-center relative border-b border-white/10 md:border-b-0">
+        <div className="w-full md:w-1/4 p-10 md:p-16 flex items-start md:items-center justify-start md:justify-center relative border-b border-white/10 md:border-b-0">
           <p className="text-xl md:text-3xl font-light text-[#999] leading-snug">
-            Research excellence is more than a commitment; it's a lifestyle.
+            Excellence is more than a commitment; it's a lifestyle.
           </p>
           {/* Animated bottom horizontal (spreads right from 75vw) */}
           <motion.div
-            style={{ scaleX: p3 }}
+            style={{ scaleX: p3 }} 
             className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left z-10"
           />
         </div>
