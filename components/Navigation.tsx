@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 const MENU_ITEMS = [
-  { name: "about", href: "/about", children: [] },
+  { name: "Home", href: "/", children: [] },
   { name: "Ideas in Action", href: "", children: [
     { name: "My Research", href: "/research" },
     { name: "Protests and Polls", href: "/protests-and-polls" },
@@ -21,7 +21,11 @@ const MENU_ITEMS = [
     { name: "Conference Papers", href: "/conference-papers" },
     { name: "Publications", href: "/publications" }
   ]},
-  { name: "contact", href: "/contact", children: [] },
+  { name: "Work with me", href: "", children: [
+    { name: "How I Can Help", href: "/work-with-me" },
+    { name: "Contact", href: "/contact" }
+  ] },
+  { name: "About", href: "/about", children: [] },
 ]
 
 export default function Navigation() {
