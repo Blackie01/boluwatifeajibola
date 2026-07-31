@@ -79,7 +79,7 @@ export default function Publications() {
       {/* ROW 2: 66% | 33% */}
       <div className="flex flex-col md:flex-row relative">
         {/* Left 2/3 (Video) */}
-        <div className="w-full md:w-2/3 grayscale relative border-b md:border-b-0 border-white/10 md:border-r aspect-square md:aspect-auto md:min-h-[600px] bg-[#111]">
+        <div className="w-full md:w-2/3 grayscale relative border-b md:border-b-0 border-white/10 md:border-r aspect-video md:aspect-auto md:min-h-[600px] bg-[#111]">
           <video
             src="/home-video.mp4"
             autoPlay
@@ -134,7 +134,7 @@ export default function Publications() {
       {/* ROW 3: 25% | 50% | 25% */}
       <div className="flex flex-col md:flex-row relative">
         {/* Left 1/4 (Empty) */}
-        <div className="w-full md:w-1/4 relative border-b md:border-b-0 border-white/10 md:border-r min-h-[300px] md:min-h-[400px]">
+        <div className="hidden md:block md:w-1/4 relative border-white/10 md:border-r md:min-h-[400px]">
           {/* Animated vertical drop (at 25vw) */}
           <motion.div
             style={{ scaleY: p6 }}
@@ -180,7 +180,7 @@ export default function Publications() {
         </div>
 
         {/* Right 1/4 (Video Placeholder) */}
-        <div className="w-full md:w-1/4 relative border-b border-white/10 md:border-b-0 min-h-[300px] md:min-h-[400px] bg-[#111]">
+        <div className="hidden md:block md:w-1/4 relative border-white/10 md:border-b-0 md:min-h-[400px]">
           {/* <video
             src="/ORBIT-5-01-LITE.mp4"
             autoPlay
