@@ -171,7 +171,7 @@ export default function SpeakingAndEvents() {
             </div>
             <div className="w-[35%] h-full">
               <EditorialImage
-                src="/speak/speak-2.jpeg"
+                src="/speak/speak-3.jpeg"
                 alt="Speaking and Events 2"
                 aspectRatio="h-full"
                 className="border-0 rounded-none w-full"

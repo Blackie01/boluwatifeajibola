@@ -34,7 +34,7 @@ export default function About() {
               transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="w-full lg:w-[85%] lg:max-w-[280px]"
             >
-              <EditorialImage src="/bsharp-sitting.jpg" alt="Philosophy" aspectRatio="aspect-[4/5]" />
+              <EditorialImage src="/about-image-2.jpg" alt="Philosophy" aspectRatio="aspect-[3.8/5]" />
             </motion.div>
 
              <div className="flex items-center gap-6 text-[#a0a0a0]">
