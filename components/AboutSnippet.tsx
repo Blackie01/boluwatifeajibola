@@ -45,7 +45,9 @@ export default function AboutSnippet() {
 
 I understand research from the inside because I produce it. I understand research development because I support proposals, funding pipelines, partnerships, and institutional strategy. I understand impact because I help evidence become useful beyond academia. And I understand audiences because I have spent years communicating through stages, music, poetry, panels, and public events.
 
-That is my edge. Turning ideas into public value and social change.`;
+That is my edge. Turning ideas into public value and social change.
+Bridging research, impact, creativity and activism (RICA).
+`;
 
   return (
     <section 
