@@ -102,13 +102,13 @@ export default function ServicesSupportSection() {
                 </div>
 
                 {/* Mobile View Body Text (Always visible on mobile) */}
-                <p className="block md:hidden text-sm text-[#444] font-light leading-relaxed pt-4 border-t border-black/10">
+                {/* <p className="block md:hidden text-sm text-[#444] font-light leading-relaxed pt-4 border-t border-black/10">
                   {card.body}
-                </p>
+                </p> */}
 
                 {/* Desktop View Body Text & Border (Border sits on exact same plane for all cards, appears only on hover) */}
-                <div className="hidden md:block border-t border-black/15 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-                  <p className="pt-4 text-sm lg:text-[15px] text-[#333] font-light leading-relaxed text-right opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                <div className="block border-t border-black/15 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                  <p className="pt-4 text-sm lg:text-[15px] text-[#333] font-light leading-relaxed md:text-right translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
                     {card.body}
                   </p>
                 </div>

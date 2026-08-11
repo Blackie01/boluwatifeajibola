@@ -70,47 +70,7 @@ export default function CreativeCommunicationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative">
           {/* Left Column: Sticky Title, Audience, Description & CTA */}
 
-          <div className="lg:col-span-7 flex flex-col gap-16">
-            {/* Group 1: I Can Help With */}
-            <div className="flex flex-col">
-              {/* Group Sub-Header */}
-              <div className="pb-4 mb-6 border-b border-white/10 flex items-center justify-between">
-                <h3
-                  className="text-lg md:text-xl font-medium uppercase tracking-wider text-white"
-                  style={{ fontFamily: "var(--font-outfit), sans-serif" }}
-                >
-                  I can help with
-                </h3>
-              </div>
 
-              {/* Pills stacked vertically arranging row by row with scroll control */}
-              <div className="flex flex-wrap gap-3.5">
-                {helpWithItems.map((item, idx) => (
-                  <ScrollPill key={item} item={item} index={idx} />
-                ))}
-              </div>
-            </div>
-
-            {/* Group 2: Good Fit For */}
-            <div className="flex flex-col">
-              {/* Group Sub-Header */}
-              <div className="pb-4 mb-6 border-b border-white/10 flex items-center justify-between">
-                <h3
-                  className="text-lg md:text-xl font-medium uppercase tracking-wider text-white"
-                  style={{ fontFamily: "var(--font-outfit), sans-serif" }}
-                >
-                  Good fit for
-                </h3>
-              </div>
-
-              {/* Pills stacked vertically arranging row by row with scroll control */}
-              <div className="flex flex-wrap gap-3.5">
-                {goodFitItems.map((item, idx) => (
-                  <ScrollPill key={item + idx} item={item} index={idx} />
-                ))}
-              </div>
-            </div>
-          </div>
 
           {/* Right Column: Row-by-Row Stacking Pills */}
 
@@ -155,6 +115,48 @@ export default function CreativeCommunicationSection() {
                   href="/contact"
                   theme="dark"
                 />
+              </div>
+            </div>
+          </div>
+
+                    <div className="lg:col-span-7 flex flex-col gap-16">
+            {/* Group 1: I Can Help With */}
+            <div className="flex flex-col">
+              {/* Group Sub-Header */}
+              <div className="pb-4 mb-6 border-b border-white/10 flex items-center justify-between">
+                <h3
+                  className="text-lg md:text-xl font-medium uppercase tracking-wider text-white"
+                  style={{ fontFamily: "var(--font-outfit), sans-serif" }}
+                >
+                  I can help with
+                </h3>
+              </div>
+
+              {/* Pills stacked vertically arranging row by row with scroll control */}
+              <div className="flex flex-wrap gap-3.5">
+                {helpWithItems.map((item, idx) => (
+                  <ScrollPill key={item} item={item} index={idx} />
+                ))}
+              </div>
+            </div>
+
+            {/* Group 2: Good Fit For */}
+            <div className="flex flex-col">
+              {/* Group Sub-Header */}
+              <div className="pb-4 mb-6 border-b border-white/10 flex items-center justify-between">
+                <h3
+                  className="text-lg md:text-xl font-medium uppercase tracking-wider text-white"
+                  style={{ fontFamily: "var(--font-outfit), sans-serif" }}
+                >
+                  Good fit for
+                </h3>
+              </div>
+
+              {/* Pills stacked vertically arranging row by row with scroll control */}
+              <div className="flex flex-wrap gap-3.5">
+                {goodFitItems.map((item, idx) => (
+                  <ScrollPill key={item + idx} item={item} index={idx} />
+                ))}
               </div>
             </div>
           </div>

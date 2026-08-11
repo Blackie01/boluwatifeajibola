@@ -21,7 +21,8 @@ const experienceItems: ExperienceItem[] = [
   },
   {
     number: "03",
-    text: "Undertaken several industry research projects",
+    highlight: "6+",
+    text: "Industry research projects undertaken",
   },
   {
     number: "04",
@@ -72,17 +73,17 @@ export default function SelectedExperienceSection() {
                 delay: idx * 0.08,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="group relative w-full rounded-none bg-white border border-black/10 hover:border-black/40 p-8 lg:p-9 flex flex-col justify-between overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-xl hover:shadow-black/5 min-h-[220px]"
+              className="group relative w-full rounded-none bg-white border border-black/10 hover:border-black/40 p-8 lg:p-9 flex flex-col justify-between overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-xl hover:shadow-black/5 "
             >
               {/* Card Header Tag (Number alone in Outfit font) */}
-              <div className="flex items-center justify-between w-full mb-6 pb-3 border-b border-black/10">
+              {/* <div className="flex items-center justify-between w-full mb-6 pb-3 border-b border-black/10">
                 <span
                   className="text-sm font-medium text-[#666] tracking-wider"
                   style={{ fontFamily: "var(--font-outfit), sans-serif" }}
                 >
                   {item.number}
                 </span>
-              </div>
+              </div> */}
 
               {/* Card Body Content */}
               <div className="flex-1 flex flex-col justify-end gap-3">
