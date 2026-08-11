@@ -14,6 +14,7 @@ const navLinks = [
   { name: "Research & Development", href: "/research-and-development" },
   { name: "Impact & Engagement", href: "/impact-and-engagement" },
   { name: "Speaking & Events", href: "/speaking-and-events" },
+  { name: "Work With Me", href: "/work-with-me" },
 ];
 
 const socialLinks = [
@@ -94,6 +95,13 @@ const pageContentMap: Record<
     subtitle:
       "Interested in a bespoke poem, spoken word performance, or creative collaboration?",
     actionCopy: "Commission a piece",
+    actionLink: "/contact",
+  },
+  "/work-with-me": {
+    title: "Have an idea, project, event or challenge in mind? ",
+    subtitle:
+      "Let’s explore how research, strategy and creativity can help move it forward. ",
+    actionCopy: "Start a conversation",
     actionLink: "/contact",
   },
 };
@@ -182,7 +190,7 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-12 sm:gap-24 w-full md:w-auto">
-              {/* Links Column */}
+              {/* Links Column (Split into 2 columns) */}
               <div className="flex flex-col gap-4">
                 <h4
                   className="text-xs uppercase tracking-widest text-[#666] mb-2"
@@ -190,15 +198,17 @@ export default function Footer() {
                 >
                   Explore
                 </h4>
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="text-[#a0a0a0] hover:text-white transition-colors duration-300 font-light"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-3.5">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="text-[#a0a0a0] hover:text-white transition-colors duration-300 font-light whitespace-nowrap"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
 
               {/* Socials Column */}
