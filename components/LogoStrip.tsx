@@ -80,3 +80,4 @@ export default function LogoStrip() {
     </section>
   );
 }
+// grayscale invert mix-blend-screen

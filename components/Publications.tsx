@@ -29,21 +29,21 @@ export default function Publications() {
       data-nav-theme="dark"
     >
       {/* Top Border Flow (Catches the river from the previous section at exactly 50vw) */}
-      <div className="hidden md:block absolute top-0 left-0 w-full h-[1px] bg-white/10" />
+      <div className="hidden lg:block absolute top-0 left-0 w-full h-[1px] bg-white/10" />
       <motion.div
         style={{ scaleX: p1 }}
-        className="hidden md:block absolute top-0 right-1/2 w-1/2 h-[1px] bg-white origin-right z-10"
+        className="hidden lg:block absolute top-0 right-1/2 w-1/2 h-[1px] bg-white origin-right z-10"
       />
       <motion.div
         style={{ scaleX: p1 }}
-        className="hidden md:block absolute top-0 left-1/2 w-1/2 h-[1px] bg-white origin-left z-10"
+        className="hidden lg:block absolute top-0 left-1/2 w-1/2 h-[1px] bg-white origin-left z-10"
       />
 
       {/* ROW 1: 75% | 25% */}
-      <div className="flex flex-col md:flex-row relative group">
+      <div className="flex flex-col lg:flex-row relative group">
         {/* Left 3/4 */}
-        <div className="w-full md:w-3/4 p-10 md:p-24 relative border-b md:border-b-0 border-white/10 md:border-r">
-          <h2 className="text-5xl md:text-7xl  leading-tight font-outfit">
+        <div className="w-full lg:w-3/4 p-10 lg:p-24 relative border-b lg:border-b-0 border-white/10 lg:border-r">
+          <h2 className="text-5xl lg:text-7xl  leading-tight font-outfit">
             Ideas 
             <br />
             In Action
@@ -51,35 +51,35 @@ export default function Publications() {
           {/* Animated vertical drop (at 75vw) */}
           <motion.div
             style={{ scaleY: p2 }}
-            className="hidden md:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
+            className="hidden lg:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
           />
           {/* Animated bottom horizontal (spreads left from 75vw) */}
           <motion.div
             style={{ scaleX: p3 }}
-            className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-right z-10"
+            className="hidden lg:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-right z-10"
           />
         </div>
 
         {/* Right 1/4 */}
-        <div className="w-full md:w-1/4 p-10 md:p-16 flex items-start md:items-center justify-start md:justify-center relative border-b border-white/10 md:border-b-0">
-          <p className="text-xl md:text-3xl font-light text-[#999] leading-snug">
+        <div className="w-full lg:w-1/4 p-10 lg:p-16 flex items-start lg:items-center justify-start lg:justify-center relative border-b border-white/10 lg:border-b-0">
+          <p className="text-xl lg:text-3xl font-light text-[#999] leading-snug">
             Excellence is more than a commitment; it's a lifestyle.
           </p>
           {/* Animated bottom horizontal (spreads right from 75vw) */}
           <motion.div
             style={{ scaleX: p3 }} 
-            className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left z-10"
+            className="hidden lg:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left z-10"
           />
         </div>
 
         {/* Base horizontal bottom line */}
-        <div className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
+        <div className="hidden lg:block absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
       </div>
 
       {/* ROW 2: 66% | 33% */}
-      <div className="flex flex-col md:flex-row relative">
+      <div className="flex flex-col xl:flex-row relative">
         {/* Left 2/3 (Video) */}
-        <div className="w-full md:w-2/3 grayscale relative border-b md:border-b-0 border-white/10 md:border-r aspect-video md:aspect-auto md:min-h-[600px] bg-[#111]">
+        <div className="w-full xl:w-2/3 grayscale relative border-b xl:border-b-0 border-white/10 xl:border-r aspect-video xl:aspect-auto xl:min-h-[600px] bg-[#111]">
           <video
             src="/home-video.mp4"
             autoPlay
@@ -92,21 +92,21 @@ export default function Publications() {
           {/* Animated vertical drop (at 66vw) */}
           <motion.div
             style={{ scaleY: p4 }}
-            className="hidden md:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
+            className="hidden xl:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
           />
           {/* Animated bottom horizontal (spreads left from 66vw) */}
           <motion.div
             style={{ scaleX: p5 }}
-            className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-right z-10"
+            className="hidden xl:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-right z-10"
           />
         </div>
 
         {/* Right 1/3 (Publication) */}
-        <div className="w-full md:w-1/3 p-10 md:p-20 flex flex-col justify-center relative border-b border-white/10 md:border-b-0 group cursor-pointer hover:bg-white/5 transition-colors duration-500">
+        <div className="w-full xl:w-1/3 p-10 xl:p-20 flex flex-col justify-center relative border-b border-white/10 xl:border-b-0 group cursor-pointer hover:bg-white/5 transition-colors duration-500">
           <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold mb-4">
-            Published Article
+            Journal Article
           </span>
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+          <h3 className="text-3xl xl:text-4xl font-bold mb-6 leading-tight">
             From COVID-19 to Fuel Subsidy Removal in Nigeria
           </h3>
           <p className="text-gray-400 leading-relaxed mb-12">
@@ -123,36 +123,36 @@ export default function Publications() {
           {/* Animated bottom horizontal (spreads right from 66vw) */}
           <motion.div
             style={{ scaleX: p5 }}
-            className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left z-10"
+            className="hidden xl:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left z-10"
           />
         </div>
 
         {/* Base horizontal bottom line */}
-        <div className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
+        <div className="hidden xl:block absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
       </div>
 
       {/* ROW 3: 25% | 50% | 25% */}
-      <div className="flex flex-col md:flex-row relative">
+      <div className="flex flex-col lg:flex-row relative">
         {/* Left 1/4 (Empty) */}
-        <div className="hidden md:block md:w-1/4 relative border-white/10 md:border-r md:min-h-[400px]">
+        <div className="hidden lg:block lg:w-1/4 relative border-white/10 lg:border-r lg:min-h-[400px]">
           {/* Animated vertical drop (at 25vw) */}
           <motion.div
             style={{ scaleY: p6 }}
-            className="hidden md:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
+            className="hidden lg:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
           />
           {/* Animated bottom horizontal (spreads left from 25vw) */}
           <motion.div
             style={{ scaleX: p7 }}
-            className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-right z-10"
+            className="hidden lg:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-right z-10"
           />
         </div>
 
         {/* Mid 1/2 (Publication) */}
-        <div className="w-full md:w-1/2 p-10 md:p-20 flex flex-col justify-center relative border-b md:border-b-0 border-white/10 md:border-r min-h-[300px] md:min-h-[400px] group cursor-pointer hover:bg-white/5 transition-colors duration-500">
+        <div className="w-full lg:w-1/2 p-10 lg:p-20 flex flex-col justify-center relative border-b lg:border-b-0 border-white/10 lg:border-r min-h-[300px] lg:min-h-[400px] group cursor-pointer hover:bg-white/5 transition-colors duration-500">
           <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold mb-4">
-            Published Article
+            Journal Article
           </span>
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+          <h3 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
             Legislative Responses in Times of Crisis{" "}
           </h3>
           <p className="text-gray-400 leading-relaxed mb-10 max-w-lg">
@@ -170,17 +170,17 @@ export default function Publications() {
           {/* Animated vertical drop (at 75vw) */}
           <motion.div
             style={{ scaleY: p6 }}
-            className="hidden md:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
+            className="hidden lg:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
           />
           {/* Animated bottom horizontal (spreads right from 25vw) */}
           <motion.div
             style={{ scaleX: p7 }}
-            className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left z-10"
+            className="hidden lg:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left z-10"
           />
         </div>
 
         {/* Right 1/4 (Video Placeholder) */}
-        <div className="hidden md:block md:w-1/4 relative border-white/10 md:border-b-0 md:min-h-[400px]">
+        <div className="hidden lg:block lg:w-1/4 relative border-white/10 lg:border-b-0 lg:min-h-[400px]">
           {/* <video
             src="/ORBIT-5-01-LITE.mp4"
             autoPlay
@@ -192,19 +192,19 @@ export default function Publications() {
           {/* Animated bottom horizontal (spreads right from 75vw) */}
           <motion.div
             style={{ scaleX: p7 }}
-            className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left z-10"
+            className="hidden lg:block absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left z-10"
           />
         </div>
 
         {/* Base horizontal bottom line */}
-        <div className="hidden md:block absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
+        <div className="hidden lg:block absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
       </div>
 
       {/* ROW 4: 33% | 33% | 33% */}
-      <div className="flex flex-col md:flex-row relative">
-        <div className="w-full md:w-1/3 p-10 md:p-16 flex flex-col relative border-b md:border-b-0 border-white/10 md:border-r min-h-[350px] group cursor-pointer hover:bg-white/5 transition-colors duration-500">
+      <div className="flex flex-col lg:flex-row relative">
+        <div className="w-full lg:w-1/3 p-10 lg:p-16 flex flex-col relative border-b lg:border-b-0 border-white/10 lg:border-r min-h-[350px] group cursor-pointer hover:bg-white/5 transition-colors duration-500">
           <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold mb-4">
-            Published Paper
+            Journal Article
           </span>
           <h4 className="text-2xl font-bold mb-4 leading-tight">
             Turning Public Engagement into Standard Practice
@@ -215,19 +215,19 @@ export default function Publications() {
           <div>
             <ActionText
               href="https://doi.org/10.1080/13572334.2023.2195147"
-              text="Read Paper"
+              text="Read Article"
               target="_blank"
             />
           </div>
           <motion.div
             style={{ scaleY: p8 }}
-            className="hidden md:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
+            className="hidden lg:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
           />
         </div>
 
-        <div className="w-full md:w-1/3 p-10 md:p-16 flex flex-col relative border-b md:border-b-0 border-white/10 md:border-r min-h-[350px] bg-[#0a0a0a]/50 group cursor-pointer hover:bg-white/5 transition-colors duration-500">
+        <div className="w-full lg:w-1/3 p-10 lg:p-16 flex flex-col relative border-b lg:border-b-0 border-white/10 lg:border-r min-h-[350px] bg-[#0a0a0a]/50 group cursor-pointer hover:bg-white/5 transition-colors duration-500">
           <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold mb-4">
-            Published Report
+            Report
           </span>
           <h4 className="text-2xl font-bold mb-4 leading-tight">
             Digital Identity in Humanitarian Contexts{" "}
@@ -240,32 +240,31 @@ export default function Publications() {
           <div>
             <ActionText
               href="https://solferinoacademy.com/wp-content/uploads/2021/09/Report-Initiating-the-co-development-of-IFRCs-Digital-ID-strategy1.pdf"
-              text="Read Paper"
+              text="Read Report"
               target="_blank"
             />
           </div>
 
           <motion.div
             style={{ scaleY: p8 }}
-            className="hidden md:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
+            className="hidden lg:block absolute top-0 right-0 w-[1px] h-full bg-white origin-top z-10"
           />
         </div>
 
-        <div className="w-full md:w-1/3 p-10 md:p-16 flex flex-col relative border-b border-white/10 md:border-b-0 min-h-[350px] group cursor-pointer hover:bg-white/5 transition-colors duration-500">
+        <div className="w-full lg:w-1/3 p-10 lg:p-16 flex flex-col relative border-b border-white/10 lg:border-b-0 min-h-[350px] group cursor-pointer hover:bg-white/5 transition-colors duration-500">
           <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-bold mb-4">
-            Conference Proceeding
+            Policy Brief
           </span>
           <h4 className="text-2xl font-bold mb-4 leading-tight">
-            The Quest for Development
+            Nigeria’s Just Transition
           </h4>
           <p className="text-gray-400 leading-relaxed mb-10 max-w-lg">
-            When social media-brokered political power encounters political
-            ‘flak jackets’
+            Climate Ambition, Labour Agency, and Uneven Participation
           </p>
           <div>
             <ActionText
-              href="https://arxiv.org/abs/2108.09741"
-              text="Read Paper"
+              href="https://justtransition.leeds.ac.uk/wp-content/uploads/sites/169/2026/08/UOL_JT_POLICY-BRIEF_NIGERIA_v2a.pdf"
+              text="Read Document"
               target="_blank"
             />
           </div>

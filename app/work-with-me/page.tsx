@@ -18,7 +18,7 @@ export default function WorkWithMe() {
         {/* Section 1: Page Title Header */}
         <PageTitle
           title="How I Can Help"
-          subTitle="Researchers, Organisations and Civic Actors"
+          subTitle=""
         />
 
         {/* Section 2: Core Value Proposition & Digital Noise Particle Entity */}
@@ -28,10 +28,10 @@ export default function WorkWithMe() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="pt-12"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 ">
             
             {/* Left Column: Hero Text Content */}
-            <div className="lg:col-span-7 flex flex-col justify-between gap-10">
+            <div className="lg:col-span-7 flex flex-col gap-4">
               <div className="flex flex-col gap-6">
                 <h2
                   className="text-2xl sm:text-3xl md:text-4xl text-white font-light leading-[1.3] tracking-tight"
@@ -54,7 +54,7 @@ export default function WorkWithMe() {
             </div>
 
             {/* Right Column: Animated Flowing Particle Dust Entity */}
-            <div className="lg:col-span-5 flex items-center justify-center w-full h-full relative min-h-[400px]">
+            <div className="lg:col-span-5 flex items-center lg:-mt-32 justify-center w-full h-full relative min-h-[400px]">
               <ParticleDustEntity />
             </div>
 
