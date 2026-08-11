@@ -8,6 +8,7 @@ interface SupportCard {
   tag: string;
   title: string;
   body: string;
+  targetId: string;
 }
 
 const supportCards: SupportCard[] = [
@@ -16,22 +17,34 @@ const supportCards: SupportCard[] = [
     tag: "RESEARCH & IMPACT",
     title: "Research Development & Impact Support",
     body: "For researchers, research teams and organisations developing proposals, partnerships, impact plans and public engagement strategies.",
+    targetId: "research-impact",
   },
   {
     number: "02",
     tag: "CREATIVE & CIVIC",
     title: "Creative & Civic Communication",
     body: "For organisations, campaigns and communities seeking creative ways to communicate ideas, inspire audiences and engage publics.",
+    targetId: "creative-communication",
   },
   {
     number: "03",
     tag: "FACILITATION & EVENTS",
     title: "Speaking, Facilitation & Events",
     body: "For conferences, workshops, panels, civic forums, celebrations and events that need energy and substance.",
+    targetId: "speaking-events",
   },
 ];
 
 export default function ServicesSupportSection() {
+  const handleScrollTo = (targetId: string) => {
+    const element = document.getElementById(targetId);
+    if (element) {
+      const yOffset = -90; // account for top fixed navbar
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="w-full bg-white text-[#0a0a0a] py-24 md:py-32 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
@@ -65,7 +78,16 @@ export default function ServicesSupportSection() {
                 delay: idx * 0.15,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="group relative w-full rounded-none bg-[#fcfcfc] border border-black/10 hover:border-black/40 p-7 lg:p-8 flex flex-col justify-start overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-xl hover:shadow-black/5 min-h-[140px] md:min-h-[160px]"
+              onClick={() => handleScrollTo(card.targetId)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  handleScrollTo(card.targetId);
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              className="group relative w-full rounded-none bg-[#fcfcfc] border border-black/10 hover:border-black/40 p-7 lg:p-8 flex flex-col justify-start overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-xl hover:shadow-black/5 min-h-[140px] md:min-h-[160px] cursor-pointer focus:outline-none focus:ring-2 focus:ring-black/20"
             >
               {/* Card Main Area */}
               <div className="flex flex-col justify-start relative w-full">

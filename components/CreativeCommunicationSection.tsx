@@ -65,7 +65,7 @@ function ScrollPill({ item, index }: ScrollPillProps) {
 
 export default function CreativeCommunicationSection() {
   return (
-    <section className="w-full bg-[#0C0C0C] text-white py-24 md:py-32 px-6 md:px-12 lg:px-24 border-t border-white/10 relative">
+    <section id="creative-communication" className="w-full bg-[#0C0C0C] text-white py-24 md:py-32 px-6 md:px-12 lg:px-24 border-t border-white/10 relative">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative">
           {/* Left Column: Sticky Title, Audience, Description & CTA */}
