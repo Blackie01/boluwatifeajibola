@@ -5,7 +5,7 @@ import { motion, useAnimate } from "framer-motion";
 import ActionText from "./ActionText";
 
 const phrases = [
-  "Researcher of Development - Democracy Nexus",
+  "Researcher of the Development-Democracy Nexus",
   "Social Change Researcher",
   "Research Impact Specialist",
   "£20M+ Research Funding Supported",
@@ -146,8 +146,7 @@ export default function HeroSection() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
             className="text-[#a0a0a0] text-base font-light leading-[1.3] md:leading-relaxed max-w-[85%] md:max-w-xl mb-6 md:mb-10"
           >
-            ...bridging research, strategy and creativity to help societies and
-            organisations reimagine what is possible.
+            …creating real-world impact through research, strategy, creativity and public engagement.
           </motion.p>
 
           <motion.div
@@ -156,8 +155,8 @@ export default function HeroSection() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
             className="flex flex-wrap items-center gap-4 md:gap-8"
           >
-            <ActionText text="Explore my work" href="/research" />
-            <ActionText text="Work with me" href="/contact" />
+            {/* <ActionText text="Explore my work" href="/research" /> */}
+            <ActionText text="Work with me" href="/work-with-me" />
           </motion.div>
         </motion.div>
       </div>

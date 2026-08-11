@@ -10,7 +10,8 @@ const workInvolvesData = [
   "Research culture and impact literacy initiatives",
   "Grant development support",
   "Research performance analysis",
-  "External partnership development"
+  "External partnership development",
+  "REF impact support"
 ];
 
 export default function WorkInvolvesSection() {

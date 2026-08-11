@@ -43,7 +43,7 @@ const items = [
     id: "gld",
     name: "GLD",
     logo: "/org-logos/Governance and Local Development Institute GLD.svg",
-    text: "Funded International research workshop participant.",
+    text: "Funded international research workshop participant.",
   },
   {
     id: "firoz",

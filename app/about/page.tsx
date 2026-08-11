@@ -63,7 +63,7 @@ export default function About() {
               This forms the basis of the questions I explore across the interconnected worlds of scholarship, creativity, civic action and faith.
             </p>
             <p className="text-[#a0a0a0] leading-relaxed">
-              Through what I describe as the convergence of RICA – Research, Impact, Creativity, and Activism, I explore, seek to influence, how people experience well-governed living.
+              Through what I describe as the convergence of RICA – Research, Impact, Creativity, and Activism, I explore and seek to influence how people experience well-governed living.
             </p>
           </motion.div>
         </div>

@@ -51,7 +51,7 @@ export default function WorkGrid() {
           className="text-[32px] md:text-[40px] leading-[1.2] text-[#a0a0a0] font-medium tracking-tight uppercase text-center mb-8"
           style={{ fontFamily: "var(--font-outfit), sans-serif" }}
         >
-          How would you like to engage my work?
+          How would you like to engage with my work?
         </h2>
         <div className="h-[2px] w-[80px] bg-[#0a0a0a] mx-auto " />
       </motion.div>

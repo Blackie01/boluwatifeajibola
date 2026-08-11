@@ -223,10 +223,10 @@ export const impactProjectsData = [
     name: "Just Transition and Development Policy",
     desc: "As a co-researcher on this international comparative project examining just transition debates across fourteen countries, I contributed to research that continues to inform conversations on climate policy, labour transitions, development, and governance in Nigeria and the larger Africa."
   },
-  {
-    name: "Gender, Leadership and Accountability",
-    desc: "Through a DFID-funded research project examining women’s leadership and empowerment across Nigeria, Mozambique, and Pakistan, I contributed to research and stakeholder engagement processes that informed broader discussions on governance, participation, and accountability in fragile settings."
-  }
+  // {
+  //   name: "Gender, Leadership and Accountability",
+  //   desc: "Through a DFID-funded research project examining women’s leadership and empowerment across Nigeria, Mozambique, and Pakistan, I contributed to research and stakeholder engagement processes that informed broader discussions on governance, participation, and accountability in fragile settings."
+  // }
 ];
 
 export const policyEngagementSummary = {
