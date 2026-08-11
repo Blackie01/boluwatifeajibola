@@ -61,7 +61,7 @@ export default function LightUpText({
       ref={sectionRef}
       className={`relative ${styles}`}
     >
-      <h1
+      <h2
         ref={textRef}
         className={textClassName}
       >
@@ -70,7 +70,7 @@ export default function LightUpText({
             {word}{" "}
           </span>
         ))}
-      </h1>
+      </h2>
     </div>
   );
 }

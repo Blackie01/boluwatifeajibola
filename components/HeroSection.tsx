@@ -135,7 +135,8 @@ export default function HeroSection() {
             className="text-white text-[28px] md:text-5xl font-medium leading-[1.1] tracking-tight mb-3 md:mb-6 min-h-[68px] md:min-h-[110px] flex flex-col justify-end"
             style={{ fontFamily: "var(--font-outfit), sans-serif" }}
           >
-            <div>
+            <span className="sr-only">Researcher, Creative & Research Development Professional</span>
+            <div aria-hidden="true">
               <RevealText />
             </div>
           </h1>

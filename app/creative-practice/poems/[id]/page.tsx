@@ -1,9 +1,37 @@
 import React from "react"
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 import PageTitle from "@/components/PageTitle"
-import { getPoemById } from "@/utils/poemData"
+import { getPoemById, poems } from "@/utils/poemData"
+
+export function generateStaticParams() {
+  return poems.map((poem) => ({
+    id: poem.id,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const poem = getPoemById(id);
+
+  if (!poem) {
+    return { title: "Poem Not Found" };
+  }
+
+  return {
+    title: poem.title,
+    description: `Read "${poem.title}" — a spoken word poem by Bolu Ajibola (MC BSharp).`,
+    alternates: {
+      canonical: `/creative-practice/poems/${poem.id}`,
+    },
+  };
+}
 
 export default async function Poem({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
