@@ -1,8 +1,13 @@
 export const galleryImages = [
+  "https://github.com/user-attachments/assets/c32b3830-da65-4051-935a-a8977fa0fb44",
+  "https://github.com/user-attachments/assets/413ae969-6cc5-4eb8-9dbc-daa30dc4d815",
+  "https://github.com/user-attachments/assets/4dd2ea5d-dc6a-4819-bb4c-8def5557bef6",
+  "https://github.com/user-attachments/assets/03234d9b-e0e6-4971-bd04-e134f1e9ec95",
+  "https://github.com/user-attachments/assets/24f75711-6cda-4de5-91c8-018983ced27a",
+
   "https://github.com/user-attachments/assets/8946eb0d-798b-448a-ae19-27be558d646a",
   "https://github.com/user-attachments/assets/5a4ecf72-c65f-4188-ba1a-016e1a4c4ab5",
   "https://github.com/user-attachments/assets/4daada7b-8ec1-47e7-8842-bc1726e077d6",
-//   "https://github.com/user-attachments/assets/386f99a3-ecb1-4bf9-87ef-1031460ade1f",
   "https://github.com/user-attachments/assets/6b39dfdd-3e74-4372-95a9-d74cdd8dff61",
   "https://github.com/user-attachments/assets/be90b042-86e4-4ef6-bc38-c7b4ee3f55f0",
   "https://github.com/user-attachments/assets/623a7762-1df8-4456-871d-4846364a9239",
@@ -15,7 +20,6 @@ export const galleryImages = [
   "https://github.com/user-attachments/assets/f068aef3-7ba2-467c-96c6-5adb0e988cbb",
   "https://github.com/user-attachments/assets/9cb4df0c-2cb8-4ce5-a4b1-08f7bc3d9470",
   "https://github.com/user-attachments/assets/d528adf3-da0b-4781-b403-0a5092488d60",
-//   "https://github.com/user-attachments/assets/aa269db0-62f5-4c1b-b53a-63ca66358e00",
   "https://github.com/user-attachments/assets/5f614749-c0bd-42e1-89d8-ff2be9e3aa45",
   "https://github.com/user-attachments/assets/0048dee0-19be-42ed-bce5-714aa624d88e",
   "https://github.com/user-attachments/assets/d8acf922-926a-4995-a938-4fe069a49d58",
@@ -29,5 +33,4 @@ export const galleryImages = [
   "https://github.com/user-attachments/assets/3feadc68-5e21-49db-9e5f-17b10065e212",
   "https://github.com/user-attachments/assets/959cbb21-c386-4e4a-9649-1351c38b30e7",
   "https://github.com/user-attachments/assets/34360010-a9d0-4b15-a645-fc478104dad1",
-  "https://github.com/user-attachments/assets/ed211e97-5049-4dfa-8d14-7d9c67a51b7d"
 ];

@@ -43,7 +43,9 @@ export default function EditorialImage({
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover filter grayscale transition-all duration-700 ease-out scale-105 group-hover:scale-100"
-            priority
+            // priority
+            // unoptimized
+            loading="lazy"
           />
           <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#d4af37] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       </div>
@@ -74,7 +76,7 @@ export default function EditorialImage({
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-full h-full max-w-7xl mx-auto cursor-default"
               onClick={(e) => e.stopPropagation()} // Prevent clicking the image from closing
             >
@@ -82,10 +84,8 @@ export default function EditorialImage({
                 src={src}
                 alt={alt}
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain"
-                sizes="100vw"
-                quality={100}
-                priority
               />
             </motion.div>
           </motion.div>
