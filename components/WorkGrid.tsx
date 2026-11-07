@@ -20,6 +20,7 @@ export default function WorkGrid() {
       image: "/bsharp-one-goal.jpg",
       href: "/impact-and-engagement",
       objectPosition: "object-[center_35%]",
+      imageScale: "scale-105 group-hover:scale-100 origin-[120%_50%]",
     },
     {
       title: "Speaking and Events",
