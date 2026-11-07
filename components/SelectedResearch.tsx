@@ -3,7 +3,7 @@ import React, { useRef, useState, useLayoutEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ActionText from "./ActionText";
 import BallotBoxSVG from "./BallotBoxSVG";
-import ProtectiveShieldSVG from "./ProtectiveShieldSVG";
+import PoliceOfficerSVG from "./PoliceOfficerSVG";
 import FistSVG from "./FistSVG";
 
 export default function SelectedResearch() {
@@ -74,7 +74,7 @@ export default function SelectedResearch() {
           className="mb-24"
         >
           <h2 className="text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight uppercase font-bold mb-6 font-outfit">
-            Selected Research
+            Featured Work
           </h2>
           <div className="h-[2px] w-[80px] bg-gray-200 mb-6"></div>
         </motion.div>
@@ -153,7 +153,7 @@ export default function SelectedResearch() {
                 <div className="px-3 py-1.5 rounded-full border border-gray-200 flex items-center gap-2">
                   <span className="flex h-2 w-2 rounded-full bg-blue-500"></span>
                   <span className="text-xs font-bold tracking-widest uppercase text-gray-500">
-                    Ongoing
+                    Doctoral Research
                   </span>
                 </div>
               </div>
@@ -165,7 +165,7 @@ export default function SelectedResearch() {
               </h3>
 
               <p className="text-gray-600 mb-8 leading-relaxed text-base max-w-xl">
-                My ongoing doctoral research, with the conceptual anchor ‘Protests and Polls’ (PaP), explores how protest movements and electoral politics shape each other. PaP focuses on the #EndSARS protests (2020), the 2023 general elections, the pre- and post-2023 elections character of the #Obidient movement, and the ongoing overlaps between activism and politics in the lead up to the 2027 elections. Across these junctures, this project traces how discourse, emotions, and symbols travel between the streets and polling sites in Nigeria.  
+                My ongoing ESRC-funded doctoral research, with the conceptual anchor ‘Protests and Polls’ (PaP), explores how protest movements and electoral politics shape each other. PaP focuses on the #EndSARS protests (2020), the 2023 general elections, the pre- and post-2023 elections character of the #Obidient movement, and the ongoing overlaps between activism and politics in the lead up to the 2027 elections. Across these junctures, this project traces how discourse, emotions, and symbols travel between the streets and polling sites in Nigeria.  
               </p>
 
               <div className="mb-12">
@@ -196,13 +196,13 @@ export default function SelectedResearch() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="md:w-1/2 p-12 md:p-20 flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-200/80 order-2 md:order-1"
+              className="md:w-1/2 p-12 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-200/80 order-2 md:order-1"
             >
               <div className="flex items-center gap-2 mb-8">
                 <div className="px-3 py-1.5 rounded-full border border-gray-200 flex items-center gap-2">
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
                   <span className="text-xs font-bold tracking-widest uppercase text-gray-500">
-                    Published
+                    Policy Research 2026
                   </span>
                 </div>
               </div>
@@ -210,18 +210,15 @@ export default function SelectedResearch() {
               <h3
                 className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit mb-6 tracking-tight text-[#0a0a0a] leading-tight"
               >
-                Digital ID & Future of Humanitarian Assistance
+                Evidence for Safer Town Centres: Research for Policy and Practice 
               </h3>
 
+              <h4 className="text-base font-medium text-gray-800 leading-relaxed max-w-xl italic mb-6">
+                National Police Chiefs’ Council (NPCC), England and Wales 
+              </h4>
+
               <p className="text-gray-600 mb-8 leading-relaxed text-base max-w-xl">
-                As a research consultant commissioned by Caribou Digital, UK, on
-                a project of the International Federation of Red Cross and Red
-                Crescent Societies (IFRC), I contributed to the early
-                development of the IFRC’s digital identity strategy. The project
-                explored the mechanisms through which digital identity systems
-                could improve humanitarian service delivery while prioritising
-                and protecting the rights, privacy, and dignity of vulnerable
-                peoples.
+                I undertook applied policy research with the NPCC, reviewing and synthesising the evidence on what makes town centres safer. The work was aligned to the Neighbourhood Policing Guarantee, which the NPCC is delivering with the Home Office and the College of Policing as part of the UK Government’s Safer Streets Mission, and produced new insights for neighbourhood policing in England and Wales. 
               </p>
 
               <div className="mb-12">
@@ -229,15 +226,14 @@ export default function SelectedResearch() {
                   Themes
                 </span>
                 <p className="text-base font-medium text-gray-800 leading-relaxed max-w-xl">
-                  Digital governance, humanitarian innovation, technology and
-                  development
+                  Evidence-informed policymaking, neighbourhood policing, public safety, policy research
                 </p>
               </div>
 
               <div>
                 <ActionText
-                  href="https://solferinoacademy.com/wp-content/uploads/2021/09/Report-Initiating-the-co-development-of-IFRCs-Digital-ID-strategy1.pdf"
-                  text="Read the report"
+                  href=""
+                  text="Report forthcoming"
                   theme="light"
                   target="_blank"
                 />
@@ -253,7 +249,7 @@ export default function SelectedResearch() {
                 viewport={{ once: true, amount: 0.5 }}
                 className="relative w-full max-w-md aspect-square flex items-center justify-center"
               >
-                <ProtectiveShieldSVG />
+                <PoliceOfficerSVG />
               </motion.div>
             </div>
           </div>
@@ -285,7 +281,7 @@ export default function SelectedResearch() {
                 <div className="px-3 py-1.5 rounded-full border border-gray-200 flex items-center gap-2">
                   <span className="flex h-2 w-2 rounded-full bg-[#d4af37]"></span>
                   <span className="text-xs font-bold tracking-widest uppercase text-gray-500">
-                    Creative
+                    Creative Practice
                   </span>
                 </div>
               </div>

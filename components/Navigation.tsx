@@ -1,117 +1,130 @@
-'use client'
-import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import Link from "next/link"
-import Image from "next/image"
+"use client";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 const MENU_ITEMS = [
   { name: "Home", href: "/", children: [] },
   { name: "About", href: "/about", children: [] },
-  { name: "Ideas in Action", href: "", children: [
-    { name: "My Research", href: "/research" },
-    { name: "Protests and Polls", href: "/protests-and-polls" },
-    { name: "Research and Development", href: "/research-and-development" },
-    { name: "Impact and Engagement", href: "/impact-and-engagement" },
-  ]},
-  { name: "Artistic Hub", href: "", children: [
-    { name: "Speaking and Events", href: "/speaking-and-events" },
-    { name: "Creative Practice", href: "/creative-practice" },
-    { name: "Poetry", href: "/creative-practice/poems" },
-  ]},
-  { name: "resources", href: "", children: [
-    { name: "Conference Papers", href: "/conference-papers" },
-    { name: "Publications", href: "/publications" }
-  ]},
-  { name: "Work with me", href: "", children: [
-    { name: "How I Can Help", href: "/work-with-me" },
-    { name: "Contact", href: "/contact" }
-  ] },
-]
+  {
+    name: "My Work",
+    href: "",
+    children: [
+      { name: "My Research", href: "/research" },
+      // { name: "Protests and Polls", href: "/protests-and-polls" },
+      { name: "Research and Development", href: "/research-and-development" },
+      { name: "Impact and Engagement", href: "/impact-and-engagement" },
+      { name: "Speaking and Events", href: "/speaking-and-events" },
+      { name: "Creative Practice", href: "/creative-practice" },
+    ],
+  },
+  {
+    name: "resources",
+    href: "",
+    children: [
+      { name: "Conference Papers", href: "/conference-papers" },
+      { name: "Publications", href: "/publications" },
+      { name: "Poetry", href: "/creative-practice/poems" },
+    ],
+  },
+  { name: "RICA Platform", href: "", children: [] },
+
+  {
+    name: "Work with me",
+    href: "",
+    children: [
+      { name: "How I Can Help", href: "/work-with-me" },
+      { name: "Contact", href: "/contact" },
+    ],
+  },
+];
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [hoveredTab, setHoveredTab] = useState<string | null>(null)
-  const [expandedMobile, setExpandedMobile] = useState<string | null>(null)
-  const [isLightBg, setIsLightBg] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [hoveredTab, setHoveredTab] = useState<string | null>(null);
+  const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
+  const [isLightBg, setIsLightBg] = useState(false);
 
   useEffect(() => {
-    let ticking = false
+    let ticking = false;
 
     const checkBackground = () => {
       // Pick a point near the logo but in the pointer-events-none area (e.g. x=10)
       // to pierce through the nav and hit the background section.
-      const el = document.elementFromPoint(10, 40)
-      let isLight = false
-      let currentEl = el
+      const el = document.elementFromPoint(10, 40);
+      let isLight = false;
+      let currentEl = el;
       while (currentEl) {
-        const bg = window.getComputedStyle(currentEl).backgroundColor
-        if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') {
-          const match = bg.match(/\d+/g)
+        const bg = window.getComputedStyle(currentEl).backgroundColor;
+        if (bg && bg !== "rgba(0, 0, 0, 0)" && bg !== "transparent") {
+          const match = bg.match(/\d+/g);
           if (match && match.length >= 3) {
-            const r = parseInt(match[0], 10)
-            const g = parseInt(match[1], 10)
-            const b = parseInt(match[2], 10)
+            const r = parseInt(match[0], 10);
+            const g = parseInt(match[1], 10);
+            const b = parseInt(match[2], 10);
             const hsp = Math.sqrt(
-              0.299 * (r * r) +
-              0.587 * (g * g) +
-              0.114 * (b * b)
-            )
-            isLight = hsp > 127.5
+              0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b),
+            );
+            isLight = hsp > 127.5;
           }
-          break
+          break;
         }
-        currentEl = currentEl.parentElement
+        currentEl = currentEl.parentElement;
       }
-      setIsLightBg(isLight)
-      ticking = false
-    }
+      setIsLightBg(isLight);
+      ticking = false;
+    };
 
     const onScroll = () => {
       if (!ticking) {
-        window.requestAnimationFrame(checkBackground)
-        ticking = true
+        window.requestAnimationFrame(checkBackground);
+        ticking = true;
       }
-    }
+    };
 
-    window.addEventListener('scroll', onScroll, { passive: true })
-    checkBackground()
+    window.addEventListener("scroll", onScroll, { passive: true });
+    checkBackground();
 
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-  
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   // To handle the popover state smoothly
   const handleMouseLeave = () => {
-    if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
-      setIsOpen(false)
-      setHoveredTab(null)
+    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
+      setIsOpen(false);
+      setHoveredTab(null);
     }
-  }
+  };
 
-  const activeItem = MENU_ITEMS.find((item) => item.name === hoveredTab)
-  const hasChildren = activeItem && activeItem.children.length > 0
+  const activeItem = MENU_ITEMS.find((item) => item.name === hoveredTab);
+  const hasChildren = activeItem && activeItem.children.length > 0;
 
   return (
     <nav className="fixed backdrop-blur-md top-0 left-0 right-0 z-[100] pt-6 px-6 md:px-12 flex justify-between items-center pointer-events-none">
       {/* Logo */}
-      <Link href="/" className="pointer-events-auto mt-2 relative w-[250px] h-[50px] block">
-        <Image 
-          src="/logo-black-bg-preview-2.png" 
-          alt="BoluAjibola Logo" 
-          fill 
+      <Link
+        href="/"
+        className="pointer-events-auto mt-2 relative w-[250px] h-[50px] block"
+      >
+        <Image
+          src="/logo-black-bg-preview-2.png"
+          alt="BoluAjibola Logo"
+          fill
           priority
-          className={`object-contain object-left transition-opacity duration-500 ease-in-out ${isLightBg ? 'opacity-0' : 'opacity-100'}`}
+          className={`object-contain object-left transition-opacity duration-500 ease-in-out ${isLightBg ? "opacity-0" : "opacity-100"}`}
         />
-        <Image 
-          src="/logo-white-bg-preview-2.png" 
-          alt="BoluAjibola Logo" 
-          fill 
+        <Image
+          src="/logo-white-bg-preview-2.png"
+          alt="BoluAjibola Logo"
+          fill
           priority
-          className={`object-contain object-left transition-opacity duration-500 ease-in-out ${isLightBg ? 'opacity-100' : 'opacity-0'}`}
+          className={`object-contain object-left transition-opacity duration-500 ease-in-out ${isLightBg ? "opacity-100" : "opacity-0"}`}
         />
       </Link>
 
       {/* Right Section: Popover + Hamburger */}
-      <div 
+      <div
         className="pointer-events-auto flex items-start gap-4 relative"
         onMouseLeave={handleMouseLeave}
       >
@@ -144,13 +157,20 @@ export default function Navigation() {
                     {hoveredTab && (
                       <div className="absolute inset-0 pointer-events-none flex p-1">
                         {MENU_ITEMS.map((item) => (
-                          <div key={item.name} className="relative px-5 py-1.5 opacity-0 flex items-center h-full">
+                          <div
+                            key={item.name}
+                            className="relative px-5 py-1.5 opacity-0 flex items-center h-full"
+                          >
                             {item.name}
                             {hoveredTab === item.name && (
                               <motion.div
                                 layoutId="nav-pill"
                                 className="absolute inset-0 bg-white/5 rounded-full"
-                                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                transition={{
+                                  type: "spring",
+                                  bounce: 0.2,
+                                  duration: 0.6,
+                                }}
                               />
                             )}
                           </div>
@@ -181,35 +201,39 @@ export default function Navigation() {
                           className="flex w-full p-1"
                         >
                           {MENU_ITEMS.map((item) => (
-                            <div key={item.name} className="relative px-5 flex flex-col">
+                            <div
+                              key={item.name}
+                              className="relative px-5 flex flex-col"
+                            >
                               {/* Invisible spacer to force identical width to the main menu item */}
                               <div className="h-0 overflow-hidden opacity-0 text-sm capitalize whitespace-nowrap pointer-events-none">
                                 {item.name}
                               </div>
-                              
+
                               {/* The actual dropdown children */}
-                              {hoveredTab === item.name && item.children.length > 0 && (
-                                <div className="w-full flex justify-center">
-                                  <div className="w-0 flex justify-center">
-                                    <div className="w-max relative mt-2">
-                                      {/* Dropdown Box Background */}
-                                      <div className="bg-[#111111]/90 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl absolute inset-0 -z-10" />
-                                      
-                                      <div className="flex flex-col gap-3 p-5 min-w-[180px]">
-                                        {item.children.map((child) => (
-                                          <Link 
-                                            key={child.name} 
-                                            href={child.href}
-                                            className="text-sm text-[#a0a0a0] hover:text-white cursor-pointer transition-colors whitespace-nowrap"
-                                          >
-                                            {child.name}
-                                          </Link>
-                                        ))}
+                              {hoveredTab === item.name &&
+                                item.children.length > 0 && (
+                                  <div className="w-full flex justify-center">
+                                    <div className="w-0 flex justify-center">
+                                      <div className="w-max relative mt-2">
+                                        {/* Dropdown Box Background */}
+                                        <div className="bg-[#111111]/90 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl absolute inset-0 -z-10" />
+
+                                        <div className="flex flex-col gap-3 p-5 min-w-[180px]">
+                                          {item.children.map((child) => (
+                                            <Link
+                                              key={child.name}
+                                              href={child.href}
+                                              className="text-sm text-[#a0a0a0] hover:text-white cursor-pointer transition-colors whitespace-nowrap"
+                                            >
+                                              {child.name}
+                                            </Link>
+                                          ))}
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
-                                </div>
-                              )}
+                                )}
                             </div>
                           ))}
                         </motion.div>
@@ -236,13 +260,19 @@ export default function Navigation() {
                 {MENU_ITEMS.map((item) => (
                   <div key={item.name} className="flex flex-col">
                     {item.children.length > 0 ? (
-                      <button 
-                        onClick={() => setExpandedMobile(expandedMobile === item.name ? null : item.name)}
+                      <button
+                        onClick={() =>
+                          setExpandedMobile(
+                            expandedMobile === item.name ? null : item.name,
+                          )
+                        }
                         className="flex justify-between items-center text-left px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-white text-sm capitalize"
                       >
                         <span>{item.name}</span>
                         <motion.span
-                          animate={{ rotate: expandedMobile === item.name ? 180 : 0 }}
+                          animate={{
+                            rotate: expandedMobile === item.name ? 180 : 0,
+                          }}
                           className="text-xs opacity-50"
                         >
                           ▼
@@ -257,30 +287,31 @@ export default function Navigation() {
                         {item.name}
                       </Link>
                     )}
-                    
+
                     {/* Mobile Children Dropdown */}
                     <AnimatePresence>
-                      {item.children.length > 0 && expandedMobile === item.name && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="overflow-hidden"
-                        >
-                          <div className="flex flex-col pl-4 py-2 gap-2 border-l border-white/10 ml-6 mt-1 mb-2">
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.name}
-                                href={child.href}
-                                onClick={() => setIsOpen(false)}
-                                className="text-sm text-[#a0a0a0] hover:text-white transition-colors py-1.5 capitalize"
-                              >
-                                {child.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </motion.div>
-                      )}
+                      {item.children.length > 0 &&
+                        expandedMobile === item.name && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="flex flex-col pl-4 py-2 gap-2 border-l border-white/10 ml-6 mt-1 mb-2">
+                              {item.children.map((child) => (
+                                <Link
+                                  key={child.name}
+                                  href={child.href}
+                                  onClick={() => setIsOpen(false)}
+                                  className="text-sm text-[#a0a0a0] hover:text-white transition-colors py-1.5 capitalize"
+                                >
+                                  {child.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
                     </AnimatePresence>
                   </div>
                 ))}
@@ -290,30 +321,32 @@ export default function Navigation() {
         </div>
 
         {/* Hamburger Icon */}
-        <div 
+        <div
           className="w-10 h-10 bg-[#111111]/90 backdrop-blur-md border border-white/10 rounded-full flex flex-col items-center justify-center gap-[5px] cursor-pointer shadow-lg shrink-0 relative z-30"
           onMouseEnter={() => {
-            if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
-              setIsOpen(true)
+            if (typeof window !== "undefined" && window.innerWidth >= 1024) {
+              setIsOpen(true);
             }
           }}
           onClick={() => {
-            if (typeof window !== 'undefined' && window.innerWidth < 1024) {
-              setIsOpen(!isOpen)
+            if (typeof window !== "undefined" && window.innerWidth < 1024) {
+              setIsOpen(!isOpen);
             }
           }}
         >
-          <motion.span 
+          <motion.span
             animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="w-4 h-[1px] bg-white block"
           />
-          <motion.span 
-            animate={isOpen ? { opacity: 0, scale: 0.5 } : { opacity: 1, scale: 1 }}
+          <motion.span
+            animate={
+              isOpen ? { opacity: 0, scale: 0.5 } : { opacity: 1, scale: 1 }
+            }
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="w-4 h-[1px] bg-white block"
           />
-          <motion.span 
+          <motion.span
             animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="w-4 h-[1px] bg-white block"
@@ -321,5 +354,5 @@ export default function Navigation() {
         </div>
       </div>
     </nav>
-  )
+  );
 }

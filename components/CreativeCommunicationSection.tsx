@@ -91,7 +91,7 @@ export default function CreativeCommunicationSection() {
               <div className="h-[2px] w-[80px] bg-white" />
 
               {/* Target Audience Callout */}
-              <div className="p-5 rounded-none bg-white/[0.05] border-l-2 border-white flex flex-col gap-1.5">
+              <div className="p-5 rounded-none bg-white/[0.05] border-white flex flex-col gap-1.5">
              
                 <p className="text-sm md:text-[15px] font-medium text-white/90 leading-relaxed">
                   For organisations, campaigns, social movements, cultural

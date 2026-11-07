@@ -28,12 +28,12 @@ export default function ImpactProjectsSection() {
               className="text-[32px] md:text-[40px] leading-[48px] font-medium tracking-tight text-white uppercase mb-6"
               style={{ fontFamily: "var(--font-outfit), sans-serif" }}
             >
-              Selected Impact and Engagement Projects: Beyond Leeds
+              Selected Impact and Engagement Projects
             </h2>
             <div className="h-[2px] w-[80px] bg-[#d4af37] mb-8" />
             
             <p className="text-[#a0a0a0] text-[18px] leading-relaxed font-light">
-              My personal research projects have also produced, and continues to produce, significant impact. I describe some of these below.
+              My own research projects have also been designed to inform decisions beyond academia. Some examples are below. 
             </p>
           </motion.div>
         </div>

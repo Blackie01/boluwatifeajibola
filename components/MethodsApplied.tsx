@@ -17,7 +17,7 @@ const defaultMethods = [
   },
   {
     title: "Fieldwork and Applied Research",
-    desc: ""
+    desc: "Rapid evidence reviews and evidence synthesis, large-scale data collection and mapping, and policy-oriented reporting for institutional audiences."
   }
 ];
 
@@ -32,7 +32,7 @@ export interface MethodsAppliedProps {
 export default function MethodsApplied({ 
   theme = "dark",
   title = "Methods Applied",
-  description = "My research combines ethnographic, qualitative, and mixed-method approaches to examine how political, social, and institutional dynamics unfold in real-world contexts. My methodological approach is guided by an interest in lived experience, political meaning-making, and the role of discourse, emotion and symbols in bridging and shaping contentious experiences.",
+  description = "My research combines ethnographic, qualitative, and mixed-method approaches to examine how political, social, and institutional dynamics unfold in real-world contexts. My methodological interests span both the interpretation of lived experiences and political meaning-making, and the systematic examination of research evidence to understand complex problems and inform policy and practice.",
   items = defaultMethods,
   columns = 2
 }: MethodsAppliedProps) {

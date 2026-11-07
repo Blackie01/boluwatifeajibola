@@ -80,7 +80,7 @@ export default function Contact() {
             className="lg:col-span-5 relative h-full min-h-[500px]"
           >
             <EditorialImage
-              src="/bsharp-contact-2.png"
+              src="/contact-me-edited.jpg"
               alt="Bolu Ajibola Contact"
               aspectRatio="aspect-[3/4] lg:h-full lg:absolute lg:inset-0"
               className="border-0 rounded-none w-full"

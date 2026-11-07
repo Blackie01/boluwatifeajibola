@@ -24,9 +24,10 @@ export default function WorkGrid() {
     {
       title: "Speaking and Events",
       subtitle: "Learn about my speaking, facilitation, and MC services.",
-      image: "/bsharp-creative.jpg",
+      image: "/hero-image-3.jpg",
       href: "/speaking-and-events",
-      objectPosition: "object-top"
+      objectPosition: "object-top",
+      imageScale: "scale-145 group-hover:scale-140 origin-[65%_50%]",
     },
     {
       title: "Creative Practice",
@@ -75,7 +76,7 @@ export default function WorkGrid() {
                   alt={item.title} 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className={`object-cover ${item.objectPosition} filter grayscale transition-all duration-700 ease-out scale-105 group-hover:scale-100`}
+                  className={`object-cover ${item.objectPosition} filter grayscale transition-all duration-700 ease-out ${item.imageScale ?? "scale-105 group-hover:scale-100"}`}
                   priority
                 />
               </div>

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | Bolu Ajibola",
   },
   description:
-    "Bolu Ajibola is a researcher, creative practitioner, and research & development professional working at the intersection of governance, democracy, impact, and public engagement.",
+    "Bolu Ajibola researches on governance, democracy, social movements, public policy and development, from Nigeria and the Global South to applied policy research in the UK. ",
   keywords: [
     "Bolu Ajibola",
     "researcher",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "Bolu Ajibola",
     title: "Bolu Ajibola — Researcher, Creative & R&D Professional",
     description:
-      "Researcher, creative practitioner, and R&D professional working at the intersection of governance, democracy, impact, and public engagement.",
+      "Research on governance, democracy, social movements, public policy and development, from Nigeria and the Global South to applied policy research in the UK.",
     images: [
       {
         url: "/heroImage.jpg",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bolu Ajibola — Researcher, Creative & R&D Professional",
     description:
-      "Researcher, creative practitioner, and R&D professional working at the intersection of governance, democracy, impact, and public engagement.",
+      "Research on governance, democracy, social movements, public policy and development, from Nigeria and the Global South to applied policy research in the UK.",
     creator: "@_boluajibola",
     images: ["/heroImage.jpg"],
   },
@@ -88,7 +88,7 @@ const jsonLd = {
   image: "https://boluajibola.com/heroImage.jpg",
   jobTitle: "Researcher & R&D Professional",
   description:
-    "Researcher, creative practitioner, and research & development professional working at the intersection of governance, democracy, impact, and public engagement.",
+    "Research on governance, democracy, social movements, public policy and development, from Nigeria and the Global South to applied policy research in the UK.",
   sameAs: [
     "https://www.linkedin.com/in/boluajibola/",
     "https://x.com/_boluajibola",

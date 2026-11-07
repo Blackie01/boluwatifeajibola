@@ -9,6 +9,12 @@ const allPublications = [
     category: "Social Movements, Crisis, and Political Institutions",
     items: [
       {
+        title: "From COVID-19 to fuel subsidy removal in Nigeria: Assessing the political opportunities for local grievance",
+        source: "Urban Governance, 4(4), 351-361 (2024)",
+        linkText: "Read publication",
+        href: "https://doi.org/10.1016/j.ugj.2024.12.007"
+      },
+      {
         title: "The legislature as target and mediator of ensuing outcomes during social emergencies: Revisiting Nigeria’s #EndSARS protest",
         source: "The Theory and Practice of Legislation, 10(2), 117-146 (2022)",
         linkText: "Read publication",
@@ -29,13 +35,19 @@ const allPublications = [
     ]
   },
   {
-    category: "Protest, Governance, and Political Opportunity",
+    category: "Development, Public Policy and Governance",
     items: [
       {
-        title: "From COVID-19 to fuel subsidy removal in Nigeria: Assessing the political opportunities for local grievance",
-        source: "Urban Governance, 4(4), 351-361 (2024)",
+        title: "Nigeria’s Just Transition: Climate Ambition, Labour Agency, and Uneven Participation ",
+        source: "Leeds Business School/Hans Böckler Foundation. ",
         linkText: "Read publication",
-        href: "https://doi.org/10.1016/j.ugj.2024.12.007"
+        href: "https://justtransition.leeds.ac.uk/wp-content/uploads/sites/169/2026/08/UOL_JT_POLICY-BRIEF_NIGERIA_v2a.pdf"
+      },
+      {
+        title: "Examples of Just Transition Initiatives from across the globe ",
+        source: "Policy note prepared for the UK Government’s Clean Energy Jobs Office. ",
+        linkText: "Read publication",
+        href: "https://1drv.ms/b/c/0ad17e1d8c9278d2/IQDTPEEA86-yQ5nmChi6yz1eAeItxwbmR5vGkTz7mbljX7Y?e=hCrocT"
       }
     ]
   },

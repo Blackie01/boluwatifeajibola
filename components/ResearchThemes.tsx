@@ -40,20 +40,20 @@ const themes = [
   },
   {
     num: "03",
-    title: "Development, policy and governance",
+    title: "Governance, public policy and development",
     content: (
       <div className="flex flex-col gap-6">
         <p>
-          My research also engages with wider relationships between development, governance and the institutional arrangements that bridge these two domains.
+         My research examines how institutions respond to public needs and pressures, and how governance arrangements and policy choices shape development outcomes. I am particularly interested in political institutions as both targets of disenchanted publics and mediators of the outcomes those publics seek. 
         </p>
         <p>
-          My study recognises the roles of political institutions during crises situations. It situates political institutions as targets of disenchanted publics and mediators of the outcomes they seek. I also examine how development outcomes are shaped by both formal structures and citizen agency. These are reflected in my work on legislative behaviour during protest episodes and governance responses to social emergencies.
+          This interest runs through my work on legislative responses to protest, humanitarian coordination, digital identity, health systems, and climate and just transition policy, across Nigeria, humanitarian settings and, more recently, UK policing. 
         </p>
         <p>
-          I have also contributed to comparative and policy-oriented research projects, including work on humanitarian coordination models; digital identity; gendered contentions in fragile, conflict affected settings; climate change and just transition; and cross-border movement solidarity in the global south.
+          In 2026, I extended this strand into applied policy research with the National Police Chiefs’ Council (NPCC), reviewing the evidence on what makes town centres safer and what it means for neighbourhood policing.  
         </p>
         <p>
-          This strand especially reflects my interest in the democracy-development nexus, including the ways in which governance infrastructures can deliver socio-economic development and stronger democratic institutions.
+          Together, these projects reflect my interest in the democracy–development nexus: the institutional and contextual conditions that determine whether institutions are accountable and whether knowledge leads to meaningful change. 
         </p>
       </div>
     )

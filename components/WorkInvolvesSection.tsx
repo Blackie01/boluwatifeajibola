@@ -7,9 +7,9 @@ const workInvolvesData = [
   "Impact planning and pathway design",
   "Impact tracking, measurement, and evidencing",
   "Stakeholder mapping and engagement",
-  "Research culture and impact literacy initiatives",
+  "Evidence synthesis and policy-oriented research",
   "Grant development support",
-  "Research performance analysis",
+  "Policy engagement and briefing",
   "External partnership development",
   "REF impact support"
 ];

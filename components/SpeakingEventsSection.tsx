@@ -85,7 +85,7 @@ export default function SpeakingEventsSection() {
               <div className="h-[2px] w-[80px] bg-[#0a0a0a]" />
 
               {/* Callout / Subtitle */}
-              <div className="p-5 rounded-none bg-black/[0.03] border-l-2 border-black/80 flex flex-col gap-1.5">
+              <div className="p-5 rounded-none bg-black/[0.03] border-black/80 flex flex-col gap-1.5">
                 <p className="text-sm md:text-[15px] font-medium text-[#222] leading-relaxed">
                   For events that need energy and substance.
                 </p>

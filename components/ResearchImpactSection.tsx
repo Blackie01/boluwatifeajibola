@@ -22,7 +22,7 @@ const goodFitItems = [
   "Academics developing proposals",
   "Research teams preparing funding bids",
   "Departments strengthening research culture",
-  "NGOs or civic organisations designing research projects",
+  "Public bodies and policy-facing organisations",
   "Organisations needing evidence-informed strategy",
 ];
 
@@ -87,7 +87,7 @@ export default function ResearchImpactSection() {
               <div className="h-[2px] w-[80px] bg-[#0a0a0a]" />
 
               {/* Target Audience Callout */}
-              <div className="p-5 rounded-none bg-black/[0.03] border-l-2 border-black/80 flex flex-col gap-1.5">
+              <div className="p-5 rounded-none bg-black/[0.03]  border-black/80 flex flex-col gap-1.5">
                 <p className="text-sm md:text-[15px] font-medium text-[#222] leading-relaxed">
                   For researchers, research teams, organisations, NGOs, think tanks, funders and policy-facing organisations.
                 </p>
@@ -95,7 +95,7 @@ export default function ResearchImpactSection() {
 
               {/* Body Description */}
               <p className="text-base text-[#444] font-light leading-relaxed">
-                I work with individuals and teams to strengthen research ideas, develop more compelling proposals, identify pathways to impact, and design engagement strategies that connect evidence with public value. I can also work with organisations to deliver research projects.
+                I work with individuals and teams to strengthen research ideas, develop more compelling proposals, identify pathways to impact, and design engagement strategies that connect evidence with public value. I can also work with organisations to deliver research projects, deliver research, including evidence reviews and policy-oriented reports.’
               </p>
             </div>
 

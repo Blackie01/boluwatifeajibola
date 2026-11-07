@@ -85,7 +85,7 @@ export default function ResearchPage() {
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 pb-24">
         <PageTitle
           title="My Research"
-          subTitle="Academic & Independent Research"
+          subTitle="Academic, Applied & Independent Research"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mt-16">
@@ -171,7 +171,7 @@ export default function ResearchPage() {
               crises, and imagine change. Across my work, I am particularly
               interested in how democracy and development intersect to shape
               social and political life, especially within global south
-              contexts.
+              contexts, and increasingly in applied policy settings.
             </p>
             <p className="text-[#a0a0a0] leading-relaxed mb-6">
               My work is organised around the three interconnected themes
@@ -200,9 +200,9 @@ export default function ResearchPage() {
       </div>
 
       <div className="bg-white text-black w-full relative z-10 pb-24 pt-24 md:pt-32">
-        <div id="ongoingProjects">
+        {/* <div id="ongoingProjects">
           <OngoingProjects theme="light" />
-        </div>
+        </div> */}
         <div id="otherResearchProjects">
           <OtherResearchProjects theme="light" />
         </div>

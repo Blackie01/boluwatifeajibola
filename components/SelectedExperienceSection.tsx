@@ -22,7 +22,7 @@ const experienceItems: ExperienceItem[] = [
   {
     number: "03",
     highlight: "6+",
-    text: "Industry research projects undertaken",
+    text: "Commissioned research and consultancy projects",
   },
   {
     number: "04",

@@ -63,7 +63,7 @@ export default function Publications() {
         {/* Right 1/4 */}
         <div className="w-full lg:w-1/4 p-10 lg:p-16 flex items-start lg:items-center justify-start lg:justify-center relative border-b border-white/10 lg:border-b-0">
           <p className="text-xl lg:text-3xl font-light text-[#999] leading-snug">
-            Excellence is more than a commitment; it's a lifestyle.
+            Ideas are only the beginning. What matters is where they lead. 
           </p>
           {/* Animated bottom horizontal (spreads right from 75vw) */}
           <motion.div

@@ -37,7 +37,7 @@ export default function WorkWithMe() {
                   className="text-2xl sm:text-3xl md:text-4xl text-white font-light leading-[1.3] tracking-tight"
                   style={{ fontFamily: "var(--font-outfit), sans-serif" }}
                 >
-                  I am committed to helping researchers, organisations and civic actors develop ideas, secure opportunities, engage publics and create meaningful change.
+                  I help researchers, organisations and civic actors develop ideas, secure opportunities, engage publics and create meaningful change. 
                 </h2>
 
                 <p className="text-[#a0a0a0] text-base md:text-lg font-light leading-relaxed max-w-2xl">

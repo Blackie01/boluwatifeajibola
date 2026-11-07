@@ -104,10 +104,7 @@ export default function ImpactAndEngagement() {
             className="lg:col-span-8 max-w-2xl text-base"
           >
             <p className="text-[#a0a0a0] leading-relaxed mb-6 font-light">
-              Throughout my career, I have been interested in generating
-              knowledge, as well as understanding how that knowledge can
-              influence policy, improve practice, shape public conversations,
-              and contribute to meaningful social change.
+              My work commits to connecting rigorous research with the people, institutions and decisions it can inform. Across higher education, international development and public policy, I have worked on impact strategy, stakeholder engagement, evidence synthesis, policy-oriented research and public engagement, and on how knowledge influences policy, improves practice and shapes public conversation. 
             </p>
             <p className="text-[#a0a0a0] leading-relaxed mb-6 font-light">
               This sits within my broader work in research and development (R&D).

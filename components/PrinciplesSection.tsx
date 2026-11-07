@@ -16,7 +16,7 @@ const principles = [
   {
     num: "03",
     title: "Demonstrating and evidencing value",
-    desc: "I am committed to helping organisations understand and demonstrate the significance of their work."
+    desc: "I help organisations understand and demonstrate the significance of their work."
   }
 ];
 

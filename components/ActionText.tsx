@@ -4,7 +4,7 @@ import Link from "next/link";
 interface ActionTextProps {
     text: string;
     href?: string;
-    theme?: 'dark' | 'light';
+    theme?: 'dark' | 'light' | undefined;
     target?: string;
 }
 
@@ -15,6 +15,7 @@ export default function ActionText({ text, href, theme = 'dark', target }: Actio
   const hoverTextColor = isLight ? "hover:text-[#0a0a0a]" : "hover:text-white";
   const baseLineColor = isLight ? "bg-[#cccccc]" : "bg-[#a0a0a0]";
   const hoverLineColor = isLight ? "bg-[#0a0a0a]" : "bg-white";
+  const hoverCursor = href ? "hover:cursor-pointer" : "cursor-not-allowed";
 
   const content = (
     <>
@@ -24,7 +25,7 @@ export default function ActionText({ text, href, theme = 'dark', target }: Actio
     </>
   );
 
-  const containerClasses = `group relative ${baseTextColor} ${hoverTextColor} transition-colors duration-300 ease-out cursor-pointer pb-1 inline-block`;
+  const containerClasses = `group relative ${baseTextColor} ${hoverTextColor} transition-colors duration-300 ease-out ${hoverCursor} pb-1 inline-block`;
 
   if (href) {
     return (

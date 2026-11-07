@@ -6,7 +6,7 @@ export const educationData = [
     yearRange: "2024 - present",
     role: "PhD (Research in Practice) in Politics",
     institution: "University of York",
-    description: "Supported by the ESRC White Rose Doctoral Training Partnership award – a highly competitive funding from the UK Research and Innovation."
+    description: "Supported by an ESRC White Rose Doctoral Training Partnership award – highly competitive funding from UK Research and Innovation."
   },
   {
     yearRange: "2020 - 2021",
@@ -24,22 +24,28 @@ export const educationData = [
 
 export const professionalJourneyData = [
   {
-    yearRange: "Mar 2024 – Present",
+    yearRange: "Mar 2023 – Present",
     role: "School of Philosophy, Religion and History of Science",
     institution: "University of Leeds",
     description: "Co-design and co-lead research impact strategy development, coordinate academic–stakeholder collaboration, manage impact tracking and evaluation systems, strengthen pathways for translating research into policy and practice, and support grant development and capture."
   },
   {
-    yearRange: "May 2022 – Feb 2023",
-    role: "Faculty of Environment",
-    institution: "University of Leeds",
-    description: "Provided research support, analysed research performance data, supported grant development, coordinated events, and liaised with academic and industry partners to strengthen research and impact outcomes."
+    yearRange: "Sept 2026 – Dec 2026",
+    role: "National Police Chiefs’ Council (NPCC)",
+    institution: "Neighbourhood Policing Guarantee Programme Team ",
+    description: "Conducted a rapid evidence review of national and international interventions to make town centres safer. Produced recommendations for neighbourhood policing.  Worked with the programme team and with policing and policy stakeholders. "
   },
   {
     yearRange: "Jan 2023 – May 2025",
     role: "Climate Change and Just Transition Project",
     institution: "Hans Böckler Stiftung",
     description: "Contributed to international comparative research – focusing on the Nigerian case study, examined policies and debates on just transition and climate governance in Nigeria; co-produced reports, policy briefs, and other outputs."
+  },
+  {
+    yearRange: "May 2022 – Feb 2023",
+    role: "Faculty of Environment",
+    institution: "University of Leeds",
+    description: "Provided research support, analysed research performance data, supported grant development, coordinated events, and liaised with academic and industry partners to strengthen research and impact outcomes."
   },
   {
     yearRange: "May – July 2021",
@@ -76,8 +82,8 @@ export const professionalJourneyData = [
 export const professionalJourneySummary = {
   title: "Professional Journey",
   paragraphs: [
-    <>My professional experience spans <Link href="/research" className="text-[#4a4a4a] underline hover:text-[#0a0a0a] transition-colors duration-300">research</Link>, <Link href="/research-and-development" className="text-[#4a4a4a] underline hover:text-[#0a0a0a] transition-colors duration-300">R&D</Link>, <Link href="/impact-and-engagement" className="text-[#4a4a4a] underline hover:text-[#0a0a0a] transition-colors duration-300">impact development</Link>, and international consultancy, with a focus on translating knowledge into practice and policy. From being a Graduate and Administrative Assistant at Redeemers University, Nigeria, whilst I completed my National Youth Service in 2019, to being a research and impact manager at the University of Leeds, UK, I have contributed towards optimising research performance and productivity. In my ongoing role at the University of Leeds I contribute to shaping research strategies, strengthening pathways through which research can inform policy, practice, and real-world change beyond academia, as well as promoting impact literacy. My successes in the field of research and impact development reflect my commitment to translating knowledge generated through research into tangible societal benefit.</>,
-    `Beyond working in academic institutions, I have contributed to research and consultancy projects with organisations such as the International Federation of Red Cross and Red Crescent Societies (IFRC), the International Council of Voluntary Agencies (ICVA), Banyan Global, Open Society Foundations, and Yiaga Africa, among others. I have worked on issues ranging from digital governance to humanitarian coordination, development policy, and social movement solidarities.`
+    <>My professional experience spans <Link href="/research" className="text-[#4a4a4a] underline hover:text-[#0a0a0a] transition-colors duration-300">research</Link>, <Link href="/research-and-development" className="text-[#4a4a4a] underline hover:text-[#0a0a0a] transition-colors duration-300">R&D</Link>, <Link href="/impact-and-engagement" className="text-[#4a4a4a] underline hover:text-[#0a0a0a] transition-colors duration-300">impact development</Link>, and international consultancy, with a focus on translating knowledge into practice and policy. From a graduate and administrative assistant role at Redeemer’s University, Nigeria, during my National Youth Service in 2019, to my current work as a research and impact manager at the University of Leeds, I have contributed to improving research performance and productivity. At Leeds I help shape research strategy, strengthen the pathways through which research informs policy and practice, promote impact literacy, and support REF2029 submissions.</>,
+    `Beyond academic institutions, I have contributed to research and consultancy projects with organisations including the IFRC, the International Council of Voluntary Agencies (ICVA), Banyan Global, Open Society Foundations, Yiaga Africa and the Hans Böckler Stiftung, on issues from digital governance and humanitarian coordination to development policy, just transition and social movement solidarities. In 2026, I extended this work into applied policy research with the National Police Chiefs’ Council (NPCC), reviewing the evidence on what makes town centres safer and what it means for neighbourhood policing. `
   ],
   imageSrc: "/bsharp-philosophy.jpg",
   imageAlt: "Bolu Ajibola Professional",
@@ -212,6 +218,10 @@ export const membershipsData = [
 
 export const impactProjectsData = [
   {
+    name: "Safer Town Centres in England and Wales",
+    desc: "Through a rapid evidence review examining what works to improve town-centre safety across England and Wales, I investigated the evidence underpinning different approaches to public safety, considering their effectiveness, limitations and implications for policing policy and practice. The work was situated within a nationally significant public safety agenda and involved engagement with stakeholders operating across policing, research and policy contexts."
+  },
+  {
     name: "Digital Identity and Humanitarian Innovation (IFRC)",
     desc: "As part of the development of the International Federation of Red Cross and Red Crescent Societies’ Digital Identity Vision, I contributed to research, stakeholder engagement processes, and collaborative workshops that informed organisational thinking on digital identity, humanitarian innovation, and data governance. The project culminated in a series of reports that supported the development of the organisation’s strategic direction."
   },
@@ -256,7 +266,7 @@ export const publicEngagementSummary = {
 export const reachCollaborationSummary = {
   title: "Reach and Collaboration",
   paragraphs: [
-    "My experience collaborating across institutions, sectors, and practices have strengthened my ability to work across disciplinary boundaries, navigate diverse institutional environments, and translate lessons between contexts.",
+    "My experience collaborating across institutions, sectors, and practices has strengthened my ability to work across disciplinary boundaries, navigate diverse institutional environments, and translate lessons between contexts.",
     "Drawing on this experience, I bring a combination of analytical rigour, strategic thinking, and collaborative practice to supporting the impact strategies of higher education institutions, facilitating stakeholder engagement, contributing to international policy discussions, and helping organisations communicate evidence more effectively"
   ],
   imageSrc: "/b-sharp-reach.jpg",
@@ -268,7 +278,7 @@ export const lookingAheadSummary = {
   title: "Looking Ahead",
   paragraphs: [
     "The challenges facing societies today are increasingly complex, interconnected, and global.",
-    "We live in times when societies are faced with overlapping and complex crises. Addressing these crises require more than evidence and academic writing. It requires strong partnerships and deliberate pathways through which evidence can influence action.",
+    "We live in times when societies are faced with overlapping and complex crises. Addressing these crises requires more than evidence and academic writing. It requires strong partnerships and deliberate pathways through which evidence can influence action.",
     "I am committed to helping to build those pathways."
   ],
   imageSrc: "/looking-ahead-2.jpeg",

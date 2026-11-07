@@ -7,7 +7,7 @@ const orgLogos = [
   "/org-logos/university-of-leeds.png",
   "/org-logos/University of York logo.png",
   "/org-logos/London School of Economics LSE.png",
-  "/org-logos/oau-logo-3.png",
+  "/org-logos/Governance and Local Development Institute GLD.svg",
   "/org-logos/Economic and Social Research Council ESRC.png",
   "/org-logos/white-rose.png",
   "/org-logos/new-ifrc.png",
