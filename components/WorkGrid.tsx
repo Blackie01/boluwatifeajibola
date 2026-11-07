@@ -19,7 +19,7 @@ export default function WorkGrid() {
       subtitle: "Explore my work in impact, policy, and public engagement",
       image: "/bsharp-one-goal.jpg",
       href: "/impact-and-engagement",
-      objectPosition: "object-[center_15%]"
+      objectPosition: "object-[center_35%]",
     },
     {
       title: "Speaking and Events",
