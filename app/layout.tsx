@@ -24,9 +24,6 @@ const cormorantUnicase = Cormorant_Unicase({
   variable: '--font-cormorant-unicase',
 })
 
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://boluajibola.com"),
   title: {
@@ -111,11 +108,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Navigation />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
